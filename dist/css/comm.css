@@ -448,10 +448,11 @@ legend {
 }
 .news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link .news-category-btn-txt {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 80px;
   font-size: 15px;
   font-weight: 700;
-  padding-left: 16px;
 }
 
 .newscards-swiper {
@@ -535,28 +536,34 @@ legend {
 .splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info {
   position: relative;
   padding: 40px;
-  color: #fff;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info-top {
+  display: flex;
 }
 .splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit {
   font-size: 28px;
   font-weight: 700;
+  padding-right: 16px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit::before {
-  position: absolute;
-  content: "\f35d";
-  top: 36px;
-  left: 153px;
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit .keyword-newscards-slider-front__tit__txt {
+  color: #fff;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__icon {
+  display: block;
   width: 30px;
   height: 30px;
   font-size: 32px;
   font-weight: 900;
   font-family: "Line Awesome Free";
+  margin-top: -4px;
+  color: #fff;
 }
 .splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__subtit {
   display: block;
   font-size: 16px;
   font-weight: 300;
   padding-top: 16px;
+  color: #fff;
 }
 .splide .splide__slide .keyword-newscards-slider-back {
   width: 400px;
@@ -595,4 +602,47 @@ legend {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.cypto-market-price-wrap {
+  display: block;
+  width: 100%;
+  height: 840px;
+  padding: 56px 216px;
+  border-radius: 20px;
+  background: #eee;
+  margin-top: 114px;
+}
+
+.cypto-market-price-wrap-tit {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 56px;
+}
+
+.cypto-market-card {
+  display: block;
+  width: 200px;
+  height: 300px;
+  padding: 16px;
+  background: #fff;
+}
+.cypto-market-card .cypto-card-rank {
+  display: flex;
+  justify-content: space-between;
+}
+.cypto-market-card .cypto-card-tit {
+  display: flex;
+}
+.cypto-market-card .cypto-card-tit-image__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.cypto-market-card .cypto-card-tit-txt {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=comm.css.map */
