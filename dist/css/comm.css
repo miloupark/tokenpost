@@ -1,0 +1,598 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Thin";
+  font-weight: 100;
+  src: url(../fonts/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  font-weight: 200;
+  src: url(../fonts/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  font-weight: 300;
+  src: url(../fonts/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-weight: 400;
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-weight: 500;
+  src: url(../fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-weight: 600;
+  src: url(../fonts/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-weight: 700;
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  font-weight: 800;
+  src: url(../fonts/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Black";
+  font-weight: 900;
+  src: url(../fonts/Pretendard-Black.woff) format("woff");
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button, header, main, footer, article {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #222;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+.wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+.header .main-logo {
+  display: flex;
+  align-items: center;
+}
+.header .main-logo a {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+}
+.header .header-gnb {
+  margin: 0 auto;
+}
+.header .header-gnb .header-gnb-depth1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.header .header-gnb .header-gnb-depth1 li a {
+  display: block;
+  text-align: center;
+  padding: 8px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Pretendard";
+}
+.header .header-gnb .header-gnb-depth1 .header-gnb-depth2 {
+  width: 100%;
+  height: 360px;
+  margin-top: 30px;
+  background: #eee;
+}
+.header .header-gnb .header-gnb-depth1 .header-gnb-depth2-lst {
+  padding-top: 8px;
+}
+.header .header-gnb .header-gnb-depth1 .header-gnb-depth2-lst li > a {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Pretendard";
+}
+.header .header-icons {
+  display: flex;
+  align-items: center;
+}
+.header .header-icons .btn-g {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 16px;
+}
+.header .header-icons .btn-g::before {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
+.header .header-icons .header-icons__search::before {
+  display: block;
+  content: "\f002";
+  transform: scaleX(-1);
+}
+.header .header-icons .header-icons__user::before {
+  content: "\f007";
+}
+.header .header-icons .header-icons__ham::before {
+  content: "\f0c9";
+}
+
+.header-icons-all {
+  display: none;
+}
+
+.swiper-wrapper {
+  width: 1280px;
+  height: 416px;
+}
+.swiper-wrapper .swiper-slide {
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-1 {
+  position: relative;
+  display: block;
+  width: 1280px;
+  height: 416px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-tit {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  width: 563px;
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-cont {
+  position: absolute;
+  top: 240px;
+  left: 80px;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.news-category-btn {
+  padding-top: 16px;
+}
+.news-category-btn .news-category-btn-lst {
+  display: flex;
+}
+.news-category-btn .news-category-btn-lst .news-category-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 153px;
+  height: 72px;
+  border-radius: 10px;
+  margin-right: 8px;
+  background-color: #eee;
+}
+.news-category-btn .news-category-btn-lst .news-category-btn-box:last-child {
+  margin-right: 0;
+}
+.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link {
+  display: flex;
+}
+.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link .news-category-btn-icons {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link .news-category-btn-txt {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  padding-left: 16px;
+}
+
+.newscards-swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 32px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-wrapper .swiper-slide {
+  display: block;
+  width: 280px;
+  height: 316px;
+  font-size: 18px;
+  margin-right: 16px;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-image {
+  display: block;
+  width: 100%;
+  height: 188px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-txtcont {
+  display: block;
+  width: 100%;
+  height: 128px;
+  padding: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #eee;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-txtcont .swiper-slide-txtcont__keyword {
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+}
+.swiper-wrapper .swiper-slide .swiper-slide-txtcont .swiper-slide-txtcont__tit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 224px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  padding-top: 4px;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  color: #333;
+}
+
+.splide {
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+.splide .splide__slide {
+  display: block;
+  width: 400px;
+  height: 440px;
+  margin-right: 10px;
+}
+.splide .splide__slide .keyword-newscards-slider-front {
+  width: 400px;
+  height: 440px;
+  background-image: url(/images/main\ slide\ bg-Stellar.jpg);
+  -o-object-fit: fit;
+     object-fit: fit;
+  border-radius: 20px;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__image {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info {
+  position: relative;
+  padding: 40px;
+  color: #fff;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit {
+  font-size: 28px;
+  font-weight: 700;
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit::before {
+  position: absolute;
+  content: "\f35d";
+  top: 36px;
+  left: 153px;
+  width: 30px;
+  height: 30px;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__subtit {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 16px;
+}
+.splide .splide__slide .keyword-newscards-slider-back {
+  width: 400px;
+  height: 440px;
+  padding: 56px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back__tit {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont {
+  display: block;
+  position: relative;
+  padding-top: 40px;
+  cursor: pointer;
+}
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont::before {
+  display: block;
+  position: absolute;
+  content: "\f061";
+  top: 34px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont .keyword-newscards-slider-back-cont-lst__tit {
+  display: block;
+  width: 216px;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}/*# sourceMappingURL=comm.css.map */
