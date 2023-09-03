@@ -4,6 +4,9 @@
 
 // comm.css -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
+* {
+  font-family: "Pretendard";
+}
 
 .wrap {
   width: 1280px;
@@ -93,7 +96,11 @@
 
 
 // tokenpost main / mainnews slider
-.swiper-wrapper {
+.mainnews-slider {
+  display: block;
+  margin: 0 auto;
+}
+.mySwiper1 {
   width: 1280px;
   height: 416px;
   .swiper-slide {
@@ -173,10 +180,10 @@
 }
 
 // tokenpost main / newscards slider
-.newscards-swiper {
+.newscards-slider {
   width: 100%;
-  height: 100%;
   margin-top: 32px;
+  overflow: hidden;
 }
 .swiper-wrapper {
   display: flex;
@@ -265,6 +272,16 @@
   width: 1280px;
   height: 100%;
   margin: 0 auto;
+  .splide__track {
+    padding-top: 48px;
+  }
+  .keyword-newscards-slider-tit {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 114px;
+  }
   .splide__slide {
     display: block;
     width: 400px;
@@ -282,7 +299,7 @@
         display: flex;
         width: 200px;
         height: 200px;
-        padding-top: 40px;
+        padding-top: 48px;
         padding-left: 100px;
       }
       .keyword-newscards-slider-front-info {
@@ -291,7 +308,6 @@
       }
       .keyword-newscards-slider-front-info-top {
         display: flex;
-  
       }
       .keyword-newscards-slider-front__tit {
         font-size: 28px;
@@ -377,29 +393,147 @@
   color: #333;
   margin-bottom: 56px;
 }
+.cypto-market-cards-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 848px;
+  height: 640px;
+  flex-wrap: wrap;
+}
 .cypto-market-card {
   display: block;
+  flex-direction: wrap;
   width: 200px;
   height: 300px;
-  padding: 16px;
+  padding: 16px 16px 24px;
+  border-radius: 12px;
   background: #fff;
   .cypto-card-rank {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    .cypto-card-rank__num {
+      display: block;
+      width: 168px;
+      height: 21px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .cypto-card-rank__icons {
+      position: relative;
+      display: block;
+      width: 21px;
+      height: 21px;
+      &::before {
+        position: absolute;
+        content: "\f004";
+        display: block;
+        top: -2px;
+        right: 0;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Line Awesome Free';
+        color: #333;
+        cursor: pointer;
+      }
+      &:hover {
+        content: "\f004";
+        font-size: 48px;
+        font-weight: 900;
+        font-family: 'Line Awesome Free';
+        cursor: pointer;
+        color: #333;
+      }
+    }
   }
   .cypto-card-tit {
     display: flex;
+    padding-top: 8px;
+  }
+  .cypto-card-tit-image {
+    display: flex;
+    align-items: center;
   }
   .cypto-card-tit-image__link {
     display: block;
     width: 30px;
     height: 30px;
+    padding-right: 8px;
   }
   .cypto-card-tit-txt {
     display: flex;
     flex-direction: column;
+    .cypto-card-tit-txt__top {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .cypto-card-tit-txt__bottom {   
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: -4px;
+    }
+  }
+  .crypto-card-graph__img {
+    display: block;
+    width: 168px;
+    height: 90px;
+    object-fit: cover;
+    padding-top: 16px;
+  }
+  .crypto-card-percent-red {
+    display: block;
+    width: 100%;
+    .crypto-card-percent-red__txt {
+      display: flex;
+      justify-content: end;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ef3030;
+      padding: 12px 0 12px 0;
+    }
+  }
+  .crypto-card-percent-blue {
+    display: block;
+    width: 100%;
+    .crypto-card-percent-blue__txt {
+      display: flex;
+      justify-content: end;
+      font-size: 18px;
+      font-weight: 400;
+      color: #2F6ED6;
+      padding: 12px 0 12px 0;
+    }
+  }
+  .crypto-card-price_link {
+    display: flex;
+    justify-content: space-between;
+    .crypto-card-price__txt {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+    }
+  }
+  .crypto-card-date {
+    display: flex;
+    justify-content: space-between;
+    .crypto-card-date__txt {
+      font-size: 13px;
+      font-weight: 300;
+      color: #555;
+    }
   }
 }
+// tokenpost main / event bnr
+.main-event-bnr {
+  width: 1280px;
+  height: 248px;
+  margin: 114px auto;
+  border-radius: 20px;
+  background: url(/images/main\ banner.jpg) 0 0 no-repeat;
+}
+
 // * {
 //   margin: 0;
 //   padding: 0;
@@ -519,3 +653,306 @@
 // .calendar-dates li:not(.active):hover::before {
 //   background: #e4e1e1;
 // }
+
+// tokenpost main / dailyinfo
+.main-dailyinfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+// tokenpost main / calendar
+.calendar-container {
+  display: block;
+  width: 524px;
+  height: 520px;  
+  border-radius: 20px;
+  background-color: #eee;
+  .main-footer-category__lst {
+    display: flex;
+  }
+}
+.wrapper{
+  width: 524px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+// tokenpost main / dailyinfo today list
+.dailyinfo-today-info {
+  width: 448px;
+  height: 520px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #eee;
+}
+.dailyinfo-today-info-tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  padding: 3px 32px;
+  &::before {
+    position: absolute;
+    content: "\f104";
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+    color: #333;
+  }
+  &::after {
+    position: absolute;
+    content: "\f105";
+    top: 0;
+    left: 132px;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+    color: #333;
+  }
+}
+.dailyinfo-today-list {
+  padding-top: 12px;
+}
+.dailyinfo-today-list-cont {
+  width: 360px;
+  height: 104px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+// tokenpost main / dailyinfo event
+.dailyinfo-event-lst {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 248px;
+  height: 520px;
+}
+// airdrop
+.dailyinfo-event-airdrop {
+  display: block;
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #2F6ED6;
+  cursor: pointer;
+  &:hover {
+    .dailyinfo-event-airdrop__tit, 
+    .dailyinfo-event-airdrop__subtit{
+      display: none;
+    }
+    width: 248px;
+    height: 248px;
+    border-radius: 20px;
+    background: url(../../images/airdrop1.jpg) no-repeat 0 0;
+    background-size: 248px 248px;
+    cursor: pointer;
+  }
+}
+.dailyinfo-event-airdrop__tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  &::after {
+    content: "\f35d";
+    position: absolute;
+    top: -6px;
+    left: 72px;
+    font-family: 'Line Awesome Free';
+    font-size: 24px;
+    font-weight: 900;
+  }
+}
+.dailyinfo-event-airdrop__subtit {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 84px;
+}
+// quiz
+.dailyinfo-event-quiz {
+  display: block;
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #2F6ED6;
+  cursor: pointer;
+  &:hover {
+    .dailyinfo-event-quiz__tit,
+    .dailyinfo-event-quiz__subtit {
+      display: none;
+    }
+    width: 248px;
+    height: 248px;
+    border-radius: 20px;
+    background: url(../../images/quiz.jpeg) no-repeat 0 0;
+    background-size: 248px 248px;
+    cursor: pointer;
+  }
+}
+.dailyinfo-event-quiz__tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  &::after {
+    content: "\f35d";
+    position: absolute;
+    top: -6px;
+    left: 36px;
+    font-family: 'Line Awesome Free';
+    font-size: 24px;
+    font-weight: 900;
+  }
+}
+.dailyinfo-event-quiz__subtit {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 84px;
+}
+
+// tokenpost main / link button
+.main-footer-btn {
+  display: block;
+  width: 100%;
+  height: 240px;
+  background-color: #eee;
+}
+.main-footer-btn__lst {
+  display: flex;
+}
+.main-footer-btn__forum {
+  display: block;
+  width: 248px;
+  height: 96px; 
+  border-radius: 12px;
+  background-color: #fff;
+  .main-footer-btn__forum__icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+      position: absolute;
+      content: "\f075";
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      font-weight: 400;
+      font-family: "Font Awesome 6 Free";
+      color: #333;
+      transform: scaleX(-1);
+    }
+  }
+}
+.main-footer-btn__crypto {
+  display: block;
+  width: 248px;
+  height: 96px; 
+  border-radius: 12px;
+  background-color: #fff;
+  .main-footer-btn__crypto__icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+      position: absolute;
+      content: "\f201";
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      font-weight: 900;
+      font-family: "Font Awesome 6 Free";
+      color: #333;
+    }
+  }
+}

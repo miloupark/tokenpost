@@ -300,6 +300,10 @@ legend {
   content: "";
 }
 
+* {
+  font-family: "Pretendard";
+}
+
 .wrap {
   width: 1280px;
   margin: 0 auto;
@@ -380,17 +384,22 @@ legend {
   display: none;
 }
 
-.swiper-wrapper {
+.mainnews-slider {
+  display: block;
+  margin: 0 auto;
+}
+
+.mySwiper1 {
   width: 1280px;
   height: 416px;
 }
-.swiper-wrapper .swiper-slide {
+.mySwiper1 .swiper-slide {
   justify-content: center;
   align-items: center;
   font-size: 18px;
   border-radius: 20px;
 }
-.swiper-wrapper .swiper-slide .swiper-slide-1 {
+.mySwiper1 .swiper-slide .swiper-slide-1 {
   position: relative;
   display: block;
   width: 1280px;
@@ -399,7 +408,7 @@ legend {
      object-fit: cover;
   border-radius: 20px;
 }
-.swiper-wrapper .swiper-slide .swiper-slide-tit {
+.mySwiper1 .swiper-slide .swiper-slide-tit {
   position: absolute;
   top: 100px;
   left: 80px;
@@ -409,7 +418,7 @@ legend {
   font-weight: 700;
   color: #fff;
 }
-.swiper-wrapper .swiper-slide .swiper-slide-cont {
+.mySwiper1 .swiper-slide .swiper-slide-cont {
   position: absolute;
   top: 240px;
   left: 80px;
@@ -455,10 +464,10 @@ legend {
   font-weight: 700;
 }
 
-.newscards-swiper {
+.newscards-slider {
   width: 100%;
-  height: 100%;
   margin-top: 32px;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -512,6 +521,16 @@ legend {
   height: 100%;
   margin: 0 auto;
 }
+.splide .splide__track {
+  padding-top: 48px;
+}
+.splide .keyword-newscards-slider-tit {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 114px;
+}
 .splide .splide__slide {
   display: block;
   width: 400px;
@@ -530,7 +549,7 @@ legend {
   display: flex;
   width: 200px;
   height: 200px;
-  padding-top: 40px;
+  padding-top: 48px;
   padding-left: 100px;
 }
 .splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info {
@@ -623,26 +642,474 @@ legend {
   margin-bottom: 56px;
 }
 
+.cypto-market-cards-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 848px;
+  height: 640px;
+  flex-wrap: wrap;
+}
+
 .cypto-market-card {
   display: block;
+  flex-direction: wrap;
   width: 200px;
   height: 300px;
-  padding: 16px;
+  padding: 16px 16px 24px;
+  border-radius: 12px;
   background: #fff;
 }
 .cypto-market-card .cypto-card-rank {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.cypto-market-card .cypto-card-rank .cypto-card-rank__num {
+  display: block;
+  width: 168px;
+  height: 21px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.cypto-market-card .cypto-card-rank .cypto-card-rank__icons {
+  position: relative;
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+.cypto-market-card .cypto-card-rank .cypto-card-rank__icons::before {
+  position: absolute;
+  content: "\f004";
+  display: block;
+  top: -2px;
+  right: 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Line Awesome Free";
+  color: #333;
+  cursor: pointer;
+}
+.cypto-market-card .cypto-card-rank .cypto-card-rank__icons:hover {
+  content: "\f004";
+  font-size: 48px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+  cursor: pointer;
+  color: #333;
 }
 .cypto-market-card .cypto-card-tit {
   display: flex;
+  padding-top: 8px;
+}
+.cypto-market-card .cypto-card-tit-image {
+  display: flex;
+  align-items: center;
 }
 .cypto-market-card .cypto-card-tit-image__link {
   display: block;
   width: 30px;
   height: 30px;
+  padding-right: 8px;
 }
 .cypto-market-card .cypto-card-tit-txt {
   display: flex;
   flex-direction: column;
+}
+.cypto-market-card .cypto-card-tit-txt .cypto-card-tit-txt__top {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+}
+.cypto-market-card .cypto-card-tit-txt .cypto-card-tit-txt__bottom {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -4px;
+}
+.cypto-market-card .crypto-card-graph__img {
+  display: block;
+  width: 168px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 16px;
+}
+.cypto-market-card .crypto-card-percent-red {
+  display: block;
+  width: 100%;
+}
+.cypto-market-card .crypto-card-percent-red .crypto-card-percent-red__txt {
+  display: flex;
+  justify-content: end;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ef3030;
+  padding: 12px 0 12px 0;
+}
+.cypto-market-card .crypto-card-percent-blue {
+  display: block;
+  width: 100%;
+}
+.cypto-market-card .crypto-card-percent-blue .crypto-card-percent-blue__txt {
+  display: flex;
+  justify-content: end;
+  font-size: 18px;
+  font-weight: 400;
+  color: #2F6ED6;
+  padding: 12px 0 12px 0;
+}
+.cypto-market-card .crypto-card-price_link {
+  display: flex;
+  justify-content: space-between;
+}
+.cypto-market-card .crypto-card-price_link .crypto-card-price__txt {
+  font-size: 13px;
+  font-weight: 400;
+  color: #555;
+}
+.cypto-market-card .crypto-card-date {
+  display: flex;
+  justify-content: space-between;
+}
+.cypto-market-card .crypto-card-date .crypto-card-date__txt {
+  font-size: 13px;
+  font-weight: 300;
+  color: #555;
+}
+
+.main-event-bnr {
+  width: 1280px;
+  height: 248px;
+  margin: 114px auto;
+  border-radius: 20px;
+  background: url(/images/main\ banner.jpg) 0 0 no-repeat;
+}
+
+.main-dailyinfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.calendar-container {
+  display: block;
+  width: 524px;
+  height: 520px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.calendar-container .main-footer-category__lst {
+  display: flex;
+}
+
+.wrapper {
+  width: 524px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .icons span:hover {
+  background: #f2f2f2;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  color: #333;
+  width: 14.2857142857%;
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+.dailyinfo-today-info {
+  width: 448px;
+  height: 520px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #eee;
+}
+
+.dailyinfo-today-info-tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  padding: 3px 32px;
+}
+.dailyinfo-today-info-tit::before {
+  position: absolute;
+  content: "\f104";
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+  color: #333;
+}
+.dailyinfo-today-info-tit::after {
+  position: absolute;
+  content: "\f105";
+  top: 0;
+  left: 132px;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+  color: #333;
+}
+
+.dailyinfo-today-list {
+  padding-top: 12px;
+}
+
+.dailyinfo-today-list-cont {
+  width: 360px;
+  height: 104px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.dailyinfo-event-lst {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 248px;
+  height: 520px;
+}
+
+.dailyinfo-event-airdrop {
+  display: block;
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #2F6ED6;
+  cursor: pointer;
+}
+.dailyinfo-event-airdrop:hover {
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  background: url(../../images/airdrop1.jpg) no-repeat 0 0;
+  background-size: 248px 248px;
+  cursor: pointer;
+}
+.dailyinfo-event-airdrop:hover .dailyinfo-event-airdrop__tit,
+.dailyinfo-event-airdrop:hover .dailyinfo-event-airdrop__subtit {
+  display: none;
+}
+
+.dailyinfo-event-airdrop__tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.dailyinfo-event-airdrop__tit::after {
+  content: "\f35d";
+  position: absolute;
+  top: -6px;
+  left: 72px;
+  font-family: "Line Awesome Free";
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.dailyinfo-event-airdrop__subtit {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 84px;
+}
+
+.dailyinfo-event-quiz {
+  display: block;
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  padding: 32px;
+  background-color: #2F6ED6;
+  cursor: pointer;
+}
+.dailyinfo-event-quiz:hover {
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+  background: url(../../images/quiz.jpeg) no-repeat 0 0;
+  background-size: 248px 248px;
+  cursor: pointer;
+}
+.dailyinfo-event-quiz:hover .dailyinfo-event-quiz__tit,
+.dailyinfo-event-quiz:hover .dailyinfo-event-quiz__subtit {
+  display: none;
+}
+
+.dailyinfo-event-quiz__tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.dailyinfo-event-quiz__tit::after {
+  content: "\f35d";
+  position: absolute;
+  top: -6px;
+  left: 36px;
+  font-family: "Line Awesome Free";
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.dailyinfo-event-quiz__subtit {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 84px;
+}
+
+.main-footer-btn {
+  display: block;
+  width: 100%;
+  height: 240px;
+  background-color: #eee;
+}
+
+.main-footer-btn__lst {
+  display: flex;
+}
+
+.main-footer-btn__forum {
+  display: block;
+  width: 248px;
+  height: 96px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.main-footer-btn__forum .main-footer-btn__forum__icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.main-footer-btn__forum .main-footer-btn__forum__icon::before {
+  position: absolute;
+  content: "\f075";
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Font Awesome 6 Free";
+  color: #333;
+  transform: scaleX(-1);
+}
+
+.main-footer-btn__crypto {
+  display: block;
+  width: 248px;
+  height: 96px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.main-footer-btn__crypto .main-footer-btn__crypto__icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.main-footer-btn__crypto .main-footer-btn__crypto__icon::before {
+  position: absolute;
+  content: "\f201";
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #333;
 }/*# sourceMappingURL=comm.css.map */
