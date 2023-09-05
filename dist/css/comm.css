@@ -323,6 +323,7 @@ legend {
   font-family: "Pretendard-Bold";
 }
 .header .header-gnb {
+  position: relative;
   margin: 0 auto;
 }
 .header .header-gnb .header-gnb-depth1 {
@@ -379,9 +380,21 @@ legend {
 .header .header-icons .header-icons__ham::before {
   content: "\f0c9";
 }
+.header .header-icons .header-icons__ham:hover .header-icons-all {
+  display: block;
+}
 
 .header-icons-all {
   display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 1000;
 }
 
 .mainnews-slider {
@@ -394,19 +407,26 @@ legend {
   height: 416px;
 }
 .mySwiper1 .swiper-slide {
+  display: block;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  border-radius: 20px;
+  width: 1280px;
+  height: 416px;
 }
 .mySwiper1 .swiper-slide .swiper-slide-1 {
   position: relative;
-  display: block;
-  width: 1280px;
+  width: 100%;
   height: 416px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: auto;
   border-radius: 20px;
+}
+.mySwiper1 .swiper-slide .swiper-slide-1::after {
+  position: absolute;
+  content: url(../../images/main\ mainnews.jpeg);
+  top: 0;
+  right: 0;
 }
 .mySwiper1 .swiper-slide .swiper-slide-tit {
   position: absolute;
@@ -479,7 +499,6 @@ legend {
 .swiper-wrapper .swiper-slide {
   display: block;
   width: 280px;
-  height: 316px;
   font-size: 18px;
   margin-right: 16px;
 }
@@ -514,7 +533,6 @@ legend {
   font-weight: 600;
   overflow: hidden;
   padding-top: 4px;
-  white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-word;
   color: #333;
@@ -946,6 +964,12 @@ header .current-date {
   color: #333;
 }
 
+.dailyinfo-today-list-cont-wrap {
+  width: 360px;
+  height: 374px;
+  overflow: auto;
+}
+
 .dailyinfo-today-list-cont {
   display: flex;
   justify-content: space-between;
@@ -953,6 +977,7 @@ header .current-date {
   border-radius: 12px;
   background-color: #fff;
   padding: 20px;
+  margin-top: 20px;
 }
 .dailyinfo-today-list-cont .dailyinfo-today-list-cont-logo-img {
   display: block;
@@ -960,12 +985,17 @@ header .current-date {
   height: 64px;
 }
 
+.dailyinfo-today-list-cont-txt {
+  display: block;
+  width: 232px;
+  height: 20px;
+}
 .dailyinfo-today-list-cont-txt .dailyinfo-today-list-cont__tit {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   display: block;
-  width: 360px;
+  width: 216px;
   height: 20px;
   font-size: 16px;
   font-weight: 600;
