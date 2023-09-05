@@ -560,12 +560,20 @@ legend {
   margin-right: 10px;
 }
 .splide .splide__slide .keyword-newscards-slider-front {
+  position: relative;
   width: 400px;
   height: 440px;
   background-image: url(/images/main\ slide\ bg-Stellar.jpg);
   -o-object-fit: fit;
      object-fit: fit;
   border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.splide .splide__slide .keyword-newscards-slider-front:hover .keyword-newscards-slider-back {
+  opacity: 1;
+}
+.splide .splide__slide .keyword-newscards-slider-front:hover .keyword-newscards-slider-back .keyword-newscards-slider-front {
+  display: none;
 }
 .splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__image {
   display: flex;
@@ -607,11 +615,15 @@ legend {
   color: #fff;
 }
 .splide .splide__slide .keyword-newscards-slider-back {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 400px;
   height: 440px;
-  padding: 56px;
+  padding: 40px;
   background-color: #eee;
   border-radius: 20px;
+  opacity: 0;
 }
 .splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back__tit {
   display: block;

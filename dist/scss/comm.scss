@@ -317,13 +317,21 @@
     height: 440px;
     margin-right: 10px;
     .keyword-newscards-slider-front {
-      // display: none;
+      position: relative;
       width: 400px;
       height: 440px;
       background-image: url(/images/main\ slide\ bg-Stellar.jpg);
       object-fit: fit;
       border-radius: 20px;
-      
+      transition: all 0.5s ease;
+      &:hover {
+        .keyword-newscards-slider-back {
+          opacity: 1;
+          .keyword-newscards-slider-front {
+            display: none;
+          }
+        }
+      }
       .keyword-newscards-front__image {
         display: flex;
         width: 200px;
@@ -365,11 +373,15 @@
       }
     }
     .keyword-newscards-slider-back {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 400px;
       height: 440px;
-      padding: 56px;
+      padding: 40px;
       background-color: #eee;
       border-radius: 20px;
+      opacity: 0;
       .keyword-newscards-back__tit {
         display: block;
         font-size: 28px;
