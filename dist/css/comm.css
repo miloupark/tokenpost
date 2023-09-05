@@ -549,29 +549,29 @@ legend {
      object-fit: fit;
   border-radius: 20px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__image {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__image {
   display: flex;
   width: 200px;
   height: 200px;
   padding-top: 48px;
   padding-left: 100px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front-info {
   position: relative;
   padding: 40px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front-info-top {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front-info-top {
   display: flex;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__tit {
   font-size: 28px;
   font-weight: 700;
   padding-right: 16px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__tit .keyword-newscards-slider-front__tit__txt {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__tit .keyword-newscards-front__tit__txt {
   color: #fff;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__icon {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__icon {
   display: block;
   width: 30px;
   height: 30px;
@@ -581,7 +581,7 @@ legend {
   margin-top: -4px;
   color: #fff;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-slider-front__subtit {
+.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__subtit {
   display: block;
   font-size: 16px;
   font-weight: 300;
@@ -595,18 +595,18 @@ legend {
   background-color: #eee;
   border-radius: 20px;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back__tit {
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back__tit {
   display: block;
   font-size: 28px;
   font-weight: 700;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont {
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont {
   display: block;
   position: relative;
   padding-top: 40px;
   cursor: pointer;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont::before {
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont::before {
   display: block;
   position: absolute;
   content: "\f061";
@@ -618,7 +618,7 @@ legend {
   font-weight: 900;
   font-family: "Line Awesome Free";
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-slider-back-cont .keyword-newscards-slider-back-cont-lst__tit {
+.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont .keyword-newscards-back-cont-lst__tit {
   display: block;
   width: 216px;
   height: 24px;

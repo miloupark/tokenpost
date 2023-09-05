@@ -299,29 +299,29 @@
       object-fit: fit;
       border-radius: 20px;
       
-      .keyword-newscards-slider-front__image {
+      .keyword-newscards-front__image {
         display: flex;
         width: 200px;
         height: 200px;
         padding-top: 48px;
         padding-left: 100px;
       }
-      .keyword-newscards-slider-front-info {
+      .keyword-newscards-front-info {
         position: relative;
         padding: 40px;
       }
-      .keyword-newscards-slider-front-info-top {
+      .keyword-newscards-front-info-top {
         display: flex;
       }
-      .keyword-newscards-slider-front__tit {
+      .keyword-newscards-front__tit {
         font-size: 28px;
         font-weight: 700;
         padding-right: 16px;
-        .keyword-newscards-slider-front__tit__txt {
+        .keyword-newscards-front__tit__txt {
           color: #fff;
         }
       }
-        .keyword-newscards-slider-front__icon {
+        .keyword-newscards-front__icon {
           display: block;
           width: 30px;
           height: 30px;
@@ -331,7 +331,7 @@
           margin-top: -4px;
           color: #fff;
       }
-      .keyword-newscards-slider-front__subtit {
+      .keyword-newscards-front__subtit {
         display: block;
         font-size: 16px;
         font-weight: 300;
@@ -345,12 +345,12 @@
       padding: 56px;
       background-color: #eee;
       border-radius: 20px;
-      .keyword-newscards-slider-back__tit {
+      .keyword-newscards-back__tit {
         display: block;
         font-size: 28px;
         font-weight: 700;
       }
-      .keyword-newscards-slider-back-cont {
+      .keyword-newscards-back-cont {
         display: block;
         position: relative;
         padding-top: 40px;
@@ -367,7 +367,7 @@
           font-weight: 900;
           font-family: 'Line Awesome Free';
         }
-        .keyword-newscards-slider-back-cont-lst__tit  {
+        .keyword-newscards-back-cont-lst__tit  {
           display: block;
           width: 216px;
           height: 24px;
@@ -840,9 +840,6 @@ header .current-date{
   }
 }
 
-
-
-
 // tokenpost main / dailyinfo event
 .dailyinfo-event-lst {
   display: flex;
@@ -851,6 +848,7 @@ header .current-date{
   width: 248px;
   height: 520px;
 }
+
 // airdrop
 .dailyinfo-event-airdrop {
   display: block;
@@ -895,6 +893,7 @@ header .current-date{
   color: #fff;
   padding-top: 84px;
 }
+
 // quiz
 .dailyinfo-event-quiz {
   display: block;
