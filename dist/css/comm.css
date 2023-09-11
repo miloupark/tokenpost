@@ -1859,7 +1859,7 @@ legend {
   display: block;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: #555;
 }
 
 .forum-notice-bbs-lst-g {
@@ -1868,6 +1868,7 @@ legend {
 .forum-notice-bbs-lst-g .forum-notice-bbs-lst-cont__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 24px;
 }
 .forum-notice-bbs-lst-g .forum-notice-bbs-lst-cont__link .forum-notice-bbs-lst-cont__tit {
@@ -1911,7 +1912,7 @@ legend {
   display: block;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: #555;
 }
 
 .forum-notice-mostviewed-lst-g {
@@ -1920,14 +1921,15 @@ legend {
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 24px;
 }
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link .forum-notice-mostviewed-lst-cont__tag {
   width: 70px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   padding-right: 24px;
-  color: #333;
+  color: #555;
 }
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link .forum-notice-mostviewed-lst-cont__tit {
   display: block;
@@ -1937,9 +1939,9 @@ legend {
   color: #333;
 }
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link .forum-notice-mostviewed-lst-cont__date {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  color: #333;
+  color: #555;
 }
 
 .forum-notice-searchbar {
@@ -2047,9 +2049,9 @@ legend {
   padding-top: 4px;
   color: #1176AA;
 }
-.forum-category-btn__link .forum-category-btn-cont__link::before {
-  content: "\f105";
+.forum-category-btn__link .forum-category-btn-cont__link::after {
   position: absolute;
+  content: "\f105";
   top: 1px;
   right: 24px;
   font-size: 16px;
@@ -2062,7 +2064,6 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 48px;
 }
 .forum-profit-certification-tit .forum-profit-certification-tit__strong {
   font-size: 28px;
@@ -2077,49 +2078,329 @@ legend {
 
 .forum-profit-review-card-g {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 48px;
 }
 
-.forum-profit-review-chart__img {
+.forum-profit-review-card {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 240px;
+  height: 290px;
+}
+.forum-profit-review-card .forum-profit-review__icon {
+  position: absolute;
+  top: 24px;
+  right: 18px;
+  width: 64px;
+  height: 64px;
+  z-index: 1000;
+}
+
+.forum-profit-review-txt-g {
+  position: absolute;
+  width: 240px;
+  height: 290px;
+  border-radius: 20px;
+  padding: 24px 18px;
+  background-color: rgba(17, 118, 170, 0.8);
+  transition: all 0.7s ease-out;
+  z-index: 5;
+}
+.forum-profit-review-txt-g .forum-profit-review__tit {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 192px;
+  color: #fff;
+}
+.forum-profit-review-txt-g .forum-profit-review__user {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2px;
+}
+.forum-profit-review-txt-g .forum-profit-review__writer {
+  width: 69px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.forum-profit-review-txt-g .forum-profit-review__date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.forum-profit-review-chart {
+  display: none;
+}
+.forum-profit-review-chart .forum-profit-review-chart__img {
   width: 240px;
   height: 290px;
   border-radius: 20px;
   z-index: 1;
 }
 
-.forum-profit-review-card {
+.forum-profit-review-card:hover .forum-profit-review-chart {
+  display: block;
+}
+.forum-profit-review-card:hover .forum-profit-review__icon,
+.forum-profit-review-card:hover .forum-profit-review-txt-g {
+  display: none;
+}
+
+.forum-chart {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.forum-chart-tit {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 100px;
+}
+.forum-chart-tit .forum-chart-tit__strong {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+.forum-chart-tit .forum-chart-tit__more {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forum-chart-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  padding-top: 48px;
+}
+
+.forum-chart-box {
+  position: relative;
+}
+
+.forum-chart-box-cover {
   position: absolute;
-  width: 240px;
+  top: 0;
+  left: 0;
+  width: 413px;
   height: 290px;
+  z-index: 10;
+}
+.forum-chart-box-cover .forum-chart-box__image {
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
-  padding: 24px 18px;
-  background-color: rgba(17, 118, 170, 0.7);
   transition: all 0.7s ease-out;
-  z-index: 5;
 }
-
-.forum-profit-review-txt {
-  padding-top: 210px;
-}
-
-.forum-profit-review__tit {
-  font-size: 18px;
+.forum-chart-box-cover .forum-chart-box__date {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
 }
 
-.forum-profit-review__writer {
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
+.forum-chart-box-report {
+  position: relative;
+}
+.forum-chart-box-report .forum-chart-box-report__image {
+  width: 413px;
+  height: 290px;
+  border-radius: 20px;
+  transition: all 0.7s ease-out;
 }
 
-.forum-profit-review__date {
+.forum-chart-box:hover .forum-chart-box-report {
+  display: block;
+}
+.forum-chart-box:hover .forum-chart-box-cover {
+  display: none;
+}
+
+.forum-event-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 98px;
+  padding-bottom: 98px;
+}
+
+.forum-airdrop {
+  width: 632px;
+  height: 656px;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: #eee;
+}
+
+.forum-airdrop-tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.forum-airdrop-tit .forum-airdrop-tit__top {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+.forum-airdrop-tit .forum-airdrop-tit__more {
   font-size: 15px;
   font-weight: 400;
+  color: #555;
+}
+
+.forum-airdrop-lst-g {
+  padding-top: 48px;
+}
+
+.forum-airdrop-lst {
+  width: 552px;
+  height: 152px;
+  border-radius: 16px;
+  padding: 20px 40px;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.forum-airdrop-lst__link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forum-airdrop-lst-tit__top {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.forum-airdrop-lst-tit__sub {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 8px;
+  color: #333;
+}
+
+.forum-airdrop-lst-tags {
+  display: flex;
+  padding-top: 8px;
+}
+
+.forum-airdrop-lst__tag {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
   color: #fff;
+  padding: 5px 9px;
+  margin-right: 10px;
+  border-radius: 16px;
+  background-color: #1176AA;
+}
+
+.forum-airdrop-lst-img {
+  display: flex;
+  align-items: center;
+}
+
+.forum-airdrop-lst__icon {
+  display: block;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+}
+
+.forum-quiz-wrap {
+  width: 100%;
+  padding-top: 98px;
+  padding-bottom: 98px;
+}
+
+.forum-quiz {
+  width: 632px;
+  height: 656px;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: #eee;
+}
+
+.forum-quiz-tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.forum-quiz-tit .forum-quiz-tit__top {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+.forum-quiz-tit .forum-quiz-tit__more {
+  font-size: 15px;
+  font-weight: 400;
+  color: #555;
+}
+
+.forum-quiz-lst-g {
+  padding-top: 48px;
+}
+
+.forum-quiz-lst {
+  width: 552px;
+  height: 152px;
+  border-radius: 16px;
+  padding: 20px 40px;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.forum-quiz-lst__link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forum-quiz-lst-tit__top {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.forum-quiz-lst-tit__sub {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 8px;
+  color: #333;
+}
+
+.forum-quiz-lst-tags {
+  display: flex;
+  padding-top: 8px;
+}
+
+.forum-quiz-lst__tag {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 9px;
+  margin-right: 10px;
+  border-radius: 16px;
+  background-color: #1176AA;
+}
+
+.forum-quiz-lst-img {
+  display: flex;
+  align-items: center;
+}
+
+.forum-quiz-lst__icon {
+  display: block;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
 }/*# sourceMappingURL=comm.css.map */
