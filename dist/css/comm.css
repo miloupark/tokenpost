@@ -512,6 +512,8 @@ legend {
   margin-left: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mySwiper1 .type2 {
   position: relative;
@@ -529,6 +531,8 @@ legend {
   margin-left: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mySwiper1 .type3 {
   position: relative;
@@ -546,6 +550,8 @@ legend {
   margin-left: auto;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mySwiper1 .swiper-slide-tit {
   position: absolute;
@@ -827,37 +833,25 @@ legend {
   align-items: center;
 }
 .cypto-market-card .cypto-card-rank .cypto-card-rank__num {
-  display: block;
+  position: relative;
   width: 168px;
   height: 21px;
   font-size: 14px;
   font-weight: 500;
 }
-.cypto-market-card .cypto-card-rank .cypto-card-rank__icons {
-  position: relative;
-  display: block;
-  width: 21px;
-  height: 21px;
-}
-.cypto-market-card .cypto-card-rank .cypto-card-rank__icons::before {
+.cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
   position: absolute;
   content: "\f004";
   display: block;
   top: -2px;
   right: 0;
+  width: 21px;
+  height: 21px;
   font-size: 18px;
   font-weight: 400;
   font-family: "Line Awesome Free";
   color: #333;
   cursor: pointer;
-}
-.cypto-market-card .cypto-card-rank .cypto-card-rank__icons:hover {
-  content: "\f004";
-  font-size: 48px;
-  font-weight: 900;
-  font-family: "Line Awesome Free";
-  cursor: pointer;
-  color: #333;
 }
 .cypto-market-card .cypto-card-tit {
   display: flex;
@@ -1504,6 +1498,52 @@ header .current-date {
   padding-top: 16px;
 }
 
+/* tablet */
+/* 1024px 이하일 경우 */
+@media screen and (max-width: 1024px) {
+  .wrap {
+    margin: 0 20%;
+  }
+  .mainnews-slider {
+    width: 1024px;
+    height: 100%;
+  }
+  .mainnews-slider .type1 {
+    width: 1024px;
+  }
+  .mainnews-slider .type1 .swiper-slide-1 {
+    display: none;
+  }
+  .mainnews-slider .type1 .swiper-slide-tit {
+    display: block;
+  }
+  .mainnews-slider .type1 span {
+    display: block;
+  }
+  .news-category-btn {
+    display: flex;
+    width: 1024px;
+    flex-direction: row;
+  }
+  .news-category-btn .news-category-btn-lst {
+    flex-wrap: wrap;
+  }
+}
+/* mobile */
+/* 큰 폰 */
+@media screen and (max-width: 744px) {
+  .mainnews-slider {
+    width: 744px;
+    height: 100%;
+  }
+  .mainnews-slider .type1 {
+    width: 744px;
+  }
+  .mainnews-slider .type1 .swiper-slide-1 {
+    display: none;
+  }
+}
+/* 작은 폰 */
 @font-face {
   font-family: "Pretendard-Thin";
   font-weight: 100;

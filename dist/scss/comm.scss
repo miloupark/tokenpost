@@ -8,6 +8,29 @@
   font-family: "Pretendard";
 }
 
+// .btn-g {
+//   // 일반적인 버튼
+//   &.red {
+//     background: red;
+//   }
+// }
+// .box-g {}
+// // title
+// .tit-sub {
+//   display: block;
+//   font-size: 28px;
+//   font-weight: 700;
+//   color: #333;
+// }
+// // icon
+
+// // btn
+
+// // more
+
+// // line
+
+
 .wrap {
   width: 1280px;
   margin: 0 auto;
@@ -219,6 +242,7 @@
     margin-left: auto;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    object-fit: cover;
   }
   .type2 { 
     position: relative;
@@ -235,6 +259,7 @@
     margin-left: auto;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    object-fit: cover;
   }
   .type3 { 
     position: relative;
@@ -251,6 +276,7 @@
     margin-left: auto;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    object-fit: cover;
   }
   .swiper-slide-tit {
     position: absolute;
@@ -573,36 +599,24 @@
     justify-content: space-between;
     align-items: center;
     .cypto-card-rank__num {
-      display: block;
+      position: relative;
       width: 168px;
       height: 21px;
       font-size: 14px;
       font-weight: 500;
-    }
-    .cypto-card-rank__icons {
-      position: relative;
-      display: block;
-      width: 21px;
-      height: 21px;
       &::before {
         position: absolute;
         content: "\f004";
         display: block;
         top: -2px;
         right: 0;
+        width: 21px;
+        height: 21px;
         font-size: 18px;
         font-weight: 400;
         font-family: 'Line Awesome Free';
         color: #333;
         cursor: pointer;
-      }
-      &:hover {
-        content: "\f004";
-        font-size: 48px;
-        font-weight: 900;
-        font-family: 'Line Awesome Free';
-        cursor: pointer;
-        color: #333;
       }
     }
   }
@@ -1347,4 +1361,62 @@ header .current-date{
   padding-top: 16px;
 }
 
+
+@media screen and (max-width: 1280px) {
+ 
+
+}
+
+/* tablet */
+/* 1024px 이하일 경우 */
+@media screen and (max-width: 1024px) {
+  .wrap {
+    margin: 0 20%;
+  }
+  .mainnews-slider {
+    width: 1024px;
+    height: 100%; 
+    .type1 {
+      width: 1024px;
+      .swiper-slide-1 {
+        display: none;
+      }
+      .swiper-slide-tit {
+        display: block;
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+  .news-category-btn {
+    display: flex;
+    width: 1024px;
+    flex-direction: row;
+    .news-category-btn-lst {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+/* mobile */
+/* 큰 폰 */
+@media screen and (max-width: 744px) {
+  .mainnews-slider {
+    width: 744px;
+    height: 100%; 
+    .type1 {
+      width: 744px;
+      .swiper-slide-1 {
+        display: none;
+      }
+   
+    }
+  }
+}
+
+/* 작은 폰 */
+@media screen and (max-width: 428px) {
+
+} 
 @import "main", "forum";
