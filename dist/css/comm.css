@@ -320,7 +320,7 @@ legend {
 }
 .header .main-logo a {
   font-size: 24px;
-  font-family: "Pretendard-Bold";
+  font-weight: 700;
 }
 .header .header-gnb {
   position: relative;
@@ -632,13 +632,13 @@ legend {
 .swiper-wrapper {
   display: flex;
 }
+.swiper-wrapper .newscards-wrap {
+  margin-right: 16px;
+}
 .swiper-wrapper .swiper-slide {
   display: block;
   width: 280px;
   font-size: 18px;
-}
-.swiper-wrapper .swiper-slide .newscards-wrap {
-  margin-right: 16px;
 }
 .swiper-wrapper .swiper-slide .swiper-slide-image {
   display: block;
@@ -657,12 +657,12 @@ legend {
   background-color: #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 4px 4px 16px rgba(0, 0, 0, 0.09);
 }
-.swiper-wrapper .swiper-slide .swiper-slide-txtcont .swiper-slide-txtcont__keyword {
+.swiper-wrapper .swiper-slide .swiper-slide-txtcont__keyword {
   font-size: 12px;
   font-weight: 500;
   color: #555;
 }
-.swiper-wrapper .swiper-slide .swiper-slide-txtcont .swiper-slide-txtcont__tit {
+.swiper-wrapper .swiper-slide .swiper-slide-txtcont__tit {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1502,47 +1502,116 @@ header .current-date {
 /* 1024px 이하일 경우 */
 @media screen and (max-width: 1024px) {
   .wrap {
-    margin: 0 20%;
+    width: 1024px;
+  }
+  .header {
+    width: 1024px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .header .main-logo {
+    display: flex;
+    align-items: center;
+  }
+  .header .main-logo a {
+    font-size: 20px;
+    font-weight: 700;
   }
   .mainnews-slider {
-    width: 1024px;
+    width: 864px;
     height: 100%;
   }
-  .mainnews-slider .type1 {
+  .mainnews-slider .mySwiper1 {
+    width: 864px;
+    height: 100%;
+  }
+  .mainnews-slider .type1,
+  .mainnews-slider .type2,
+  .mainnews-slider .type3 {
+    display: block;
     width: 1024px;
   }
-  .mainnews-slider .type1 .swiper-slide-1 {
+  .mainnews-slider .type1 .swiper-slide-1,
+  .mainnews-slider .type1 .swiper-slide-2,
+  .mainnews-slider .type1 .swiper-slide-3,
+  .mainnews-slider .type2 .swiper-slide-1,
+  .mainnews-slider .type2 .swiper-slide-2,
+  .mainnews-slider .type2 .swiper-slide-3,
+  .mainnews-slider .type3 .swiper-slide-1,
+  .mainnews-slider .type3 .swiper-slide-2,
+  .mainnews-slider .type3 .swiper-slide-3 {
     display: none;
   }
-  .mainnews-slider .type1 .swiper-slide-tit {
-    display: block;
+  .mainnews-slider .type1 .swiper-slide-tit,
+  .mainnews-slider .type2 .swiper-slide-tit,
+  .mainnews-slider .type3 .swiper-slide-tit {
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 560px;
+    word-break: keep-all;
   }
-  .mainnews-slider .type1 span {
-    display: block;
+  .mainnews-slider .type1 .swiper-slide-cont,
+  .mainnews-slider .type2 .swiper-slide-cont,
+  .mainnews-slider .type3 .swiper-slide-cont {
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 400px;
+    word-break: keep-all;
   }
   .news-category-btn {
     display: flex;
-    width: 1024px;
-    flex-direction: row;
+    width: 864px;
+    height: 200px;
+    margin: 0 auto;
   }
   .news-category-btn .news-category-btn-lst {
+    display: flex;
     flex-wrap: wrap;
+    width: 864px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .news-category-btn .news-category-btn-lst .news-category-btn-box {
+    display: flex;
+    width: 200px;
+    margin-right: 0;
+  }
+  .newscards-slider {
+    width: 1024px;
+    margin-top: 12px;
+    margin: 0 auto;
+  }
+  .newscards-slider .newscards-swiper .swiper-wrapper .newscards-wrap {
+    display: block;
+    width: 240px;
+  }
+  .newscards-slider .newscards-swiper .swiper-wrapper .newscards-wrap .swiper-slide-txtcont__tit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 172px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 600;
+    overflow: hidden;
+    padding-top: 4px;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    color: #333;
+  }
+  .splide {
+    width: 1024px;
+    height: 100%;
+  }
+  .splide__slide {
+    display: block;
+    width: 300px;
+    height: 340px;
+    margin-right: 10px;
   }
 }
 /* mobile */
 /* 큰 폰 */
-@media screen and (max-width: 744px) {
-  .mainnews-slider {
-    width: 744px;
-    height: 100%;
-  }
-  .mainnews-slider .type1 {
-    width: 744px;
-  }
-  .mainnews-slider .type1 .swiper-slide-1 {
-    display: none;
-  }
-}
 /* 작은 폰 */
 @font-face {
   font-family: "Pretendard-Thin";

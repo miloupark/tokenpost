@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper1", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
+  }
 });
 
 // tokenpost main / newscards slider
@@ -16,6 +16,17 @@ var swiper = new Swiper(".mySwiper2", {
     delay: 2500,
     disableOnInteraction: false,
   },
+  breakpoint: {
+    1024: {
+      slidesPerView: 4
+    },
+    744: {
+      slidesPerView: 1
+    },
+    428: {
+      slidesPerView: 1
+    }
+  }
 });
 
 // tokenpost main / keyword newscards slider
@@ -23,5 +34,10 @@ var swiper = new Swiper(".mySwiper2", {
   type   : 'loop',
   drag   : 'free',
   perPage: 3,
+  breakpoint: {
+    1024: {
+      perPage: 2,
+    }
+  }
 } );
 splide.mount();
