@@ -32,7 +32,8 @@
 
 
 .wrap {
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 .header {
@@ -86,9 +87,7 @@
     align-items: center;
     .btn-g {
       display: block;
-      width: 32px;
-      height: 32px;
-      margin-left: 16px;
+      margin-left: 24px;
       &::before {
         font-size: 24px;
         font-weight: 900;
@@ -201,14 +200,13 @@
 .header-icons-all-login {
   display: flex;
   justify-content: space-between;
-  width: 1280px;
+  width: 100%;
   height: 80px;
   margin: 0 auto;
   border-radius: 20px;
   margin-top: 30px;
   padding: 29px 40px;
   background-color: #fff;
-
 }
 
 // tokenpost main / mainnews slider
@@ -217,19 +215,19 @@
   margin: 0 auto;
 }
 .mySwiper1 {
-  width: 1280px;
+  width: 100%;
   height: 416px;
   .swiper-slide {
     display: block;
     justify-content: center;
     align-items: center;
-    width: 1280px;
+    width: 100%;
     height: 416px;
     // font-size: 18px;
   }
   .type1 {
     position: relative;
-    width: 1280px;
+    width: 100%;
     height: 416px;
     object-fit: cover;
     border-radius: 20px;
@@ -237,7 +235,7 @@
   }
   .swiper-slide-1 {
     display: block;
-    width: 536px;
+    width: 44%;
     height: 100%;
     margin-left: auto;
     border-top-right-radius: 20px;
@@ -246,7 +244,7 @@
   }
   .type2 { 
     position: relative;
-    width: 1280px;
+    width: 100%;
     height: 416px;
     object-fit: cover;
     border-radius: 20px;
@@ -254,7 +252,7 @@
   }
   .swiper-slide-2 {
     display: block;
-    width: 536px;
+    width: 44%;
     height: 100%;
     margin-left: auto;
     border-top-right-radius: 20px;
@@ -263,7 +261,7 @@
   }
   .type3 { 
     position: relative;
-    width: 1280px;
+    width: 100%;
     height: 416px;
     object-fit: cover;
     border-radius: 20px;
@@ -271,7 +269,7 @@
   }
   .swiper-slide-3 {
     display: block;
-    width: 536px;
+    width: 44%;
     height: 100%;
     margin-left: auto;
     border-top-right-radius: 20px;
@@ -282,7 +280,7 @@
     position: absolute;
     top: 100px;
     left: 80px;
-    width: 563px;
+    width: 44%;
     display: block;
     font-size: 40px;
     font-weight: 700;
@@ -292,10 +290,8 @@
     position: absolute;
     top: 240px;
     left: 80px;
-    width: 560px;
+    width: 40%;
     display: block;
-    // width: 100%;
-    // height: 100%;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
@@ -311,7 +307,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 153px;
+      width: 100%;
       height: 72px;
       border-radius: 10px;
       margin-right: 8px;
@@ -322,21 +318,20 @@
         margin-right: 0;
       }
       &:hover{
-        transform: translateY(-8px);
-        // transition: all 0.3s ease-out;
+        transform: translateY(-8%);
       }
       .news-category-btn-box-link {
         display: flex;
+        justify-content: center;
         .news-category-btn-icons {
           display: block;
-          width: 40px;
-          height: 40px;
+          width: 28%;
         }
         .news-category-btn-txt {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 80px;
+          width: 48%;
           font-size: 15px;
           font-weight: 700;
           // padding-left: 16px;
@@ -355,8 +350,7 @@
 }
 .newscards-wrap {
   display: block;
-  width: 280px;
-  // height: 316px;
+  width: 20%;
   font-size: 18px;
   margin-right: 16px;
 }
@@ -365,53 +359,46 @@
   .newscards-wrap {
     margin-right: 16px;
   }
-  .swiper-slide {
+  .swiper-slide-image {
     display: block;
-    width: 280px;
-    // height: 316px;
-    font-size: 18px;
-    .swiper-slide-image {
-      display: block;
-      width: 100%;
-      height: 188px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .swiper-slide-txtcont {
-      display: block;
-      width: 100%;
-      height: 128px;
-      padding: 16px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 4px 16px rgba(0,0,0,.09);
-    }
-    .swiper-slide-txtcont__keyword {
-      font-size: 12px;
-      font-weight: 500;
-      color: #555;
-    }
-    .swiper-slide-txtcont__tit {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      width: 224px;
-      height: 56px;
-      font-size: 16px;
-      font-weight: 600;
-      overflow: hidden;
-      padding-top: 4px;
-      text-overflow: ellipsis;
-      word-break: break-word;
-      color: #333;
-    }
+    width: 100%;
+    height: 188px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .swiper-slide-txtcont {
+    display: block;
+    width: 100%;
+    height: 128px;
+    padding: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 4px 16px rgba(0,0,0,.09);
+  }
+  .swiper-slide-txtcont__keyword {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+  }
+  .swiper-slide-txtcont__tit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    padding-top: 4px;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    color: #333;
   }
 }
 // tokenpost main / keyword newscards slider
 .splide {
-  width: 1280px;
-  height: 100%;
+  width: 100%;
   margin: 0 auto;
   .splide__track {
     padding-top: 48px;
@@ -425,13 +412,13 @@
   }
   .splide__slide {
     display: block;
-    width: 400px;
+    width: 33%;
     height: 440px;
     margin-right: 10px;
     .keyword-newscards-slider-front {
       position: relative;
-      width: 400px;
-      height: 440px;
+      width: 100%;
+      height: 100%;
       background-image: url(../../images/mainslide-bg-Stellar.jpg);
       border-radius: 20px;
       transition: all 0.5s ease;
@@ -439,11 +426,13 @@
         .keyword-newscards-slider-back {
           display: block;
         }
+        .keyword-newscards-slider-front {
+          display: none;
+        }
       }
       .keyword-newscards-front__image {
         display: flex;
-        width: 200px;
-        height: 200px;
+        width: 50%;
         padding-top: 48px;
         padding-left: 100px;
       }
@@ -464,8 +453,6 @@
       }
       .keyword-newscards-front__icon {
         display: block;
-        width: 30px;
-        height: 30px;
         font-size: 32px;
         font-weight: 900;
         font-family: 'Line Awesome Free';
@@ -480,14 +467,13 @@
         color: #fff;
       }
     }
-    
     .keyword-newscards-slider-back {
       display: none;
       position: absolute;
       top: 0;
       left: 0;
-      width: 400px;
-      height: 440px;
+      width: 100%;
+      height: 100%;
       padding: 40px;
       border-radius: 20px;
       background-color: #eee;
@@ -498,29 +484,28 @@
       }
       .keyword-newscards-back-cont {
         display: block;
-        position: relative;
         padding-top: 40px;
         cursor: pointer;
-        &::before {
-          display: block;
-          position: absolute;
-          content: "\f061";
-          top: 34px;
-          right: 0;
-          width: 24px;
-          height: 24px;
-          font-size: 24px;
-          font-weight: 900;
-          font-family: 'Line Awesome Free';
+        .keyword-newscards-back-cont-lst {
+          position: relative;
+          padding-bottom: 20px;
+          &::before {
+            position: absolute;
+            content: "\f061";
+            top: -6px;
+            right: 0;
+            font-size: 24px;
+            font-weight: 900;
+            font-family: 'Line Awesome Free';
+          }
         }
-        .keyword-newscards-back-cont-lst__tit  {
+        .keyword-newscards-back-cont-lst__tit {
           display: block;
-          width: 216px;
+          width: 80%;
           height: 24px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          
         }
       }
     }
