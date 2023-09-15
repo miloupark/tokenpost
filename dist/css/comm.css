@@ -806,15 +806,15 @@ legend {
 .cypto-market-cards-wrap {
   display: flex;
   justify-content: space-between;
-  width: 848px;
+  width: 100%;
   height: 640px;
   flex-wrap: wrap;
 }
 
 .cypto-market-card {
-  display: block;
+  display: flex;
   flex-wrap: wrap;
-  width: 200px;
+  width: 24%;
   height: 300px;
   padding: 16px 16px 24px;
   border-radius: 12px;
@@ -822,12 +822,13 @@ legend {
 }
 .cypto-market-card .cypto-card-rank {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 .cypto-market-card .cypto-card-rank .cypto-card-rank__num {
   position: relative;
-  width: 168px;
+  width: 100%;
   height: 21px;
   font-size: 14px;
   font-weight: 500;
@@ -838,8 +839,6 @@ legend {
   display: block;
   top: -2px;
   right: 0;
-  width: 21px;
-  height: 21px;
   font-size: 18px;
   font-weight: 400;
   font-family: "Line Awesome Free";
@@ -848,21 +847,22 @@ legend {
 }
 .cypto-market-card .cypto-card-tit {
   display: flex;
+  width: 100%;
   padding-top: 8px;
 }
-.cypto-market-card .cypto-card-tit-image {
+.cypto-market-card .cypto-card-tit .cypto-card-tit-image {
   display: flex;
+  width: 24%;
   align-items: center;
 }
-.cypto-market-card .cypto-card-tit-image__link {
+.cypto-market-card .cypto-card-tit .cypto-card-tit-image .cypto-card-tit-image__link {
   display: block;
-  width: 30px;
-  height: 30px;
-  padding-right: 8px;
+  width: 70%;
 }
 .cypto-market-card .cypto-card-tit-txt {
   display: flex;
   flex-direction: column;
+  width: 76%;
 }
 .cypto-market-card .cypto-card-tit-txt .cypto-card-tit-txt__top {
   display: block;
@@ -874,6 +874,9 @@ legend {
   font-size: 14px;
   font-weight: 500;
   margin-top: -4px;
+}
+.cypto-market-card .crypto-card-graph {
+  width: 100%;
 }
 .cypto-market-card .crypto-card-graph__img {
   display: block;
@@ -907,11 +910,14 @@ legend {
   color: #2F6ED6;
   padding: 12px 0 12px 0;
 }
-.cypto-market-card .crypto-card-price_link {
+.cypto-market-card .crypto-card-price {
+  width: 100%;
+}
+.cypto-market-card .crypto-card-price .crypto-card-price_link {
   display: flex;
   justify-content: space-between;
 }
-.cypto-market-card .crypto-card-price_link .crypto-card-price__txt {
+.cypto-market-card .crypto-card-price .crypto-card-price_link .crypto-card-price__txt {
   font-size: 13px;
   font-weight: 400;
   color: #555;

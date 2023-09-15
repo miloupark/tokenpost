@@ -531,25 +531,26 @@
 .cypto-market-cards-wrap {
   display: flex;
   justify-content: space-between;
-  width: 848px;
+  width: 100%;
   height: 640px;
   flex-wrap: wrap;
 }
 .cypto-market-card {
-  display: block;
+  display: flex;
   flex-wrap: wrap;
-  width: 200px;
+  width: 24%;
   height: 300px;
   padding: 16px 16px 24px;
   border-radius: 12px;
   background: #fff;
   .cypto-card-rank {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     .cypto-card-rank__num {
       position: relative;
-      width: 168px;
+      width: 100%;
       height: 21px;
       font-size: 14px;
       font-weight: 500;
@@ -559,8 +560,6 @@
         display: block;
         top: -2px;
         right: 0;
-        width: 21px;
-        height: 21px;
         font-size: 18px;
         font-weight: 400;
         font-family: 'Line Awesome Free';
@@ -571,21 +570,22 @@
   }
   .cypto-card-tit {
     display: flex;
+    width: 100%;
     padding-top: 8px;
-  }
-  .cypto-card-tit-image {
-    display: flex;
-    align-items: center;
-  }
-  .cypto-card-tit-image__link {
-    display: block;
-    width: 30px;
-    height: 30px;
-    padding-right: 8px;
+    .cypto-card-tit-image {
+      display: flex;
+      width: 24%;
+      align-items: center;
+      .cypto-card-tit-image__link {
+        display: block;
+        width: 70%;
+      }
+    }
   }
   .cypto-card-tit-txt {
     display: flex;
     flex-direction: column;
+    width: 76%;
     .cypto-card-tit-txt__top {
       display: block;
       font-size: 12px;
@@ -597,6 +597,9 @@
       font-weight: 500;
       margin-top: -4px;
     }
+  }
+  .crypto-card-graph {
+    width: 100%;
   }
   .crypto-card-graph__img {
     display: block;
@@ -629,13 +632,16 @@
       padding: 12px 0 12px 0;
     }
   }
-  .crypto-card-price_link {
-    display: flex;
-    justify-content: space-between;
-    .crypto-card-price__txt {
-      font-size: 13px;
-      font-weight: 400;
-      color: #555;
+  .crypto-card-price {
+    width: 100%;
+    .crypto-card-price_link {
+      display: flex;
+      justify-content: space-between;
+      .crypto-card-price__txt {
+        font-size: 13px;
+        font-weight: 400;
+        color: #555;
+      }
     }
   }
   .crypto-card-date {
