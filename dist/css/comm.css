@@ -738,7 +738,7 @@ legend {
   display: block;
   font-size: 16px;
   font-weight: 300;
-  padding-top: 16px;
+  padding-top: 8px;
   color: #fff;
 }
 .splide .splide__slide .keyword-newscards-slider-back {
@@ -837,7 +837,7 @@ legend {
   position: absolute;
   content: "\f004";
   display: block;
-  top: -2px;
+  top: -3px;
   right: 0;
   font-size: 18px;
   font-weight: 400;
@@ -880,7 +880,7 @@ legend {
 }
 .cypto-market-card .crypto-card-graph__img {
   display: block;
-  width: 168px;
+  width: 100%;
   height: 90px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -911,13 +911,11 @@ legend {
   padding: 12px 0 12px 0;
 }
 .cypto-market-card .crypto-card-price {
-  width: 100%;
-}
-.cypto-market-card .crypto-card-price .crypto-card-price_link {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-.cypto-market-card .crypto-card-price .crypto-card-price_link .crypto-card-price__txt {
+.cypto-market-card .crypto-card-price .crypto-card-price__txt {
   font-size: 13px;
   font-weight: 400;
   color: #555;
@@ -925,6 +923,7 @@ legend {
 .cypto-market-card .crypto-card-date {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .cypto-market-card .crypto-card-date .crypto-card-date__txt {
   font-size: 13px;
@@ -933,7 +932,7 @@ legend {
 }
 
 .main-event-bnr {
-  width: 1280px;
+  width: 100%;
   height: 248px;
   margin: 114px auto;
   border-radius: 20px;
@@ -942,6 +941,7 @@ legend {
 .main-dailyinfo {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -954,7 +954,7 @@ legend {
 }
 
 .wrapper {
-  width: 524px;
+  width: 40%;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -1061,7 +1061,7 @@ header .current-date {
 }
 
 .dailyinfo-today-info {
-  width: 448px;
+  width: 35%;
   height: 520px;
   border-radius: 20px;
   padding: 32px;
@@ -1079,7 +1079,7 @@ header .current-date {
 .dailyinfo-today-info-tit::before {
   position: absolute;
   content: "\f104";
-  top: 0;
+  top: -2px;
   left: 0;
   font-size: 24px;
   font-weight: 900;
@@ -1089,7 +1089,7 @@ header .current-date {
 .dailyinfo-today-info-tit::after {
   position: absolute;
   content: "\f105";
-  top: 0;
+  top: -2px;
   left: 132px;
   font-size: 24px;
   font-weight: 900;
@@ -1098,7 +1098,7 @@ header .current-date {
 }
 
 .dailyinfo-today-list-cont-wrap {
-  width: 404px;
+  width: 103%;
   height: 374px;
   overflow: auto;
   margin-top: 20px;
@@ -1107,7 +1107,7 @@ header .current-date {
 .dailyinfo-today-list-cont {
   display: flex;
   justify-content: space-between;
-  width: 360px;
+  width: 95%;
   border-radius: 12px;
   background-color: #fff;
   padding: 20px;
@@ -1115,20 +1115,20 @@ header .current-date {
 }
 .dailyinfo-today-list-cont .dailyinfo-today-list-cont-logo-img {
   display: block;
-  width: 64px;
+  width: 100%;
   height: 64px;
 }
 
 .dailyinfo-today-list-cont-txt {
   display: block;
-  width: 232px;
+  width: 72%;
 }
 .dailyinfo-today-list-cont-txt .dailyinfo-today-list-cont__tit {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   display: block;
-  width: 216px;
+  width: 100%;
   height: 20px;
   font-size: 16px;
   font-weight: 600;
@@ -1152,17 +1152,21 @@ header .current-date {
   color: #555;
 }
 
+.dailyinfo-event {
+  display: block;
+  width: 19%;
+}
+
 .dailyinfo-event-lst {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 248px;
   height: 520px;
 }
 
 .dailyinfo-event-airdrop {
   display: block;
-  width: 248px;
+  width: 100%;
   height: 248px;
   border-radius: 20px;
   padding: 32px;
@@ -1171,8 +1175,6 @@ header .current-date {
   cursor: pointer;
 }
 .dailyinfo-event-airdrop:hover {
-  width: 248px;
-  height: 248px;
   border-radius: 20px;
   background: url(../../images/airdrop1.jpg) no-repeat 0 0;
   background-size: 248px 248px;
@@ -1210,7 +1212,7 @@ header .current-date {
 
 .dailyinfo-event-quiz {
   display: block;
-  width: 248px;
+  width: 100%;
   height: 248px;
   border-radius: 20px;
   padding: 32px;
@@ -1219,8 +1221,6 @@ header .current-date {
   cursor: pointer;
 }
 .dailyinfo-event-quiz:hover {
-  width: 248px;
-  height: 248px;
   border-radius: 20px;
   background: url(../../images/quiz.jpeg) no-repeat 0 0;
   background-size: 248px 248px;
@@ -1265,150 +1265,94 @@ header .current-date {
   background-color: #eee;
 }
 
-.main-footer-btn__lst {
+.main-footer-btn-lst {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 808px;
+  width: 64%;
   height: 100%;
 }
 
-.main-footer-btn__forum {
-  display: flex;
-  align-items: center;
-  width: 248px;
+.main-footer-btn-g {
+  position: relative;
+  width: 30%;
   height: 96px;
-  padding: 20px;
+  padding: 24px 22px;
   border-radius: 12px;
   background-color: #fff;
 }
-.main-footer-btn__forum .main-footer-btn__forum__icon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-}
-.main-footer-btn__forum .main-footer-btn__forum__icon::before {
+.main-footer-btn-g::before {
   position: absolute;
   content: "\f27a";
-  top: 0;
-  left: 0;
+  top: 32px;
+  left: 24px;
   font-size: 24px;
   font-weight: 400;
   font-family: "Font Awesome 6 Free";
   color: #333;
   transform: scaleX(-1);
 }
-.main-footer-btn__forum .main-footer-btn__forum__txt {
-  display: block;
-  padding-left: 16px;
-}
-.main-footer-btn__forum .main-footer-btn__forum__txt .main-footer-btn__forum__subtit {
-  display: flex;
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
-}
-.main-footer-btn__forum .main-footer-btn__forum__txt .main-footer-btn__forum__tit {
-  display: flex;
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
-}
-.main-footer-btn__forum .main-footer-btn__forum__txt .main-footer-btn__forum__tit::after {
-  content: "\f105";
-  font-size: 16px;
-  font-weight: 900;
-  font-family: "Line Awesome Free";
-}
-
-.main-footer-btn__crypto {
-  display: flex;
-  align-items: center;
-  width: 248px;
-  height: 96px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #fff;
-}
-.main-footer-btn__crypto .main-footer-btn__crypto__icon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-}
-.main-footer-btn__crypto .main-footer-btn__crypto__icon::before {
+.main-footer-btn-g:nth-child(2)::before {
   position: absolute;
   content: "\f51e";
-  top: -8px;
-  left: 0;
+  top: 24px;
+  left: 20px;
   font-size: 32px;
   font-weight: 900;
   font-family: "Line Awesome Free";
   color: #333;
 }
-.main-footer-btn__crypto .main-footer-btn__crypto__txt {
-  display: block;
-  padding-left: 16px;
+.main-footer-btn-g:nth-child(3)::before {
+  position: absolute;
+  content: "\f015";
+  top: 24px;
+  left: 20px;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+  color: #333;
 }
-.main-footer-btn__crypto .main-footer-btn__crypto__txt .main-footer-btn__crypto__subtit {
+.main-footer-btn-g .main-footer-btn-g-txt {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+}
+.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__subtit {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   color: #555;
 }
-.main-footer-btn__crypto .main-footer-btn__crypto__txt .main-footer-btn__crypto__tit {
+.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__tit {
   display: flex;
   font-size: 16px;
   font-weight: 500;
   color: #333;
 }
-.main-footer-btn__crypto .main-footer-btn__crypto__txt .main-footer-btn__crypto__tit::after {
+.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__tit::after {
   content: "\f105";
   font-size: 16px;
   font-weight: 900;
   font-family: "Line Awesome Free";
 }
 
-.main-footer-btn__cs {
-  display: flex;
-  align-items: center;
-  width: 248px;
-  height: 96px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #fff;
-}
-.main-footer-btn__cs .main-footer-btn__cs__icon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-}
-.main-footer-btn__cs .main-footer-btn__cs__icon::before {
-  position: absolute;
-  content: "\f015";
-  top: 0;
-  left: 0;
-  font-size: 24px;
-  font-weight: 900;
-  font-family: "Line Awesome Free";
-  color: #333;
-}
-.main-footer-btn__cs .main-footer-btn__cs__txt {
+.main-footer-btn__crypto__txt {
   display: block;
   padding-left: 16px;
 }
-.main-footer-btn__cs .main-footer-btn__cs__txt .main-footer-btn__cs__subtit {
+.main-footer-btn__crypto__txt .main-footer-btn__crypto__subtit {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   color: #555;
 }
-.main-footer-btn__cs .main-footer-btn__cs__txt .main-footer-btn__cs__tit {
+.main-footer-btn__crypto__txt .main-footer-btn__crypto__tit {
   display: flex;
   font-size: 16px;
   font-weight: 500;
   color: #333;
 }
-.main-footer-btn__cs .main-footer-btn__cs__txt .main-footer-btn__cs__tit::after {
+.main-footer-btn__crypto__txt .main-footer-btn__crypto__tit::after {
   content: "\f105";
   font-size: 16px;
   font-weight: 900;
@@ -1416,7 +1360,7 @@ header .current-date {
 }
 
 .main-footer-wrap {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 .main-footer-wrap .main-footer-category__lst {
