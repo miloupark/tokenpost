@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper1", {
 
 // tokenpost main / newscards slider
 var swiper = new Swiper(".mySwiper2", {
-  slidesPerView: 5,
+  slidesPerView: 3,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -25,6 +25,9 @@ var swiper = new Swiper(".mySwiper2", {
     },
     428: {
       slidesPerView: 1
+    },
+    1440: {
+      slidesPerView: 5
     }
   }
 });
@@ -34,10 +37,10 @@ var swiper = new Swiper(".mySwiper2", {
   type   : 'loop',
   drag   : 'free',
   perPage: 3,
-  breakpoint: {
-    1024: {
-      perPage: 2,
-    }
-  }
+  // breakpoint: {
+  //   1024: {
+  //     perPage: 2,
+  //   }
+  // }
 } );
 splide.mount();
