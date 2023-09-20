@@ -12,23 +12,22 @@ var swiper = new Swiper(".mySwiper1", {
 // tokenpost main / newscards slider
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: 5,
+  spaceBetween: 16,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
-  breakpoint: {
-    1024: {
-      slidesPerView: 4
+  breakpoints: {
+    428: {
+      slidesPerView: 1
     },
     744: {
       slidesPerView: 1
     },
-    428: {
-      slidesPerView: 1
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 24,
     },
-    1440: {
-      slidesPerView: 5
-    }
   }
 });
 
