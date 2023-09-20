@@ -33,14 +33,25 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 // tokenpost main / keyword newscards slider
-  var splide = new Splide( '.splide', {
-  type   : 'loop',
-  drag   : 'free',
-  perPage: 3,
-  // breakpoint: {
-  //   1024: {
-  //     perPage: 2,
-  //   }
-  // }
-} );
-splide.mount();
+var swiper = new Swiper(".mySwiper3", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+//   var splide = new Splide( '.splide', {
+//   type   : 'loop',
+//   drag   : 'free',
+//   perPage: 3,
+//   breakpoint: {
+//     1024: {
+//       perPage: 2,
+//     }
+//   }
+// } );
+// splide.mount();

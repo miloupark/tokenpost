@@ -573,6 +573,11 @@ legend {
   color: #fff;
 }
 
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  color: #1176AA;
+}
+
 .news-category-btn {
   padding-top: 16px;
 }
@@ -616,7 +621,7 @@ legend {
 
 .newscards-slider {
   width: 100%;
-  height: 330px;
+  height: 334px;
   margin-top: 32px;
   overflow: hidden;
 }
@@ -672,77 +677,68 @@ legend {
   color: #333;
 }
 
-.splide {
+.mySwiper3 {
   width: 100%;
   margin: 0 auto;
+  padding-top: 96px;
 }
-.splide .splide__track {
-  padding-top: 48px;
-}
-.splide .keyword-newscards-slider-tit {
+.mySwiper3 .keyword-newscards-tit {
   display: flex;
   justify-content: center;
   font-size: 28px;
   font-weight: 700;
-  margin-top: 100px;
+  padding-bottom: 56px;
 }
-.splide .splide__slide {
-  display: block;
+.mySwiper3 .keyword-newscard {
+  position: relative;
   width: 33%;
   height: 440px;
   margin-right: 10px;
 }
-.splide .splide__slide .keyword-newscards-slider-front {
+.mySwiper3 .keyword-newscard .keyword-newscard-front {
   position: relative;
   width: 100%;
   height: 100%;
   background-image: url(../../images/mainslide-bg-Stellar.jpg);
   border-radius: 20px;
-  transition: all 0.5s ease;
+  z-index: 100;
 }
-.splide .splide__slide .keyword-newscards-slider-front:hover .keyword-newscards-slider-back {
-  display: block;
-}
-.splide .splide__slide .keyword-newscards-slider-front:hover .keyword-newscards-slider-front {
-  display: none;
-}
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__image {
+.mySwiper3 .keyword-newscard .keyword-newscard-front .keyword-newscard-front__image {
   display: flex;
   width: 50%;
   padding-top: 48px;
   padding-left: 100px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front-info {
+.mySwiper3 .keyword-newscard .keyword-newscard-front .keyword-newscard-front-info {
   position: relative;
   padding: 40px;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front-info .keyword-newscards-front-info-top {
-  display: flex;
-}
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__tit {
+.mySwiper3 .keyword-newscard .keyword-newscard-front .keyword-newscards-front-tit {
+  position: relative;
   font-size: 28px;
   font-weight: 700;
   padding-right: 16px;
-}
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__tit .keyword-newscards-front__tit__txt {
   color: #fff;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__icon {
-  display: block;
+.mySwiper3 .keyword-newscard .keyword-newscard-front .keyword-newscards-front-tit::before {
+  position: absolute;
+  top: 0;
+  left: 104px;
+  content: "\f35d";
   font-size: 32px;
   font-weight: 900;
   font-family: "Line Awesome Free";
   margin-top: -4px;
   color: #fff;
 }
-.splide .splide__slide .keyword-newscards-slider-front .keyword-newscards-front__subtit {
+.mySwiper3 .keyword-newscard .keyword-newscard-front .keyword-newscard-front__subtit {
   display: block;
   font-size: 16px;
   font-weight: 300;
   padding-top: 8px;
   color: #fff;
 }
-.splide .splide__slide .keyword-newscards-slider-back {
+.mySwiper3 .keyword-newscard .keyword-newscard-back {
   display: none;
   position: absolute;
   top: 0;
@@ -753,21 +749,21 @@ legend {
   border-radius: 20px;
   background-color: #eee;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back__tit {
+.mySwiper3 .keyword-newscard .keyword-newscard-back .keyword-newscard-back__tit {
   display: block;
   font-size: 28px;
   font-weight: 700;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont {
+.mySwiper3 .keyword-newscard .keyword-newscard-back .keyword-newscard-back-cont {
   display: block;
   padding-top: 40px;
   cursor: pointer;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont .keyword-newscards-back-cont-lst {
+.mySwiper3 .keyword-newscard .keyword-newscard-back .keyword-newscard-back-cont .keyword-newscard-back-cont-lst {
   position: relative;
   padding-bottom: 20px;
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont .keyword-newscards-back-cont-lst::before {
+.mySwiper3 .keyword-newscard .keyword-newscard-back .keyword-newscard-back-cont .keyword-newscard-back-cont-lst::before {
   position: absolute;
   content: "\f061";
   top: -6px;
@@ -776,13 +772,26 @@ legend {
   font-weight: 900;
   font-family: "Line Awesome Free";
 }
-.splide .splide__slide .keyword-newscards-slider-back .keyword-newscards-back-cont .keyword-newscards-back-cont-lst__tit {
+.mySwiper3 .keyword-newscard .keyword-newscard-back .keyword-newscard-back-cont .keyword-newscard-back-cont-lst__tit {
   display: block;
   width: 80%;
   height: 24px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.mySwiper3 .swiper-button-prev:after, .mySwiper3 .swiper-rtl .swiper-button-next:after,
+.mySwiper3 .swiper-button-next:after, .mySwiper3 .swiper-rtl .swiper-button-prev:after {
+  margin-top: 200px;
+  color: #fff;
+}
+
+.mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-front {
+  display: none;
+}
+
+.mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-back {
+  display: block;
 }
 
 .cypto-market-price-wrap {

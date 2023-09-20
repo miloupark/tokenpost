@@ -297,6 +297,10 @@
     color: #fff;
   }
 }
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  color: #1176AA;
+}
 
 // tokenpost main / news category buttons
 .news-category-btn {
@@ -344,7 +348,7 @@
 // tokenpost main / newscards slider
 .newscards-slider {
   width: 100%;
-  height: 330px;
+  height: 334px;
   margin-top: 32px;
   overflow: hidden;
 }
@@ -395,69 +399,59 @@
   color: #333;
 }
 // tokenpost main / keyword newscards slider
-.splide {
+.mySwiper3 {
   width: 100%;
   margin: 0 auto;
-  .splide__track {
-    padding-top: 48px;
-  }
-  .keyword-newscards-slider-tit {
+  padding-top: 96px;
+  .keyword-newscards-tit {
     display: flex;
     justify-content: center;
     font-size: 28px;
     font-weight: 700;
-    margin-top: 100px;
+    padding-bottom: 56px;
   }
-  .splide__slide {
-    display: block;
+  .keyword-newscard {
+    position: relative;
     width: 33%;
     height: 440px;
     margin-right: 10px;
-    .keyword-newscards-slider-front {
+    .keyword-newscard-front {
       position: relative;
       width: 100%;
       height: 100%;
       background-image: url(../../images/mainslide-bg-Stellar.jpg);
       border-radius: 20px;
-      transition: all 0.5s ease;
-      &:hover {
-        .keyword-newscards-slider-back {
-          display: block;
-        }
-        .keyword-newscards-slider-front {
-          display: none;
-        }
-      }
-      .keyword-newscards-front__image {
+      z-index: 100;
+      .keyword-newscard-front__image {
         display: flex;
         width: 50%;
         padding-top: 48px;
         padding-left: 100px;
       }
-      .keyword-newscards-front-info {
+      .keyword-newscard-front-info {
         position: relative;
         padding: 40px;
-        .keyword-newscards-front-info-top {
-          display: flex;
-        }
+      
       }
-      .keyword-newscards-front__tit {
+      .keyword-newscards-front-tit {
+        position: relative;
         font-size: 28px;
         font-weight: 700;
         padding-right: 16px;
-        .keyword-newscards-front__tit__txt {
+        color: #fff;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 104px;
+          content: "\f35d";
+          font-size: 32px;
+          font-weight: 900;
+          font-family: 'Line Awesome Free';
+          margin-top: -4px;
           color: #fff;
         }
       }
-      .keyword-newscards-front__icon {
-        display: block;
-        font-size: 32px;
-        font-weight: 900;
-        font-family: 'Line Awesome Free';
-        margin-top: -4px;
-        color: #fff;
-      }
-      .keyword-newscards-front__subtit {
+      .keyword-newscard-front__subtit {
         display: block;
         font-size: 16px;
         font-weight: 300;
@@ -465,7 +459,7 @@
         color: #fff;
       }
     }
-    .keyword-newscards-slider-back {
+    .keyword-newscard-back {
       display: none;
       position: absolute;
       top: 0;
@@ -475,16 +469,16 @@
       padding: 40px;
       border-radius: 20px;
       background-color: #eee;
-      .keyword-newscards-back__tit {
+      .keyword-newscard-back__tit {
         display: block;
         font-size: 28px;
         font-weight: 700;
       }
-      .keyword-newscards-back-cont {
+      .keyword-newscard-back-cont {
         display: block;
         padding-top: 40px;
         cursor: pointer;
-        .keyword-newscards-back-cont-lst {
+        .keyword-newscard-back-cont-lst {
           position: relative;
           padding-bottom: 20px;
           &::before {
@@ -497,7 +491,7 @@
             font-family: 'Line Awesome Free';
           }
         }
-        .keyword-newscards-back-cont-lst__tit {
+        .keyword-newscard-back-cont-lst__tit {
           display: block;
           width: 80%;
           height: 24px;
@@ -508,6 +502,17 @@
       }
     }
   }
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    margin-top: 200px;
+    color: #fff;
+  }
+}
+.mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-front {
+  display: none;
+}
+.mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-back {
+  display: block;
 }
 .cypto-market-price-wrap {
   display: block;
