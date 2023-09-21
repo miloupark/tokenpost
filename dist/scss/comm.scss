@@ -711,9 +711,9 @@ header .icons{
   &::before {
     position: absolute;
     content: "\f104";
-    top: -6px;
-    left: 0;
-    font-size: 32px;
+    top: -3px;
+    left: 4px;
+    font-size: 30px;
     font-weight: 900;
     font-family: "Line Awesome Free";
     color: #333;
@@ -721,9 +721,9 @@ header .icons{
   &::after {
     position: absolute;
     content: "\f105";
-    top: -6px;
-    right: 0;
-    font-size: 32px;
+    top: -3px;
+    right: -5px;
+    font-size: 30px;
     font-weight: 900;
     font-family: "Line Awesome Free";
     margin-left: 8px;
@@ -731,6 +731,7 @@ header .icons{
   }
 }
 header .icons span{
+  display: block;
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -818,26 +819,6 @@ header .current-date{
   color: #333;
   padding: 3px 32px;
   margin-bottom: 20px;
-  &::before {
-    position: absolute;
-    content: "\f104";
-    top: -2px;
-    left: 0;
-    font-size: 24px;
-    font-weight: 900;
-    font-family: 'Line Awesome Free';
-    color: #333;
-  }
-  &::after {
-    position: absolute;
-    content: "\f105";
-    top: -2px;
-    left: 132px;
-    font-size: 24px;
-    font-weight: 900;
-    font-family: 'Line Awesome Free';
-    color: #333;
-  }
 }
 .dailyinfo-today-list-cont-wrap {
   width: 103%;
