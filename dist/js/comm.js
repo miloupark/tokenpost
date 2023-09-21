@@ -46,11 +46,11 @@ var swiper = new Swiper(".mySwiper3", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    428: {
-      slidesPerView: 2
+    428: { /* 이하의 크기에서 옵션 값 */
+    slidesPerView: 1
     },
     744: {
-      slidesPerView: 3
+      slidesPerView: 1
     },
     1024: {
       slidesPerView: 3,

@@ -1191,8 +1191,9 @@ header .current-date{
     width: 1024px;
     margin: 0;
     .header {
-      width: 100%;
+      width: 90%;
       height: 100px;
+      margin: 0 auto;
       .main-logo {
         display: flex;
         align-items: center;
@@ -1201,9 +1202,12 @@ header .current-date{
           font-weight: 700;
         }
       }
+      .header-gnb .header-gnb-depth1 {
+        display: none;
+      }
     }
 
-    // tokenpost main / mainnews slider
+    // mainnews slider
     .mainnews-slider {
       width: 100%;
       margin: 0;
@@ -1221,21 +1225,20 @@ header .current-date{
             width: 40%;
             object-fit: cover;
           }
-          .swiper-slide-tit {
-            // width: max-content;
-            // max-width: 560px;
-            width: 46%;
-            word-break: keep-all;
-          }
-          .swiper-slide-cont {
-            width: max-content;
-            max-width: 400px;
-            word-break: keep-all;
-          }
+        }
+        .swiper-slide-tit {
+          // width: max-content;
+          // max-width: 560px;
+          width: 46%;
+          word-break: keep-all;
+        }
+        .swiper-slide-cont {
+          width: max-content;
+          max-width: 400px;
+          word-break: keep-all;
         }
       }
     }
-
     // tokenpost main / news category buttons
     .news-category-btn {
       display: flex;
@@ -1256,7 +1259,6 @@ header .current-date{
         }
       }
     }
-
     // tokenpost main / newscards slider
     .newscards-slider {
       width: 100%;
@@ -1345,7 +1347,6 @@ header .current-date{
       width: 100%;
       height: 248px;
       margin: 0;
-      // margin: 114px auto;
       border-radius: 20px;
       object-fit: contain;
     }
@@ -1368,41 +1369,41 @@ header .current-date{
     }
     .dailyinfo-today-list-cont {
       padding: 15px;
-      .dailyinfo-today-list-cont-logo {
-        display: flex;
-        align-items: center;
-        .dailyinfo-today-list-cont-logo-img {
-          width: 100%;
-          height: 56px;
-        }
-      }
+    }
+    .dailyinfo-today-list-cont-logo {
+      display: flex;
+      align-items: center;
+    }
+    .dailyinfo-today-list-cont-logo-img {
+      width: 100%;
+      height: 56px;
     }
     .dailyinfo-today-list-cont-txt {
       width: 70%;
     }
     .dailyinfo-event {
       height: 440px;
-      .dailyinfo-event-lst {
-        height: 440px;
-        .dailyinfo-event-airdrop,
-        .dailyinfo-event-quiz {
-          width: 100%;
-          height: 200px;
-          padding: 24px;
-          &:hover {
-            .dailyinfo-event-quiz__tit,
-            .dailyinfo-event-quiz__subtit {
-              display: none;
-            }
-            background-size: 100% 200px;
-          }
+    }
+    .dailyinfo-event-lst {
+      height: 440px;
+    }
+    .dailyinfo-event-airdrop,
+    .dailyinfo-event-quiz {
+      width: 100%;
+      height: 200px;
+      padding: 24px;
+      &:hover {
+        background-size: 100% 200px;
+        .dailyinfo-event-quiz__tit,
+        .dailyinfo-event-quiz__subtit {
+          display: none;
         }
       }
-      .dailyinfo-event-airdrop__subtit,
-      .dailyinfo-event-quiz__subtit {
-        font-size: 20px;
-        padding-top: 60px;
-      }
+    }
+    .dailyinfo-event-airdrop__subtit,
+    .dailyinfo-event-quiz__subtit {
+      font-size: 20px;
+      padding-top: 60px;
     }
     // tokenpost main / link button
     .main-footer-btn {
@@ -1422,6 +1423,50 @@ header .current-date{
 
 /* 작은 폰 */
 @media screen and (max-width: 428px) {
+  .wrap {
+    max-width: 428px;
+    width: 428px;
+  }
+  // header
+  .header .header-icons .header-icons__search::before,
+  .header .header-icons .header-icons__user::before {
+    display: none
+  }
+  // mainnews slider
+  .mySwiper1 {
+    .swiper-slide-1,
+    .swiper-slide-2,
+    .swiper-slide-3, 
+    .swiper-slide-cont {
+      display: none;
+    }
+    .type1 {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64%;
+    transform: translate(-50%, -50%)
+  }
+  
+  // news category buttons
+  .news-category-btn {
+    width: 100%;
+  }
 
+  .news-category-btn .news-category-btn-lst .news-category-btn-box {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
 } 
+
+
+
+
+
 @import "main", "forum";
