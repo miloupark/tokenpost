@@ -356,9 +356,6 @@
   display: block;
   width: 20%;
   font-size: 18px;
-}
-.swiper-wrapper {
-  // display: flex;
   .swiper-slide-image {
     display: block;
     width: 100%;
@@ -412,7 +409,6 @@
     position: relative;
     width: 33%;
     height: 440px;
-    margin-right: 10px;
     .keyword-newscard-front {
       position: relative;
       width: 100%;
@@ -422,14 +418,14 @@
       z-index: 100;
       .keyword-newscard-front__image {
         display: flex;
+        justify-content: center;
         width: 50%;
+        // height: 205px;
         padding-top: 48px;
         padding-left: 100px;
       }
       .keyword-newscard-front-info {
-        position: relative;
         padding: 40px;
-      
       }
       .keyword-newscards-front-tit {
         position: relative;
@@ -439,8 +435,22 @@
         color: #fff;
         &::before {
           position: absolute;
-          top: 0;
+          top: -4px;
           left: 104px;
+          content: "\f35d";
+          font-size: 32px;
+          font-weight: 900;
+          font-family: 'Line Awesome Free';
+          margin-top: -4px;
+          color: #fff;
+        }
+      }
+      .key-newscards-fr-tit-2 {
+        position: relative;
+        &::before {
+          position: absolute;
+          top: -4px;
+          left: 56px;
           content: "\f35d";
           font-size: 32px;
           font-weight: 900;
@@ -512,6 +522,8 @@
 .mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-back {
   display: block;
 }
+
+// tokenpost main / crypto market
 .cypto-market-price-wrap {
   display: block;
   width: 100%;
@@ -656,10 +668,13 @@
 }
 // tokenpost main / event bnr
 .main-event-bnr {
-  width: 100%;
-  height: 248px;
   margin: 114px auto;
-  border-radius: 20px;
+  .main-event-bnr__img {
+    width: 100%;
+    height: 248px;
+    border-radius: 20px;
+    object-fit: contain;
+  }
 }
 
 // tokenpost main / dailyinfo
@@ -692,6 +707,28 @@
 }
 header .icons{
   display: flex;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "\f104";
+    top: -6px;
+    left: 0;
+    font-size: 32px;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+    color: #333;
+  }
+  &::after {
+    position: absolute;
+    content: "\f105";
+    top: -6px;
+    right: 0;
+    font-size: 32px;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+    margin-left: 8px;
+    color: #333;
+  }
 }
 header .icons span{
   height: 38px;
@@ -1165,6 +1202,8 @@ header .current-date{
         }
       }
     }
+
+    // tokenpost main / mainnews slider
     .mainnews-slider {
       width: 100%;
       margin: 0;
@@ -1179,11 +1218,13 @@ header .current-date{
           .swiper-slide-1,
           .swiper-slide-2,
           .swiper-slide-3 {
-            display: none;
+            width: 40%;
+            object-fit: cover;
           }
           .swiper-slide-tit {
-            width: max-content;
-            max-width: 560px;
+            // width: max-content;
+            // max-width: 560px;
+            width: 46%;
             word-break: keep-all;
           }
           .swiper-slide-cont {
@@ -1194,6 +1235,8 @@ header .current-date{
         }
       }
     }
+
+    // tokenpost main / news category buttons
     .news-category-btn {
       display: flex;
       width: 100%;
@@ -1213,54 +1256,169 @@ header .current-date{
         }
       }
     }
+
+    // tokenpost main / newscards slider
     .newscards-slider {
-      width: 1024px;
+      width: 100%;
+      height: 268px;
       margin-top: 24px;
     }
-    .newscards-swiper {
-      .swiper-wrapper {
-        .newscards-wrap {
-          display: block;
-          width: 240px;
-          .swiper-slide-image {
-  
+    .newscards-wrap {
+      display: block;
+      width: 33%;
+      .swiper-slide-image {
+        width: 100%;
+        height: 142px;
+      }
+      .swiper-slide-txtcont {
+        width: 100%;
+        height: 112px;
+        
+      }
+      .swiper-slide-txtcont__tit {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+    // tokenpost main / keyword newscards slider
+    .keyword-newscard {
+      height: 360px;
+      .keyword-newscard-front {
+        display: flex;
+        justify-content: center;
+        .keyword-newscard-front__image {
+          display: flex;
+          justify-content: center;
+          width: 40%;
+          padding: 50px 98px 40px;
+        }
+        .keyword-newscard-front-info {
+          padding: 0 40px;
+        }
+        .keyword-newscards-front-tit {
+          position: relative;
+          font-size: 24px;
+          &::before {
+            position: absolute;
+            top: -6px;
+            left: 90px;
           }
-          .swiper-slide-txtcont__tit {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            width: 172px;
-            height: 48px;
-            font-size: 15px;
-            font-weight: 600;
-            overflow: hidden;
-            padding-top: 4px;
-            text-overflow: ellipsis;
-            word-break: break-word;
-            color: #333;
+        }
+        .key-newscards-fr-tit-2 {
+          position: relative;
+          &::before {
+            position: absolute;
+            top: -6px;
+            left: 48px;
           }
+        }
+        .keyword-newscard-front__subtit {
+          font-size: 15px;
+        }
+      }
+      .keyword-newscard-back__tit {
+       font-size: 24px;
+      }
+      .keyword-newscard-back-cont {
+       padding-top: 32px;
+      }
+      .keyword-newscard-back-cont-lst:nth-child(6) {
+       display: none;
+      }
+    }
+    // tokenpost main / crypto market
+    .cypto-market-price-wrap {
+      width: 100%;
+      padding: 56px 60px;
+    }
+    .cypto-market-cards-wrap {
+      display: flex;
+      width: 100%;
+    }
+
+    
+    // tokenpost main / event bnr
+    .main-event-bnr__img {
+      width: 100%;
+      height: 248px;
+      margin: 0;
+      // margin: 114px auto;
+      border-radius: 20px;
+      object-fit: contain;
+    }
+
+    // tokenpost main / dailyinfo
+    .main-dailyinfo {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 440px;
+    }
+    .calendar-container {
+      height: 100%
+    }
+    .dailyinfo-today-info {
+      height: 440px;
+    }
+    .dailyinfo-today-list-cont-wrap {
+      height: 332px;
+    }
+    .dailyinfo-today-list-cont {
+      padding: 15px;
+      .dailyinfo-today-list-cont-logo {
+        display: flex;
+        align-items: center;
+        .dailyinfo-today-list-cont-logo-img {
+          width: 100%;
+          height: 56px;
         }
       }
     }
-    .splide {
-      width: 1024px;
-      height: 100%; 
+    .dailyinfo-today-list-cont-txt {
+      width: 70%;
     }
-    .splide__slide {
-      display: block;
-      width: 300px;
-      height: 340px;
-      margin-right: 10px;
+    .dailyinfo-event {
+      height: 440px;
+      .dailyinfo-event-lst {
+        height: 440px;
+        .dailyinfo-event-airdrop,
+        .dailyinfo-event-quiz {
+          width: 100%;
+          height: 200px;
+          padding: 24px;
+          &:hover {
+            .dailyinfo-event-quiz__tit,
+            .dailyinfo-event-quiz__subtit {
+              display: none;
+            }
+            background-size: 100% 200px;
+          }
+        }
+      }
+      .dailyinfo-event-airdrop__subtit,
+      .dailyinfo-event-quiz__subtit {
+        font-size: 20px;
+        padding-top: 60px;
+      }
     }
-  }
-  }
-  
+    // tokenpost main / link button
+    .main-footer-btn {
+      width: 100%;
+    }
+    .main-footer-btn-lst {
+      width: 80%;
+    }
 
-/* mobile */
-/* 큰 폰 */
-@media screen and (max-width: 744px) {
- 
+    // tokenpost main / footer
+    .main-footer-wrap {
+      width: 90%;
+    }
+  }
 }
+  
 
 /* 작은 폰 */
 @media screen and (max-width: 428px) {

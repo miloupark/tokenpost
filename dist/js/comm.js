@@ -18,15 +18,19 @@ var swiper = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    428: {
+    428: { /* 이하의 크기에서 옵션 값 */
       slidesPerView: 1
     },
     744: {
-      slidesPerView: 1
+      slidesPerView: 3
     },
     1024: {
       slidesPerView: 4,
       spaceBetween: 24,
+    },
+    1440: {
+      slidesPerView: 5,
+      spaceBetween: 16,
     },
   }
 });
@@ -41,4 +45,20 @@ var swiper = new Swiper(".mySwiper3", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    428: {
+      slidesPerView: 2
+    },
+    744: {
+      slidesPerView: 3
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }
 });
