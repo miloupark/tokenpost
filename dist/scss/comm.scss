@@ -30,7 +30,7 @@
 
 // // line
 
-
+// layout
 .wrap {
   max-width: 1280px;
   width: 100%;
@@ -40,6 +40,29 @@
   display: flex;
   width: 100%;
   height: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrap {
+    max-width: 1024px;
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 428px) {}
+
+.header {
   .main-logo {
     display: flex;
     align-items: center;
@@ -297,11 +320,10 @@
     color: #fff;
   }
 }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-  color: #1176AA;
+.mySwiper1-next,
+.mySwiper1-prev {
+  color: #fff;
 }
-
 // tokenpost main / news category buttons
 .news-category-btn {
   padding-top: 16px;
@@ -347,15 +369,21 @@
 
 // tokenpost main / newscards slider
 .newscards-slider {
-  width: 100%;
+  width: 101%;
   height: 334px;
   margin-top: 32px;
   overflow: hidden;
+  padding-right: 13px;
+}
+.newscards-swiper {
+  width: 100%;
 }
 .newscards-wrap {
   display: block;
   width: 20%;
   font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,.07), 4px 4px 16px rgba(0,0,0,.07);
   .swiper-slide-image {
     display: block;
     width: 100%;
@@ -371,7 +399,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 4px 16px rgba(0,0,0,.09);
   }
   .swiper-slide-txtcont__keyword {
     font-size: 12px;
@@ -507,13 +534,21 @@
   display: block;
   width: 80%;
   height: 24px;
+  font-size: 16px;
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  &:hover {
+    display: block;
+    font-weight: 500;
+    color: #1176AA;
+    cursor: pointer;
+  }
 }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-  margin-top: 200px;
+.btnnext-keyword-card,
+.btnprev-keyword-card {
+  margin-top: 75px;
   color: #fff;
 }
 .mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-front {
@@ -668,12 +703,12 @@
 }
 // tokenpost main / event bnr
 .main-event-bnr {
-  margin: 114px 0;
+  margin: 114px 0 56px;
   .main-event-bnr__img {
     width: 100%;
-    height: 248px;
+    height: 192px;
     border-radius: 20px;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
@@ -819,12 +854,32 @@ header .current-date{
   color: #333;
   padding: 3px 32px;
   margin-bottom: 20px;
+  &::before {
+    position: absolute;
+    content: "\f104";
+    top: -3px;
+    left: 0;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+    color: #333;
+  }
+  &::after {
+    position: absolute;
+    content: "\f105";
+    top: -3px;
+    left: 132px;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+    color: #333;
+  }
 }
 .dailyinfo-today-list-cont-wrap {
   width: 103%;
   height: 374px;
   overflow: auto;
-  margin-top: 20px;
+  margin-top: 32px;
 }
 .dailyinfo-today-list-cont {
   display: flex;
@@ -985,6 +1040,7 @@ header .current-date{
   height: 240px;
   margin-top: 114px;
   background-color: #eee;
+  border-radius: 20px;
 }
 .main-footer-btn-lst {
   display: flex;
@@ -1089,7 +1145,7 @@ header .current-date{
     display: flex;
     font-size: 15px;
     font-weight: 500;
-    padding: 24px 0;
+    padding: 32px 0 16px;
     color: #555;
   }
   .main-footer-category__lst {
@@ -1167,66 +1223,55 @@ header .current-date{
 /* tablet */
 /* 1024px 이하일 경우 */
 @media screen and (max-width: 1024px) {
-  .wrap {
-    max-width: 1024px;
-    width: 1024px;
-    margin: 0;
-    .header {
-      width: 90%;
-      height: 100px;
-      margin: 0 auto;
-      .main-logo {
-        display: flex;
-        align-items: center;
-        a {
-          font-size: 20px;
-          font-weight: 700;
-        }
-      }
-      .header-gnb .header-gnb-depth1 {
-        display: none;
-      }
-    }
-
-    // mainnews slider
-    .mainnews-slider {
-      width: 100%;
-      margin: 0;
-      .mySwiper1 {
-        width: 100%;
-        margin: 0;
-        .type1,
-        .type2,
-        .type3 {
-          display: block;
-          width: 100%;
-          .swiper-slide-1,
-          .swiper-slide-2,
-          .swiper-slide-3 {
-            width: 40%;
-            object-fit: cover;
-          }
-        }
-        .swiper-slide-tit {
-          // width: max-content;
-          // max-width: 560px;
-          width: 46%;
-          word-break: keep-all;
-        }
-        .swiper-slide-cont {
-          width: max-content;
-          max-width: 400px;
-          word-break: keep-all;
-        }
-      }
-    }
-    // tokenpost main / news category buttons
-    .news-category-btn {
+  .header {
+    .main-logo {
       display: flex;
-      width: 100%;
-      height: 200px;
-      padding-top: 32px;
+      align-items: center;
+      a {
+        font-size: 20px;
+        font-weight: 700;
+      }
     }
+    .header-gnb .header-gnb-depth1 {
+      display: none;
+    }
+  }
+
+  // mainnews slider
+  .mainnews-slider {
+    width: 100%;
+    margin: 0 auto;
+    .mySwiper1 {
+      width: 100%;
+      .swiper-slide-tit {
+        width: 46%;
+        word-break: keep-all;
+      }
+      .swiper-slide-cont {
+        width: max-content;
+        max-width: 400px;
+        word-break: keep-all;
+      }
+    }
+    .type1,
+    .type2,
+    .type3 {
+      display: block;
+      width: 100%;
+      .swiper-slide-1,
+      .swiper-slide-2,
+      .swiper-slide-3 {
+        width: 40%;
+        object-fit: cover;
+      }
+    }
+  }
+  // tokenpost main / news category buttons
+  .news-category-btn {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-top: 32px;
     .news-category-btn-lst {
       display: flex;
       flex-wrap: wrap;
@@ -1239,169 +1284,183 @@ header .current-date{
         width: 200px;
         margin-right: 0;
         &:hover {
-          transition: none;
+          transform: none;
+        }
+        &:active {
+          background-color: #1176AA;
+          .news-category-btn-txt {
+            color: #fff;
+          }
         }
       }
-    }
-    // tokenpost main / newscards slider
-    .newscards-slider {
-      width: 100%;
-      height: 268px;
-      margin-top: 24px;
-    }
-    .newscards-wrap {
-      display: block;
-      width: 33%;
-      .swiper-slide-image {
-        width: 100%;
-        height: 142px;
-      }
-      .swiper-slide-txtcont {
-        width: 100%;
-        height: 112px;
-      }
-      .swiper-slide-txtcont__tit {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 100%;
-        font-size: 14px;
-      }
-    }
-    // tokenpost main / keyword newscards slider
-    .keyword-newscard {
-      height: 360px;
-    }
-    .keyword-newscard-front {
-      display: flex;
-      justify-content: center;
-    }
-    .keyword-newscard-front__image {
-      display: flex;
-      justify-content: center;
-      width: 40%;
-      padding: 50px 98px 40px;
-    }
-    .keyword-newscard-front-info {
-      padding: 0 40px;
-    }
-    .keyword-newscards-front-tit {
-      position: relative;
-      font-size: 24px;
-      &::before {
-        position: absolute;
-        top: -6px;
-        left: 90px;
-      }
-    }
-    .key-newscards-fr-tit-2 {
-      position: relative;
-      &::before {
-        position: absolute;
-        top: -6px;
-        left: 48px;
-      }
-    }
-    .keyword-newscard-front__subtit {
-      font-size: 15px;
-    }
-    .keyword-newscard-back__tit {
-      font-size: 24px;
-    }
-    .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
-      padding-top: 24px;
-    }
-    .keyword-newscard-back-cont-lst:nth-child(6) {
-      display: none;
-    }
-
-    // tokenpost main / crypto market
-    .cypto-market-price-wrap {
-      width: 100%;
-      padding: 56px 60px;
-    }
-    .cypto-market-cards-wrap {
-      display: flex;
-      width: 100%;
-    }
-
-    
-    // tokenpost main / event bnr
-    .main-event-bnr__img {
-      width: 100%;
-      height: 248px;
-      margin: 0;
-      border-radius: 20px;
-      object-fit: contain;
-    }
-
-    // tokenpost main / dailyinfo
-    .main-dailyinfo {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 440px;
-    }
-    .calendar-container {
-      height: 100%
-    }
-    .dailyinfo-today-info {
-      height: 440px;
-    }
-    .dailyinfo-today-list-cont-wrap {
-      height: 332px;
-    }
-    .dailyinfo-today-list-cont {
-      padding: 15px;
-    }
-    .dailyinfo-today-list-cont-logo {
-      display: flex;
-      align-items: center;
-    }
-    .dailyinfo-today-list-cont-logo-img {
-      width: 100%;
-      height: 56px;
-    }
-    .dailyinfo-today-list-cont-txt {
-      width: 70%;
-    }
-    .dailyinfo-event {
-      height: 440px;
-    }
-    .dailyinfo-event-lst {
-      height: 440px;
-    }
-    .dailyinfo-event-airdrop,
-    .dailyinfo-event-quiz {
-      width: 100%;
-      height: 200px;
-      padding: 24px;
-      &:hover {
-        background-size: 100% 200px;
-        .dailyinfo-event-quiz__tit,
-        .dailyinfo-event-quiz__subtit {
-          display: none;
-        }
-      }
-    }
-    .dailyinfo-event-airdrop__subtit,
-    .dailyinfo-event-quiz__subtit {
-      font-size: 20px;
-      padding-top: 60px;
-    }
-    // tokenpost main / link button
-    .main-footer-btn {
-      width: 100%;
-    }
-    .main-footer-btn-lst {
-      width: 80%;
-    }
-
-    // tokenpost main / footer
-    .main-footer-wrap {
-      width: 90%;
     }
   }
+  // tokenpost main / newscards slider
+  .newscards-slider {
+    width: 102%;
+    height: 268px;/* 254px */
+    margin-top: 24px;
+    overflow: hidden;
+    padding-right: 20px;
+  }
+  .newscards-wrap {
+    display: block;
+    width: 33%;
+    .swiper-slide-image {
+      width: 100%;
+      height: 142px;
+    }
+    .swiper-slide-txtcont {
+      width: 100%;
+      height: 112px;
+    }
+    .swiper-slide-txtcont__tit {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+  // tokenpost main / keyword newscards slider
+  .keyword-newscard {
+    height: 360px;
+  }
+  .keyword-newscard-front {
+    display: flex;
+    justify-content: center;
+  }
+  .keyword-newscard-front__image {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding: 50px 98px 40px;
+  }
+  .keyword-newscard-front-info {
+    padding: 0 40px;
+  }
+  .keyword-newscards-front-tit {
+    position: relative;
+    font-size: 24px;
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: 90px;
+    }
+  }
+  .key-newscards-fr-tit-2 {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: 48px;
+    }
+  }
+  .keyword-newscard-front__subtit {
+    font-size: 15px;
+  }
+  .keyword-newscard-back__tit {
+    font-size: 24px;
+  }
+  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+    padding-top: 24px;
+  }
+  .keyword-newscard-back-cont-lst:nth-child(6) {
+    display: none;
+  }
+
+  // tokenpost main / crypto market
+  .cypto-market-price-wrap {
+    width: 100%;
+    padding: 56px 60px;
+  }
+  .cypto-market-cards-wrap {
+    display: flex;
+    width: 100%;
+  }
+
+  // tokenpost main / event bnr
+  .main-event-bnr {
+    margin: 114px 0 56px;
+    .main-event-bnr__img {
+      width: 100%;
+      height: 192px;
+      margin: 0;
+      border-radius: 20px;
+    }
+  }
+
+  // tokenpost main / dailyinfo
+  .main-dailyinfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 420px;
+  }
+  .calendar-container {
+    height: 100%
+  }
+  .wrapper header {
+    padding: 16px 30px 0;
+  }
+ 
+  .dailyinfo-today-info {
+    height: 420px;
+  }
+  .dailyinfo-today-list-cont-wrap {
+    height: 332px;
+  }
+  .dailyinfo-today-list-cont {
+    padding: 15px;
+  }
+  .dailyinfo-today-list-cont-logo {
+    display: flex;
+    align-items: center;
+  }
+  .dailyinfo-today-list-cont-logo-img {
+    width: 100%;
+    height: 56px;
+  }
+  .dailyinfo-today-list-cont-txt {
+    width: 70%;
+  }
+  .dailyinfo-event {
+    height: 440px;
+  }
+  .dailyinfo-event-lst {
+    height: 420px;
+  }
+  .dailyinfo-event-airdrop,
+  .dailyinfo-event-quiz {
+    width: 100%;
+    height: 200px;
+    padding: 24px;
+    &:hover {
+      background-size: 100% 200px;
+      .dailyinfo-event-quiz__tit,
+      .dailyinfo-event-quiz__subtit {
+        display: none;
+      }
+    }
+  }
+  .dailyinfo-event-airdrop__subtit,
+  .dailyinfo-event-quiz__subtit {
+    font-size: 20px;
+    padding-top: 60px;
+  }
+  // tokenpost main / link button
+  .main-footer-btn {
+    width: 100%;
+  }
+  .main-footer-btn-lst {
+    width: 80%;
+  }
+
+  // tokenpost main / footer
+  .main-footer-wrap {
+    width: 90%;
+  }
+  
 }
   
 
@@ -1434,7 +1493,7 @@ header .current-date{
       justify-content: center;
       top: 50%;
       left: 50%;
-      width: 55%;
+      width: 68%;
       line-height: 1.7;
       transform: translate(-50%, -50%)
     }
@@ -1459,7 +1518,13 @@ header .current-date{
           width: 48%;
           margin-bottom: 16px;
           &:hover {
-            transition: none;
+            transform: none;
+          }
+          &:active {
+            color: #1176AA;
+            .news-category-btn-txt {
+              color: #fff;
+            }
           }
           .news-category-btn-txt {
             font-size: 18px;
@@ -1472,6 +1537,8 @@ header .current-date{
       width: 100%;
       height: 420px; /* 400px */
       margin-top: 32px;
+      overflow: hidden;
+      padding-right: 13px;
     }
     .mySwiper2 {
       width: 100%;
@@ -1495,12 +1562,15 @@ header .current-date{
           font-size: 20px;
           height: 64px;
           padding-top: 8px;
+          overflow: hidden;
+          padding-right: 13px;
         }
       }
     }
     // keyword newscards slider
     .mySwiper3 {
       width: 100%;
+      padding-top: 100px;
     }
     .keyword-newscards-tit {
       padding-bottom: 32px
@@ -1531,6 +1601,12 @@ header .current-date{
     }
     .keyword-newscard-back-cont-lst__tit {
       font-size: 18px;
+      &:hover {
+        display: block;
+        font-weight: 500px;
+        color: #1176AA;
+        cursor: pointer;
+      }
     } 
     .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
       padding-top: 40px;

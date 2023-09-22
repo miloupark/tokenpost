@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper1", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  }
+  },
 });
 
 // tokenpost main / newscards slider
@@ -31,7 +31,7 @@ var swiper = new Swiper(".mySwiper2", {
     },
     1440: {
       slidesPerView: 5,
-      spaceBetween: 16,
+      spaceBetween: 24,
     },
   }
 });
@@ -42,7 +42,8 @@ var swiper = new Swiper(".mySwiper3", {
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+  },
+  navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
