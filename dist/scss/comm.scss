@@ -398,123 +398,123 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 96px;
-  .keyword-newscards-tit {
-    display: flex;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: 700;
-    padding-bottom: 56px;
-  }
-  .keyword-newscard {
-    position: relative;
-    width: 33%;
-    height: 440px;
-    .keyword-newscard-front {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background-image: url(../../images/mainslide-bg-Stellar.jpg);
-      border-radius: 20px;
-      z-index: 100;
-      .keyword-newscard-front__image {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        // height: 205px;
-        padding-top: 48px;
-        padding-left: 100px;
-      }
-      .keyword-newscard-front-info {
-        padding: 40px;
-      }
-      .keyword-newscards-front-tit {
-        position: relative;
-        font-size: 28px;
-        font-weight: 700;
-        padding-right: 16px;
-        color: #fff;
-        &::before {
-          position: absolute;
-          top: -4px;
-          left: 104px;
-          content: "\f35d";
-          font-size: 32px;
-          font-weight: 900;
-          font-family: 'Line Awesome Free';
-          margin-top: -4px;
-          color: #fff;
-        }
-      }
-      .key-newscards-fr-tit-2 {
-        position: relative;
-        &::before {
-          position: absolute;
-          top: -4px;
-          left: 56px;
-          content: "\f35d";
-          font-size: 32px;
-          font-weight: 900;
-          font-family: 'Line Awesome Free';
-          margin-top: -4px;
-          color: #fff;
-        }
-      }
-      .keyword-newscard-front__subtit {
-        display: block;
-        font-size: 16px;
-        font-weight: 300;
-        padding-top: 8px;
-        color: #fff;
-      }
-    }
-    .keyword-newscard-back {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 40px;
-      border-radius: 20px;
-      background-color: #eee;
-      .keyword-newscard-back__tit {
-        display: block;
-        font-size: 28px;
-        font-weight: 700;
-      }
-      .keyword-newscard-back-cont {
-        display: block;
-        padding-top: 40px;
-        cursor: pointer;
-        .keyword-newscard-back-cont-lst {
-          position: relative;
-          padding-bottom: 20px;
-          &::before {
-            position: absolute;
-            content: "\f061";
-            top: -6px;
-            right: 0;
-            font-size: 24px;
-            font-weight: 900;
-            font-family: 'Line Awesome Free';
-          }
-        }
-        .keyword-newscard-back-cont-lst__tit {
-          display: block;
-          width: 80%;
-          height: 24px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-  }
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    margin-top: 200px;
+}
+.keyword-newscards-tit {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 56px;
+}
+.keyword-newscard {
+  position: relative;
+  width: 33%;
+  height: 440px;
+}
+.keyword-newscard-front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/mainslide-bg-Stellar.jpg);
+  border-radius: 20px;
+  z-index: 100;
+}
+.keyword-newscard-front__image {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  // height: 205px;
+  padding-top: 48px;
+  padding-left: 100px;
+}
+.keyword-newscard-front-info {
+  padding: 40px;
+}
+.keyword-newscards-front-tit {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  padding-right: 16px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 104px;
+    content: "\f35d";
+    font-size: 32px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+    margin-top: -4px;
     color: #fff;
   }
+}
+.key-newscards-fr-tit-2 {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 56px;
+    content: "\f35d";
+    font-size: 32px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+    margin-top: -4px;
+    color: #fff;
+  }
+}
+.keyword-newscard-front__subtit {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 8px;
+  color: #fff;
+}
+.keyword-newscard-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.keyword-newscard-back__tit {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+.keyword-newscard-back-cont {
+  display: block;
+  padding-top: 40px;
+  cursor: pointer;
+}
+.keyword-newscard-back-cont-lst {
+  position: relative;
+  padding-bottom: 20px;
+  &::before {
+    position: absolute;
+    content: "\f061";
+    top: -6px;
+    right: 0;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+  }
+}
+.keyword-newscard-back-cont-lst__tit {
+  display: block;
+  width: 80%;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  margin-top: 200px;
+  color: #fff;
 }
 .mySwiper3 .swiper-wrapper .keyword-newscard:hover .keyword-newscard-front {
   display: none;
@@ -668,7 +668,7 @@
 }
 // tokenpost main / event bnr
 .main-event-bnr {
-  margin: 114px auto;
+  margin: 114px 0;
   .main-event-bnr__img {
     width: 100%;
     height: 248px;
@@ -836,7 +836,7 @@ header .current-date{
   margin-bottom: 20px;
   .dailyinfo-today-list-cont-logo-img {
     display: block;
-    width: 100%;
+    width: 98%;
     height: 64px;
   }
 }
@@ -1238,7 +1238,9 @@ header .current-date{
         display: flex;
         width: 200px;
         margin-right: 0;
-        transition: none;
+        &:hover {
+          transition: none;
+        }
       }
     }
     // tokenpost main / newscards slider
@@ -1257,7 +1259,6 @@ header .current-date{
       .swiper-slide-txtcont {
         width: 100%;
         height: 112px;
-        
       }
       .swiper-slide-txtcont__tit {
         display: -webkit-box;
@@ -1270,49 +1271,50 @@ header .current-date{
     // tokenpost main / keyword newscards slider
     .keyword-newscard {
       height: 360px;
-      .keyword-newscard-front {
-        display: flex;
-        justify-content: center;
-        .keyword-newscard-front__image {
-          display: flex;
-          justify-content: center;
-          width: 40%;
-          padding: 50px 98px 40px;
-        }
-        .keyword-newscard-front-info {
-          padding: 0 40px;
-        }
-        .keyword-newscards-front-tit {
-          position: relative;
-          font-size: 24px;
-          &::before {
-            position: absolute;
-            top: -6px;
-            left: 90px;
-          }
-        }
-        .key-newscards-fr-tit-2 {
-          position: relative;
-          &::before {
-            position: absolute;
-            top: -6px;
-            left: 48px;
-          }
-        }
-        .keyword-newscard-front__subtit {
-          font-size: 15px;
-        }
-      }
-      .keyword-newscard-back__tit {
-       font-size: 24px;
-      }
-      .keyword-newscard-back-cont {
-       padding-top: 32px;
-      }
-      .keyword-newscard-back-cont-lst:nth-child(6) {
-       display: none;
+    }
+    .keyword-newscard-front {
+      display: flex;
+      justify-content: center;
+    }
+    .keyword-newscard-front__image {
+      display: flex;
+      justify-content: center;
+      width: 40%;
+      padding: 50px 98px 40px;
+    }
+    .keyword-newscard-front-info {
+      padding: 0 40px;
+    }
+    .keyword-newscards-front-tit {
+      position: relative;
+      font-size: 24px;
+      &::before {
+        position: absolute;
+        top: -6px;
+        left: 90px;
       }
     }
+    .key-newscards-fr-tit-2 {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: -6px;
+        left: 48px;
+      }
+    }
+    .keyword-newscard-front__subtit {
+      font-size: 15px;
+    }
+    .keyword-newscard-back__tit {
+      font-size: 24px;
+    }
+    .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+      padding-top: 24px;
+    }
+    .keyword-newscard-back-cont-lst:nth-child(6) {
+      display: none;
+    }
+
     // tokenpost main / crypto market
     .cypto-market-price-wrap {
       width: 100%;
@@ -1408,59 +1410,175 @@ header .current-date{
   .wrap {
     max-width: 428px;
     width: 428px;
-  }
-  // header
-  .header .header-icons .header-icons__search::before,
-  .header .header-icons .header-icons__user::before {
-    display: none
-  }
-  // mainnews slider
-  .mySwiper1 {
-    .swiper-slide-1,
-    .swiper-slide-2,
-    .swiper-slide-3, 
-    .swiper-slide-cont {
-      display: none;
+    // header
+    .header .header-icons .header-icons__search::before,
+    .header .header-icons .header-icons__user::before {
+      display: none
     }
-    .type1 {
-      display: flex;
-      align-items: center;
-    }
-  }
-  .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 64%;
-    line-height: 1.7;
-    transform: translate(-50%, -50%)
-  }
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    color: #fff;
-  }
-  
-  // news category buttons
-  .news-category-btn {
-    display: flex;
-    width: 100%;
-    height: 352px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    .news-category-btn-lst {
-      flex-wrap: wrap;
-      width: 100%;
-      .news-category-btn-box {
+    // mainnews slider
+    .mySwiper1 {
+      .swiper-slide-1,
+      .swiper-slide-2,
+      .swiper-slide-3, 
+      .swiper-slide-cont {
+        display: none;
+      }
+      .type1 {
         display: flex;
-        width: 48%;
-        margin-bottom: 16px;
-        transition: none;
+        align-items: center;
+        justify-content: center;
       }
     }
+    .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
+      position: absolute;
+      justify-content: center;
+      top: 50%;
+      left: 50%;
+      width: 55%;
+      line-height: 1.7;
+      transform: translate(-50%, -50%)
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+      color: #fff;
+      margin-top: 0;
+    }
+    
+    // news category buttons
+    .news-category-btn {
+      display: flex;
+      width: 100%;
+      height: 369px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .news-category-btn-lst {
+        flex-wrap: wrap;
+        width: 100%;
+        .news-category-btn-box {
+          display: flex;
+          width: 48%;
+          margin-bottom: 16px;
+          &:hover {
+            transition: none;
+          }
+          .news-category-btn-txt {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    // newscards slider
+    .newscards-slider {
+      width: 100%;
+      height: 420px; /* 400px */
+      margin-top: 32px;
+    }
+    .mySwiper2 {
+      width: 100%;
+      margin: 0 auto;
+      .newscards-wrap {
+        width: 100%;
+        .swiper-slide-image {
+          display: block;
+          width: 100%;
+          height: 240px;
+        }
+        .swiper-slide-txtcont {
+          width: 100%;
+          height: 160px;
+          padding: 24px;
+        }
+        .swiper-slide-txtcont__keyword {
+          font-size: 16px;
+        }
+        .swiper-slide-txtcont__tit {
+          font-size: 20px;
+          height: 64px;
+          padding-top: 8px;
+        }
+      }
+    }
+    // keyword newscards slider
+    .mySwiper3 {
+      width: 100%;
+    }
+    .keyword-newscards-tit {
+      padding-bottom: 32px
+    }
+    .keyword-newscard {
+      height: 440px;
+    }
+    .keyword-newscard-front__image {
+      width: 50%;
+      padding: 40px 100px 40px;
+    }
+    .keyword-newscards-front-tit {
+      font-size: 28px;
+      &::before {
+        position: absolute;
+        top: -4px;
+        left: 104px;
+      }
+    }
+    .keyword-newscard-front__subtit {
+      font-size: 18px;
+    }
+    .keyword-newscard-back__tit {
+      font-size: 28px;
+    }
+    .keyword-newscard-back-cont-lst {
+      padding-bottom: 30px;
+    }
+    .keyword-newscard-back-cont-lst__tit {
+      font-size: 18px;
+    } 
+    .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+      padding-top: 40px;
+    }
+    .mySwiper3 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+    .mySwiper3 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+      color: #fff;
+      margin-top: 200px;
+    }
+
+    // crypto market
+    .cypto-market-price-wrap {
+      display: block;
+      width: 100%;
+      padding: 32px;
+    }
+    .cypto-market-price-wrap-tit {
+      margin-bottom: 32px;
+    }
+    .cypto-market-cards-wrap {
+      display: block;
+    }
+    .cypto-market-card {
+      display: flex;
+      width: 100%;
+      height: 80px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .cypto-card-rank
+    .cypto-card-rank__num {
+      display: block;
+      text-align: center;
+      width: 10%;
+      height: 24px;
+      font-size: 20px;
+    }
+    .crypto-card-graph,
+    .crypto-card-price,
+    .crypto-card-date {
+      display: none;
+    }
+    .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
+      display: none;
+    }
+
+
   }
-
-
- 
 } 
 
 

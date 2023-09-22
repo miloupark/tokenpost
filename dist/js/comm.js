@@ -11,18 +11,19 @@ var swiper = new Swiper(".mySwiper1", {
 
 // tokenpost main / newscards slider
 var swiper = new Swiper(".mySwiper2", {
-  slidesPerView: 5,
-  spaceBetween: 16,
+  slidesPerView: 1,
+  // spaceBetween: 16,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   breakpoints: {
     428: { /* 이하의 크기에서 옵션 값 */
-      slidesPerView: 1
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
     744: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     1024: {
       slidesPerView: 4,
@@ -37,7 +38,7 @@ var swiper = new Swiper(".mySwiper2", {
 
 // tokenpost main / keyword newscards slider
 var swiper = new Swiper(".mySwiper3", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
