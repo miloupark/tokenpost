@@ -41,26 +41,54 @@
   width: 100%;
   height: 100px;
 }
-
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+.footer {
+  width: 100%;
+  margin: 0 auto;
+}
 @media screen and (max-width: 1024px) {
   .wrap {
     max-width: 1024px;
     width: 1024px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   .header {
     width: 100%;
     height: 100px;
     margin: 0 auto;
-    padding: 0 20px;
   }
   .main {
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto;
   }
 }
-@media screen and (max-width: 428px) {}
+@media screen and (max-width: 428px) {
+  .wrap {
+    max-width: 428px;
+    width: 428px;
+  }
+  .header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
 .header {
   .main-logo {
@@ -418,6 +446,9 @@
     text-overflow: ellipsis;
     word-break: break-word;
     color: #333;
+    &:hover {
+      color: #1176AA;
+    }
   }
 }
 // tokenpost main / keyword newscards slider
@@ -514,21 +545,12 @@
 }
 .keyword-newscard-back-cont {
   display: block;
-  padding-top: 40px;
+  padding-top: 32px;
   cursor: pointer;
 }
 .keyword-newscard-back-cont-lst {
   position: relative;
-  padding-bottom: 20px;
-  &::before {
-    position: absolute;
-    content: "\f061";
-    top: -6px;
-    right: 0;
-    font-size: 24px;
-    font-weight: 900;
-    font-family: 'Line Awesome Free';
-  }
+  padding-bottom: 24px;
 }
 .keyword-newscard-back-cont-lst__tit {
   display: block;
@@ -539,9 +561,18 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  &::before {
+    position: absolute;
+    content: "\f061";
+    top: -6px;
+    right: 0;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+  }
   &:hover {
     display: block;
-    font-weight: 500;
+    font-weight: 500px;
     color: #1176AA;
     cursor: pointer;
   }
@@ -591,114 +622,114 @@
   padding: 16px 16px 24px;
   border-radius: 12px;
   background: #fff;
-  .cypto-card-rank {
-    display: flex;
+}
+.cypto-card-rank {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .cypto-card-rank__num {
+    position: relative;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    .cypto-card-rank__num {
-      position: relative;
-      width: 100%;
-      height: 21px;
-      font-size: 14px;
-      font-weight: 500;
-      &::before {
-        position: absolute;
-        content: "\f004";
-        display: block;
-        top: -3px;
-        right: 0;
-        font-size: 18px;
-        font-weight: 400;
-        font-family: 'Line Awesome Free';
-        color: #333;
-        cursor: pointer;
-      }
-    }
-  }
-  .cypto-card-tit {
-    display: flex;
-    width: 100%;
-    padding-top: 8px;
-    .cypto-card-tit-image {
-      display: flex;
-      width: 24%;
-      align-items: center;
-      .cypto-card-tit-image__link {
-        display: block;
-        width: 70%;
-      }
-    }
-  }
-  .cypto-card-tit-txt {
-    display: flex;
-    flex-direction: column;
-    width: 76%;
-    .cypto-card-tit-txt__top {
+    height: 21px;
+    font-size: 14px;
+    font-weight: 500;
+    &::before {
+      position: absolute;
+      content: "\f004";
       display: block;
-      font-size: 12px;
-      font-weight: 400;
-    }
-    .cypto-card-tit-txt__bottom {   
-      display: block;
-      font-size: 14px;
-      font-weight: 500;
-      margin-top: -4px;
-    }
-  }
-  .crypto-card-graph {
-    width: 100%;
-  }
-  .crypto-card-graph__img {
-    display: block;
-    width: 100%;
-    height: 90px;
-    object-fit: cover;
-    padding-top: 16px;
-  }
-  .crypto-card-percent-red {
-    display: block;
-    width: 100%;
-    .crypto-card-percent-red__txt {
-      display: flex;
-      justify-content: end;
+      top: -3px;
+      right: 0;
       font-size: 18px;
       font-weight: 400;
-      color: #ef3030;
-      padding: 12px 0 12px 0;
+      font-family: 'Line Awesome Free';
+      color: #333;
+      cursor: pointer;
     }
   }
-  .crypto-card-percent-blue {
+}
+.cypto-card-tit {
+  display: flex;
+  width: 100%;
+  padding-top: 8px;
+}
+.cypto-card-tit-image {
+  display: flex;
+  width: 24%;
+  align-items: center;
+}
+.cypto-card-tit-image__link {
+  display: block;
+  width: 70%;
+}
+.cypto-card-tit-txt {
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+}
+.cypto-card-tit-txt__top {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+}
+.cypto-card-tit-txt__bottom {   
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -4px;
+}
+.crypto-card-graph {
+  width: 100%;
+}
+.crypto-card-graph__img {
+  display: block;
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  padding-top: 16px;
+}
+.crypto-card-percent-red {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  .crypto-card-percent-red__txt {
     display: block;
-    width: 100%;
-    .crypto-card-percent-blue__txt {
-      display: flex;
-      justify-content: end;
-      font-size: 18px;
-      font-weight: 400;
-      color: #2F6ED6;
-      padding: 12px 0 12px 0;
-    }
+    font-size: 18px;
+    font-weight: 400;
+    color: #ef3030;
+    padding: 12px 0 12px 0;
   }
-  .crypto-card-price {
+}
+.crypto-card-percent-blue {
+  display: block;
+  width: 100%;
+  .crypto-card-percent-blue__txt {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    .crypto-card-price__txt {
-      font-size: 13px;
-      font-weight: 400;
-      color: #555;
-    }
+    justify-content: end;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2F6ED6;
+    padding: 12px 0 12px 0;
   }
-  .crypto-card-date {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    .crypto-card-date__txt {
-      font-size: 13px;
-      font-weight: 300;
-      color: #555;
-    }
+}
+.crypto-card-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .crypto-card-price__txt {
+    font-size: 13px;
+    font-weight: 400;
+    color: #555;
+  }
+}
+.crypto-card-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .crypto-card-date__txt {
+    font-size: 13px;
+    font-weight: 300;
+    color: #555;
   }
 }
 // tokenpost main / event bnr
@@ -706,7 +737,6 @@
   margin: 114px 0 56px;
   .main-event-bnr__img {
     width: 100%;
-    height: 192px;
     border-radius: 20px;
     object-fit: cover;
   }
@@ -737,7 +767,7 @@
 .wrapper header{
   display: flex;
   align-items: center;
-  padding: 25px 30px 10px;
+  padding: 25px 39px 10px;
   justify-content: space-between;
 }
 header .icons{
@@ -785,7 +815,7 @@ header .icons span:hover{
   background: #f2f2f2;
 }
 header .current-date{
-  font-size: 1.45rem;
+  font-size: 20px;
   font-weight: 500;
 }
 .calendar{
@@ -813,7 +843,7 @@ header .current-date{
   z-index: 1;
   cursor: pointer;
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .days li.inactive{
   color: #aaa;
@@ -885,47 +915,51 @@ header .current-date{
   display: flex;
   justify-content: space-between;
   width: 95%;
+  height: 106px;
   border-radius: 12px;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
-  .dailyinfo-today-list-cont-logo-img {
-    display: block;
-    width: 98%;
-    height: 64px;
-  }
+}
+.dailyinfo-today-list-cont-logo-img {
+  display: block;
+  width: 98%;
+  height: 64px;
 }
 .dailyinfo-today-list-cont-txt {
   display: block;
   width: 72%;
-  .dailyinfo-today-list-cont__tit {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    display: block;
-    width: 100%;
-    height: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    word-break: break-word;
-    color: #333;
+}
+.dailyinfo-today-list-cont__tit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  color: #333;
+  &:hover {
+    color: #1176AA;
   }
-  .dailyinfo-today-list-cont__date {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    padding-top: 4px;
-    color: #555;
-  }
-  .dailyinfo-today-list-cont__tag {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #555;
-  }
+}
+.dailyinfo-today-list-cont__date {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 6px;
+  color: #555;
+}
+.dailyinfo-today-list-cont__tag {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
 }
 
 // tokenpost main / dailyinfo event
@@ -1091,65 +1125,85 @@ header .current-date{
       color: #333;
     }
   }
-  .main-footer-btn-g-txt {
-    display: flex;
-    justify-content: center;
-    padding-left: 40px;
-    .main-footer-btn-g__subtit {
-      display: flex;
-      font-size: 14px;
-      font-weight: 500;
-      color: #555;
-    }
-    .main-footer-btn-g__tit {
-    display: flex;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-      &::after {
-      content: "\f105";
-      font-size: 16px;
-      font-weight: 900;
-      font-family: "Line Awesome Free";
-     }
-    }
+}
+.main-footer-btn-g-txt {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+}
+.main-footer-btn-g__subtit {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.main-footer-btn-g__tit {
+display: flex;
+font-size: 16px;
+font-weight: 500;
+color: #333;
+  &::after {
+  content: "\f105";
+  font-size: 16px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+ }
+ &:hover {
+  color: #1176AA;
+ }
+}
+.main-footer-btn__crypto__txt {
+  display: block;
+  padding-left: 16px;
+}
+.main-footer-btn__crypto__subtit {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.main-footer-btn__crypto__tit {
+display: flex;
+font-size: 16px;
+font-weight: 500;
+color: #333;
+  &::after {
+  content: "\f105";
+  font-size: 16px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
   }
 }
-  .main-footer-btn__crypto__txt {
-    display: block;
-    padding-left: 16px;
-    .main-footer-btn__crypto__subtit {
-      display: flex;
-      font-size: 14px;
-      font-weight: 500;
-      color: #555;
-    }
-    .main-footer-btn__crypto__tit {
-    display: flex;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-      &::after {
-      content: "\f105";
-      font-size: 16px;
-      font-weight: 900;
-      font-family: "Line Awesome Free";
-     }
-    }
+.main-footer-btn__crypto__subtit {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.main-footer-btn__crypto__tit {
+display: flex;
+font-size: 16px;
+font-weight: 500;
+color: #333;
+  &::after {
+  content: "\f105";
+  font-size: 16px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
   }
+}
 
-.main-footer-wrap {
-  width: 100%;
-  margin: 0 auto;
+.footer {
   .main-footer-category__lst {
     display: flex;
     font-size: 15px;
     font-weight: 500;
-    padding: 32px 0 16px;
+    padding: 56px 0 16px;
     color: #555;
   }
   .main-footer-category__lst {
     li {
+      display: block;
       position: relative;
       padding-right: 24px;
       &::before {
@@ -1298,7 +1352,7 @@ header .current-date{
   // tokenpost main / newscards slider
   .newscards-slider {
     width: 102%;
-    height: 268px;/* 254px */
+    height: 268px; /* 254px */
     margin-top: 24px;
     overflow: hidden;
     padding-right: 20px;
@@ -1320,6 +1374,9 @@ header .current-date{
       -webkit-box-orient: vertical;
       width: 100%;
       font-size: 14px;
+      &:hover {
+        color: #1176AA;
+      }
     }
   }
   // tokenpost main / keyword newscards slider
@@ -1359,10 +1416,13 @@ header .current-date{
   .keyword-newscard-front__subtit {
     font-size: 15px;
   }
+  .keyword-newscard-back {
+    padding: 32px;
+  }
   .keyword-newscard-back__tit {
     font-size: 24px;
   }
-  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+  .keyword-newscard-back-cont {
     padding-top: 24px;
   }
   .keyword-newscard-back-cont-lst:nth-child(6) {
@@ -1372,7 +1432,7 @@ header .current-date{
   // tokenpost main / crypto market
   .cypto-market-price-wrap {
     width: 100%;
-    padding: 56px 60px;
+    padding: 56px;
   }
   .cypto-market-cards-wrap {
     display: flex;
@@ -1403,15 +1463,22 @@ header .current-date{
   .wrapper header {
     padding: 16px 30px 0;
   }
- 
+  .calendar .days li {
+    margin-top: 30px;
+  }
   .dailyinfo-today-info {
     height: 420px;
+    padding: 20px;
   }
   .dailyinfo-today-list-cont-wrap {
+    width: 100%;
     height: 332px;
+    margin-top: 16px;
   }
   .dailyinfo-today-list-cont {
-    padding: 15px;
+    width: 93%;
+    height: 96px;
+    padding: 16px;
   }
   .dailyinfo-today-list-cont-logo {
     display: flex;
@@ -1419,12 +1486,19 @@ header .current-date{
   }
   .dailyinfo-today-list-cont-logo-img {
     width: 100%;
-    height: 56px;
+    height: 40px;
   }
   .dailyinfo-today-list-cont-txt {
-    width: 70%;
+    width: 78%;
+  }
+  .dailyinfo-today-list-cont__tit {
+    font-size: 15px;
+  }
+  .dailyinfo-today-list-cont__date {
+    padding-top: 4px;
   }
   .dailyinfo-event {
+    width: 20%;
     height: 440px;
   }
   .dailyinfo-event-lst {
@@ -1451,210 +1525,351 @@ header .current-date{
   // tokenpost main / link button
   .main-footer-btn {
     width: 100%;
+    height: 240px;
   }
   .main-footer-btn-lst {
-    width: 80%;
-  }
-
-  // tokenpost main / footer
-  .main-footer-wrap {
     width: 90%;
   }
-  
 }
   
 
 /* 작은 폰 */
 @media screen and (max-width: 428px) {
-  .wrap {
-    max-width: 428px;
-    width: 428px;
-    // header
-    .header .header-icons .header-icons__search::before,
-    .header .header-icons .header-icons__user::before {
-      display: none
-    }
-    // mainnews slider
-    .mySwiper1 {
-      .swiper-slide-1,
-      .swiper-slide-2,
-      .swiper-slide-3, 
-      .swiper-slide-cont {
-        display: none;
-      }
-      .type1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
-      position: absolute;
-      justify-content: center;
-      top: 50%;
-      left: 50%;
-      width: 68%;
-      line-height: 1.7;
-      transform: translate(-50%, -50%)
-    }
-    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-      color: #fff;
-      margin-top: 0;
-    }
-    
-    // news category buttons
-    .news-category-btn {
-      display: flex;
-      width: 100%;
-      height: 369px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      .news-category-btn-lst {
-        flex-wrap: wrap;
-        width: 100%;
-        .news-category-btn-box {
-          display: flex;
-          width: 48%;
-          margin-bottom: 16px;
-          &:hover {
-            transform: none;
-          }
-          &:active {
-            color: #1176AA;
-            .news-category-btn-txt {
-              color: #fff;
-            }
-          }
-          .news-category-btn-txt {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    // newscards slider
-    .newscards-slider {
-      width: 100%;
-      height: 420px; /* 400px */
-      margin-top: 32px;
-      overflow: hidden;
-      padding-right: 13px;
-    }
-    .mySwiper2 {
-      width: 100%;
-      margin: 0 auto;
-      .newscards-wrap {
-        width: 100%;
-        .swiper-slide-image {
-          display: block;
-          width: 100%;
-          height: 240px;
-        }
-        .swiper-slide-txtcont {
-          width: 100%;
-          height: 160px;
-          padding: 24px;
-        }
-        .swiper-slide-txtcont__keyword {
-          font-size: 16px;
-        }
-        .swiper-slide-txtcont__tit {
-          font-size: 20px;
-          height: 64px;
-          padding-top: 8px;
-          overflow: hidden;
-          padding-right: 13px;
-        }
-      }
-    }
-    // keyword newscards slider
-    .mySwiper3 {
-      width: 100%;
-      padding-top: 100px;
-    }
-    .keyword-newscards-tit {
-      padding-bottom: 32px
-    }
-    .keyword-newscard {
-      height: 440px;
-    }
-    .keyword-newscard-front__image {
-      width: 50%;
-      padding: 40px 100px 40px;
-    }
-    .keyword-newscards-front-tit {
-      font-size: 28px;
-      &::before {
-        position: absolute;
-        top: -4px;
-        left: 104px;
-      }
-    }
-    .keyword-newscard-front__subtit {
-      font-size: 18px;
-    }
-    .keyword-newscard-back__tit {
-      font-size: 28px;
-    }
-    .keyword-newscard-back-cont-lst {
-      padding-bottom: 30px;
-    }
-    .keyword-newscard-back-cont-lst__tit {
-      font-size: 18px;
-      &:hover {
-        display: block;
-        font-weight: 500px;
-        color: #1176AA;
-        cursor: pointer;
-      }
-    } 
-    .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
-      padding-top: 40px;
-    }
-    .mySwiper3 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-    .mySwiper3 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-      color: #fff;
-      margin-top: 200px;
-    }
-
-    // crypto market
-    .cypto-market-price-wrap {
-      display: block;
-      width: 100%;
-      padding: 32px;
-    }
-    .cypto-market-price-wrap-tit {
-      margin-bottom: 32px;
-    }
-    .cypto-market-cards-wrap {
-      display: block;
-    }
-    .cypto-market-card {
-      display: flex;
-      width: 100%;
-      height: 80px;
-      border-radius: 20px;
-      margin-bottom: 8px;
-    }
-    .cypto-card-rank
-    .cypto-card-rank__num {
-      display: block;
-      text-align: center;
-      width: 10%;
-      height: 24px;
-      font-size: 20px;
-    }
-    .crypto-card-graph,
-    .crypto-card-price,
-    .crypto-card-date {
-      display: none;
-    }
-    .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
-      display: none;
-    }
-
-
+  // header
+  .header .header-icons .header-icons__search::before,
+  .header .header-icons .header-icons__user::before {
+    display: none
   }
+  // mainnews slider
+  .mySwiper1 {
+    .swiper-slide-1,
+    .swiper-slide-2,
+    .swiper-slide-3, 
+    .swiper-slide-cont {
+      display: none;
+    }
+    .type1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    width: 68%;
+    line-height: 1.7;
+    transform: translate(-50%, -50%)
+  }
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    color: #fff;
+    margin-top: 0;
+  }
+  
+  // news category buttons
+  .news-category-btn {
+    display: flex;
+    width: 100%;
+    height: 369px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .news-category-btn-lst {
+      flex-wrap: wrap;
+      width: 100%;
+      .news-category-btn-box {
+        display: flex;
+        width: 48%;
+        margin-bottom: 16px;
+        &:hover {
+          transform: none;
+        }
+        &:active {
+          color: #1176AA;
+          .news-category-btn-txt {
+            color: #fff;
+          }
+        }
+        .news-category-btn-txt {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  // newscards slider
+  .newscards-slider {
+    width: 100%;
+    height: 420px; /* 400px */
+    margin-top: 32px;
+    overflow: hidden;
+    padding-right: 0;
+  }
+  .mySwiper2 {
+    width: 100%;
+    margin: 0 auto;
+    .newscards-wrap {
+      width: 100%;
+      .swiper-slide-image {
+        display: block;
+        width: 100%;
+        height: 240px;
+      }
+      .swiper-slide-txtcont {
+        width: 100%;
+        height: 160px;
+        padding: 24px;
+      }
+      .swiper-slide-txtcont__keyword {
+        font-size: 16px;
+      }
+      .swiper-slide-txtcont__tit {
+        font-size: 20px;
+        height: 64px;
+        padding-top: 8px;
+        overflow: hidden;
+        padding-right: 13px;
+      }
+    }
+  }
+  // keyword newscards slider
+  .mySwiper3 {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .keyword-newscards-tit {
+    padding-bottom: 32px
+  }
+  .keyword-newscard {
+    height: 440px;
+  }
+  .keyword-newscard-front__image {
+    width: 50%;
+    padding: 40px 100px 40px;
+  }
+  .keyword-newscards-front-tit {
+    font-size: 28px;
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 104px;
+    }
+  }
+  .keyword-newscard-front__subtit {
+    font-size: 18px;
+  }
+  .keyword-newscard-back__tit {
+    font-size: 28px;
+  }
+  .keyword-newscard-back-cont-lst {
+    padding-bottom: 30px;
+  }
+  .keyword-newscard-back-cont-lst__tit {
+    font-size: 18px;
+    &:hover {
+      display: block;
+      font-weight: 500px;
+      color: #1176AA;
+      cursor: pointer;
+    }
+  } 
+  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+    padding-top: 40px;
+  }
+  .btnnext-keyword-card,
+  .btnprev-keyword-card {
+    color: #fff;
+    margin-top: 72px;
+  }
+
+  // crypto market
+  .cypto-market-price-wrap {
+    display: block;
+    width: 100%;
+    height: 642px;
+    padding: 32px;
+  }
+  .cypto-market-price-wrap-tit {
+    margin-bottom: 32px;
+  }
+  .cypto-market-cards-wrap {
+    display: block;
+    height: 504px;
+  }
+  .cypto-market-card {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  .cypto-card-rank {
+    width: 16%;
+  }
+  .cypto-card-rank__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .cypto-card-tit {
+    width: 60%;
+    padding: 0;
+  }
+  .cypto-card-tit-image {
+    width: 14%;
+  }
+  .cypto-card-tit-image__link {
+    width: 100%;
+  }
+  .cypto-card-tit-txt {
+    display: flex;
+    justify-content: center;
+    padding-left: 8px;
+  }
+  .cypto-card-tit-txt__top {
+    display: inline;
+  }
+  .cypto-card-tit-txt__bottom {
+    display: inline;
+  }
+  .crypto-card-percent-red {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    .crypto-card-percent-red__txt {
+      display: block;
+      padding: 0;
+    }
+  }
+  .crypto-card-percent-blue {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    .crypto-card-percent-blue__txt {
+      display: block;
+      padding: 0;
+    }
+  }
+  .crypto-card-graph,
+  .crypto-card-price,
+  .crypto-card-date {
+    display: none;
+  }
+  .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
+    display: none;
+  }
+  
+  // tokenpost main / event bnr
+  .main-event-bnr {
+    .main-event-bnr__img {
+      object-fit: cover;
+      object-position: 68% top;
+    }
+  }
+
+  // tokenpost main / dailyinfo
+  .main-dailyinfo {
+    display: block;
+    width: 100%;
+    height: 1180px;
+  }
+  // tokenpost main / calendar
+  .wrapper {
+    width: 100%;
+  }
+
+  //  tokenpost main / dailyinfo today list
+  .dailyinfo-today-info {
+    width: 100%;
+    height: 450px;
+    margin-top: 56px
+  }
+  .dailyinfo-today-list-cont-wrap {
+    width: 100%;
+    height: 332px;
+    margin-top: 32px;
+  }
+
+  // tokenpost main / dailyinfo event
+  .dailyinfo-event {
+    width: 100%;
+    height: 200px;
+    margin-top: 56px;
+  }
+  .dailyinfo-event-lst {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+  }
+  .dailyinfo-event-airdrop {
+    width: 49%;
+  }
+  .dailyinfo-event-quiz {
+    width: 49%;
+  }
+
+  .main-footer-btn {
+    width: 100%;
+    height: 336px;
+    padding: 32px;
+  }
+  .main-footer-btn-lst {
+    display: block;
+    width: 80%;
+  }
+  .main-footer-btn-g {
+    width: 100%;
+    height: 80px;
+    margin-top: 16px;
+    padding: 16px;
+    &:nth-child(1) {
+      margin-top: 0;
+      &::before {
+        top: 24px;
+        left: 24px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        top: 16px ;
+        left: 20px;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        top: 16px ;
+        left: 20px;
+      }
+    }
+  }
+  .footer {
+    .main-footer-category {
+      width: 100%;
+    }
+    .main-footer-category__lst {
+      display: block;
+      li {
+        display: inline-block;
+        padding-right: 8px;
+        &::before {
+          top: 10px;
+          right: 2px;
+        }
+        a { 
+          display: inline-block;
+          padding: 4px;
+        }
+      }
+    }
+  }
+  
+
 } 
 
 

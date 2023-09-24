@@ -20,7 +20,7 @@ var swiper = new Swiper(".mySwiper2", {
   breakpoints: {
     428: { /* 이하의 크기에서 옵션 값 */
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 16,
     },
     744: {
       slidesPerView: 3,

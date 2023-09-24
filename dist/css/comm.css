@@ -316,22 +316,54 @@ legend {
   height: 100px;
 }
 
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1024px) {
   .wrap {
     max-width: 1024px;
     width: 1024px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   .header {
     width: 100%;
     height: 100px;
     margin: 0 auto;
-    padding: 0 20px;
   }
   .main {
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 428px) {
+  .wrap {
+    max-width: 428px;
+    width: 428px;
+  }
+  .header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .header .main-logo {
@@ -692,6 +724,9 @@ legend {
   word-break: break-word;
   color: #333;
 }
+.newscards-wrap .swiper-slide-txtcont__tit:hover {
+  color: #1176AA;
+}
 
 .mySwiper3 {
   width: 100%;
@@ -796,22 +831,13 @@ legend {
 
 .keyword-newscard-back-cont {
   display: block;
-  padding-top: 40px;
+  padding-top: 32px;
   cursor: pointer;
 }
 
 .keyword-newscard-back-cont-lst {
   position: relative;
-  padding-bottom: 20px;
-}
-.keyword-newscard-back-cont-lst::before {
-  position: absolute;
-  content: "\f061";
-  top: -6px;
-  right: 0;
-  font-size: 24px;
-  font-weight: 900;
-  font-family: "Line Awesome Free";
+  padding-bottom: 24px;
 }
 
 .keyword-newscard-back-cont-lst__tit {
@@ -824,9 +850,18 @@ legend {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.keyword-newscard-back-cont-lst__tit::before {
+  position: absolute;
+  content: "\f061";
+  top: -6px;
+  right: 0;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
 .keyword-newscard-back-cont-lst__tit:hover {
   display: block;
-  font-weight: 500;
+  font-weight: 500px;
   color: #1176AA;
   cursor: pointer;
 }
@@ -881,20 +916,21 @@ legend {
   border-radius: 12px;
   background: #fff;
 }
-.cypto-market-card .cypto-card-rank {
+
+.cypto-card-rank {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-.cypto-market-card .cypto-card-rank .cypto-card-rank__num {
+.cypto-card-rank .cypto-card-rank__num {
   position: relative;
   width: 100%;
   height: 21px;
   font-size: 14px;
   font-weight: 500;
 }
-.cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
+.cypto-card-rank .cypto-card-rank__num::before {
   position: absolute;
   content: "\f004";
   display: block;
@@ -906,40 +942,48 @@ legend {
   color: #333;
   cursor: pointer;
 }
-.cypto-market-card .cypto-card-tit {
+
+.cypto-card-tit {
   display: flex;
   width: 100%;
   padding-top: 8px;
 }
-.cypto-market-card .cypto-card-tit .cypto-card-tit-image {
+
+.cypto-card-tit-image {
   display: flex;
   width: 24%;
   align-items: center;
 }
-.cypto-market-card .cypto-card-tit .cypto-card-tit-image .cypto-card-tit-image__link {
+
+.cypto-card-tit-image__link {
   display: block;
   width: 70%;
 }
-.cypto-market-card .cypto-card-tit-txt {
+
+.cypto-card-tit-txt {
   display: flex;
   flex-direction: column;
   width: 76%;
 }
-.cypto-market-card .cypto-card-tit-txt .cypto-card-tit-txt__top {
+
+.cypto-card-tit-txt__top {
   display: block;
   font-size: 12px;
   font-weight: 400;
 }
-.cypto-market-card .cypto-card-tit-txt .cypto-card-tit-txt__bottom {
+
+.cypto-card-tit-txt__bottom {
   display: block;
   font-size: 14px;
   font-weight: 500;
   margin-top: -4px;
 }
-.cypto-market-card .crypto-card-graph {
+
+.crypto-card-graph {
   width: 100%;
 }
-.cypto-market-card .crypto-card-graph__img {
+
+.crypto-card-graph__img {
   display: block;
   width: 100%;
   height: 90px;
@@ -947,23 +991,25 @@ legend {
      object-fit: cover;
   padding-top: 16px;
 }
-.cypto-market-card .crypto-card-percent-red {
-  display: block;
-  width: 100%;
-}
-.cypto-market-card .crypto-card-percent-red .crypto-card-percent-red__txt {
+
+.crypto-card-percent-red {
   display: flex;
   justify-content: end;
+  width: 100%;
+}
+.crypto-card-percent-red .crypto-card-percent-red__txt {
+  display: block;
   font-size: 18px;
   font-weight: 400;
   color: #ef3030;
   padding: 12px 0 12px 0;
 }
-.cypto-market-card .crypto-card-percent-blue {
+
+.crypto-card-percent-blue {
   display: block;
   width: 100%;
 }
-.cypto-market-card .crypto-card-percent-blue .crypto-card-percent-blue__txt {
+.crypto-card-percent-blue .crypto-card-percent-blue__txt {
   display: flex;
   justify-content: end;
   font-size: 18px;
@@ -971,22 +1017,24 @@ legend {
   color: #2F6ED6;
   padding: 12px 0 12px 0;
 }
-.cypto-market-card .crypto-card-price {
+
+.crypto-card-price {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.cypto-market-card .crypto-card-price .crypto-card-price__txt {
+.crypto-card-price .crypto-card-price__txt {
   font-size: 13px;
   font-weight: 400;
   color: #555;
 }
-.cypto-market-card .crypto-card-date {
+
+.crypto-card-date {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.cypto-market-card .crypto-card-date .crypto-card-date__txt {
+.crypto-card-date .crypto-card-date__txt {
   font-size: 13px;
   font-weight: 300;
   color: #555;
@@ -997,7 +1045,6 @@ legend {
 }
 .main-event-bnr .main-event-bnr__img {
   width: 100%;
-  height: 192px;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1028,7 +1075,7 @@ legend {
 .wrapper header {
   display: flex;
   align-items: center;
-  padding: 25px 30px 10px;
+  padding: 25px 39px 10px;
   justify-content: space-between;
 }
 
@@ -1083,7 +1130,7 @@ header .icons span:hover {
 }
 
 header .current-date {
-  font-size: 1.45rem;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -1117,7 +1164,7 @@ header .current-date {
   z-index: 1;
   cursor: pointer;
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .days li.inactive {
@@ -1196,12 +1243,14 @@ header .current-date {
   display: flex;
   justify-content: space-between;
   width: 95%;
+  height: 106px;
   border-radius: 12px;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
 }
-.dailyinfo-today-list-cont .dailyinfo-today-list-cont-logo-img {
+
+.dailyinfo-today-list-cont-logo-img {
   display: block;
   width: 98%;
   height: 64px;
@@ -1211,7 +1260,8 @@ header .current-date {
   display: block;
   width: 72%;
 }
-.dailyinfo-today-list-cont-txt .dailyinfo-today-list-cont__tit {
+
+.dailyinfo-today-list-cont__tit {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1226,17 +1276,22 @@ header .current-date {
   word-break: break-word;
   color: #333;
 }
-.dailyinfo-today-list-cont-txt .dailyinfo-today-list-cont__date {
+.dailyinfo-today-list-cont__tit:hover {
+  color: #1176AA;
+}
+
+.dailyinfo-today-list-cont__date {
   display: block;
   font-size: 14px;
   font-weight: 500;
-  padding-top: 4px;
+  padding-top: 6px;
   color: #555;
 }
-.dailyinfo-today-list-cont-txt .dailyinfo-today-list-cont__tag {
+
+.dailyinfo-today-list-cont__tag {
   display: block;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #555;
 }
 
@@ -1401,69 +1456,94 @@ header .current-date {
   font-family: "Line Awesome Free";
   color: #333;
 }
-.main-footer-btn-g .main-footer-btn-g-txt {
+
+.main-footer-btn-g-txt {
   display: flex;
   justify-content: center;
   padding-left: 40px;
 }
-.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__subtit {
+
+.main-footer-btn-g__subtit {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   color: #555;
 }
-.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__tit {
+
+.main-footer-btn-g__tit {
   display: flex;
   font-size: 16px;
   font-weight: 500;
   color: #333;
 }
-.main-footer-btn-g .main-footer-btn-g-txt .main-footer-btn-g__tit::after {
+.main-footer-btn-g__tit::after {
   content: "\f105";
   font-size: 16px;
   font-weight: 900;
   font-family: "Line Awesome Free";
+}
+.main-footer-btn-g__tit:hover {
+  color: #1176AA;
 }
 
 .main-footer-btn__crypto__txt {
   display: block;
   padding-left: 16px;
 }
-.main-footer-btn__crypto__txt .main-footer-btn__crypto__subtit {
+
+.main-footer-btn__crypto__subtit {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   color: #555;
 }
-.main-footer-btn__crypto__txt .main-footer-btn__crypto__tit {
+
+.main-footer-btn__crypto__tit {
   display: flex;
   font-size: 16px;
   font-weight: 500;
   color: #333;
 }
-.main-footer-btn__crypto__txt .main-footer-btn__crypto__tit::after {
+.main-footer-btn__crypto__tit::after {
   content: "\f105";
   font-size: 16px;
   font-weight: 900;
   font-family: "Line Awesome Free";
 }
 
-.main-footer-wrap {
-  width: 100%;
-  margin: 0 auto;
+.main-footer-btn__crypto__subtit {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
 }
-.main-footer-wrap .main-footer-category__lst {
+
+.main-footer-btn__crypto__tit {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.main-footer-btn__crypto__tit::after {
+  content: "\f105";
+  font-size: 16px;
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
+
+.footer .main-footer-category__lst {
   display: flex;
   font-size: 15px;
   font-weight: 500;
-  padding: 32px 0 16px;
+  padding: 56px 0 16px;
   color: #555;
 }
-.main-footer-wrap .main-footer-category__lst li {
+.footer .main-footer-category__lst li {
+  display: block;
   position: relative;
   padding-right: 24px;
 }
-.main-footer-wrap .main-footer-category__lst li::before {
+.footer .main-footer-category__lst li::before {
   position: absolute;
   display: block;
   content: "";
@@ -1473,7 +1553,7 @@ header .current-date {
   height: 12px;
   background-color: #555;
 }
-.main-footer-wrap .main-footer-category__lst li:last-child::before {
+.footer .main-footer-category__lst li:last-child::before {
   display: none;
 }
 
@@ -1634,6 +1714,9 @@ header .current-date {
     width: 100%;
     font-size: 14px;
   }
+  .newscards-wrap .swiper-slide-txtcont__tit:hover {
+    color: #1176AA;
+  }
   .keyword-newscard {
     height: 360px;
   }
@@ -1670,10 +1753,13 @@ header .current-date {
   .keyword-newscard-front__subtit {
     font-size: 15px;
   }
+  .keyword-newscard-back {
+    padding: 32px;
+  }
   .keyword-newscard-back__tit {
     font-size: 24px;
   }
-  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+  .keyword-newscard-back-cont {
     padding-top: 24px;
   }
   .keyword-newscard-back-cont-lst:nth-child(6) {
@@ -1681,7 +1767,7 @@ header .current-date {
   }
   .cypto-market-price-wrap {
     width: 100%;
-    padding: 56px 60px;
+    padding: 56px;
   }
   .cypto-market-cards-wrap {
     display: flex;
@@ -1708,14 +1794,22 @@ header .current-date {
   .wrapper header {
     padding: 16px 30px 0;
   }
+  .calendar .days li {
+    margin-top: 30px;
+  }
   .dailyinfo-today-info {
     height: 420px;
+    padding: 20px;
   }
   .dailyinfo-today-list-cont-wrap {
+    width: 100%;
     height: 332px;
+    margin-top: 16px;
   }
   .dailyinfo-today-list-cont {
-    padding: 15px;
+    width: 93%;
+    height: 96px;
+    padding: 16px;
   }
   .dailyinfo-today-list-cont-logo {
     display: flex;
@@ -1723,12 +1817,19 @@ header .current-date {
   }
   .dailyinfo-today-list-cont-logo-img {
     width: 100%;
-    height: 56px;
+    height: 40px;
   }
   .dailyinfo-today-list-cont-txt {
-    width: 70%;
+    width: 78%;
+  }
+  .dailyinfo-today-list-cont__tit {
+    font-size: 15px;
+  }
+  .dailyinfo-today-list-cont__date {
+    padding-top: 4px;
   }
   .dailyinfo-event {
+    width: 20%;
     height: 440px;
   }
   .dailyinfo-event-lst {
@@ -1757,36 +1858,30 @@ header .current-date {
   }
   .main-footer-btn {
     width: 100%;
+    height: 240px;
   }
   .main-footer-btn-lst {
-    width: 80%;
-  }
-  .main-footer-wrap {
     width: 90%;
   }
 }
 /* 작은 폰 */
 @media screen and (max-width: 428px) {
-  .wrap {
-    max-width: 428px;
-    width: 428px;
-  }
-  .wrap .header .header-icons .header-icons__search::before,
-  .wrap .header .header-icons .header-icons__user::before {
+  .header .header-icons .header-icons__search::before,
+  .header .header-icons .header-icons__user::before {
     display: none;
   }
-  .wrap .mySwiper1 .swiper-slide-1,
-  .wrap .mySwiper1 .swiper-slide-2,
-  .wrap .mySwiper1 .swiper-slide-3,
-  .wrap .mySwiper1 .swiper-slide-cont {
+  .mySwiper1 .swiper-slide-1,
+  .mySwiper1 .swiper-slide-2,
+  .mySwiper1 .swiper-slide-3,
+  .mySwiper1 .swiper-slide-cont {
     display: none;
   }
-  .wrap .mySwiper1 .type1 {
+  .mySwiper1 .type1 {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .wrap .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
+  .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
     position: absolute;
     justify-content: center;
     top: 50%;
@@ -1795,153 +1890,288 @@ header .current-date {
     line-height: 1.7;
     transform: translate(-50%, -50%);
   }
-  .wrap .swiper-button-prev:after, .wrap .swiper-rtl .swiper-button-next:after,
-  .wrap .swiper-button-next:after, .wrap .swiper-rtl .swiper-button-prev:after {
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
     color: #fff;
     margin-top: 0;
   }
-  .wrap .news-category-btn {
+  .news-category-btn {
     display: flex;
     width: 100%;
     height: 369px;
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .wrap .news-category-btn .news-category-btn-lst {
+  .news-category-btn .news-category-btn-lst {
     flex-wrap: wrap;
     width: 100%;
   }
-  .wrap .news-category-btn .news-category-btn-lst .news-category-btn-box {
+  .news-category-btn .news-category-btn-lst .news-category-btn-box {
     display: flex;
     width: 48%;
     margin-bottom: 16px;
   }
-  .wrap .news-category-btn .news-category-btn-lst .news-category-btn-box:hover {
+  .news-category-btn .news-category-btn-lst .news-category-btn-box:hover {
     transform: none;
   }
-  .wrap .news-category-btn .news-category-btn-lst .news-category-btn-box:active {
+  .news-category-btn .news-category-btn-lst .news-category-btn-box:active {
     color: #1176AA;
   }
-  .wrap .news-category-btn .news-category-btn-lst .news-category-btn-box:active .news-category-btn-txt {
+  .news-category-btn .news-category-btn-lst .news-category-btn-box:active .news-category-btn-txt {
     color: #fff;
   }
-  .wrap .news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-txt {
+  .news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-txt {
     font-size: 18px;
   }
-  .wrap .newscards-slider {
+  .newscards-slider {
     width: 100%;
     height: 420px; /* 400px */
     margin-top: 32px;
     overflow: hidden;
-    padding-right: 13px;
+    padding-right: 0;
   }
-  .wrap .mySwiper2 {
+  .mySwiper2 {
     width: 100%;
     margin: 0 auto;
   }
-  .wrap .mySwiper2 .newscards-wrap {
+  .mySwiper2 .newscards-wrap {
     width: 100%;
   }
-  .wrap .mySwiper2 .newscards-wrap .swiper-slide-image {
+  .mySwiper2 .newscards-wrap .swiper-slide-image {
     display: block;
     width: 100%;
     height: 240px;
   }
-  .wrap .mySwiper2 .newscards-wrap .swiper-slide-txtcont {
+  .mySwiper2 .newscards-wrap .swiper-slide-txtcont {
     width: 100%;
     height: 160px;
     padding: 24px;
   }
-  .wrap .mySwiper2 .newscards-wrap .swiper-slide-txtcont__keyword {
+  .mySwiper2 .newscards-wrap .swiper-slide-txtcont__keyword {
     font-size: 16px;
   }
-  .wrap .mySwiper2 .newscards-wrap .swiper-slide-txtcont__tit {
+  .mySwiper2 .newscards-wrap .swiper-slide-txtcont__tit {
     font-size: 20px;
     height: 64px;
     padding-top: 8px;
     overflow: hidden;
     padding-right: 13px;
   }
-  .wrap .mySwiper3 {
+  .mySwiper3 {
     width: 100%;
     padding-top: 100px;
   }
-  .wrap .keyword-newscards-tit {
+  .keyword-newscards-tit {
     padding-bottom: 32px;
   }
-  .wrap .keyword-newscard {
+  .keyword-newscard {
     height: 440px;
   }
-  .wrap .keyword-newscard-front__image {
+  .keyword-newscard-front__image {
     width: 50%;
     padding: 40px 100px 40px;
   }
-  .wrap .keyword-newscards-front-tit {
+  .keyword-newscards-front-tit {
     font-size: 28px;
   }
-  .wrap .keyword-newscards-front-tit::before {
+  .keyword-newscards-front-tit::before {
     position: absolute;
     top: -4px;
     left: 104px;
   }
-  .wrap .keyword-newscard-front__subtit {
+  .keyword-newscard-front__subtit {
     font-size: 18px;
   }
-  .wrap .keyword-newscard-back__tit {
+  .keyword-newscard-back__tit {
     font-size: 28px;
   }
-  .wrap .keyword-newscard-back-cont-lst {
+  .keyword-newscard-back-cont-lst {
     padding-bottom: 30px;
   }
-  .wrap .keyword-newscard-back-cont-lst__tit {
+  .keyword-newscard-back-cont-lst__tit {
     font-size: 18px;
   }
-  .wrap .keyword-newscard-back-cont-lst__tit:hover {
+  .keyword-newscard-back-cont-lst__tit:hover {
     display: block;
     font-weight: 500px;
     color: #1176AA;
     cursor: pointer;
   }
-  .wrap .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
     padding-top: 40px;
   }
-  .wrap .mySwiper3 .swiper-button-prev:after, .wrap .swiper-rtl .swiper-button-next:after,
-  .wrap .mySwiper3 .swiper-button-next:after, .wrap .swiper-rtl .swiper-button-prev:after {
+  .btnnext-keyword-card,
+  .btnprev-keyword-card {
     color: #fff;
-    margin-top: 200px;
+    margin-top: 72px;
   }
-  .wrap .cypto-market-price-wrap {
+  .cypto-market-price-wrap {
     display: block;
     width: 100%;
+    height: 642px;
     padding: 32px;
   }
-  .wrap .cypto-market-price-wrap-tit {
+  .cypto-market-price-wrap-tit {
     margin-bottom: 32px;
   }
-  .wrap .cypto-market-cards-wrap {
+  .cypto-market-cards-wrap {
     display: block;
+    height: 504px;
   }
-  .wrap .cypto-market-card {
+  .cypto-market-card {
     display: flex;
     width: 100%;
-    height: 80px;
-    border-radius: 20px;
+    height: 56px;
+    border-radius: 12px;
     margin-bottom: 8px;
+    padding: 8px;
   }
-  .wrap .cypto-card-rank .cypto-card-rank__num {
+  .cypto-card-rank {
+    width: 16%;
+  }
+  .cypto-card-rank__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .cypto-card-tit {
+    width: 60%;
+    padding: 0;
+  }
+  .cypto-card-tit-image {
+    width: 14%;
+  }
+  .cypto-card-tit-image__link {
+    width: 100%;
+  }
+  .cypto-card-tit-txt {
+    display: flex;
+    justify-content: center;
+    padding-left: 8px;
+  }
+  .cypto-card-tit-txt__top {
+    display: inline;
+  }
+  .cypto-card-tit-txt__bottom {
+    display: inline;
+  }
+  .crypto-card-percent-red {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+  }
+  .crypto-card-percent-red .crypto-card-percent-red__txt {
     display: block;
-    text-align: center;
-    width: 10%;
-    height: 24px;
-    font-size: 20px;
+    padding: 0;
   }
-  .wrap .crypto-card-graph,
-  .wrap .crypto-card-price,
-  .wrap .crypto-card-date {
+  .crypto-card-percent-blue {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+  }
+  .crypto-card-percent-blue .crypto-card-percent-blue__txt {
+    display: block;
+    padding: 0;
+  }
+  .crypto-card-graph,
+  .crypto-card-price,
+  .crypto-card-date {
     display: none;
   }
-  .wrap .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
+  .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
     display: none;
+  }
+  .main-event-bnr .main-event-bnr__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 68% top;
+       object-position: 68% top;
+  }
+  .main-dailyinfo {
+    display: block;
+    width: 100%;
+    height: 1180px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .dailyinfo-today-info {
+    width: 100%;
+    height: 450px;
+    margin-top: 56px;
+  }
+  .dailyinfo-today-list-cont-wrap {
+    width: 100%;
+    height: 332px;
+    margin-top: 32px;
+  }
+  .dailyinfo-event {
+    width: 100%;
+    height: 200px;
+    margin-top: 56px;
+  }
+  .dailyinfo-event-lst {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+  }
+  .dailyinfo-event-airdrop {
+    width: 49%;
+  }
+  .dailyinfo-event-quiz {
+    width: 49%;
+  }
+  .main-footer-btn {
+    width: 100%;
+    height: 336px;
+    padding: 32px;
+  }
+  .main-footer-btn-lst {
+    display: block;
+    width: 80%;
+  }
+  .main-footer-btn-g {
+    width: 100%;
+    height: 80px;
+    margin-top: 16px;
+    padding: 16px;
+  }
+  .main-footer-btn-g:nth-child(1) {
+    margin-top: 0;
+  }
+  .main-footer-btn-g:nth-child(1)::before {
+    top: 24px;
+    left: 24px;
+  }
+  .main-footer-btn-g:nth-child(2)::before {
+    top: 16px;
+    left: 20px;
+  }
+  .main-footer-btn-g:nth-child(3)::before {
+    top: 16px;
+    left: 20px;
+  }
+  .footer .main-footer-category {
+    width: 100%;
+  }
+  .footer .main-footer-category__lst {
+    display: block;
+  }
+  .footer .main-footer-category__lst li {
+    display: inline-block;
+    padding-right: 8px;
+  }
+  .footer .main-footer-category__lst li::before {
+    top: 10px;
+    right: 2px;
+  }
+  .footer .main-footer-category__lst li a {
+    display: inline-block;
+    padding: 4px;
   }
 }
 @font-face {
