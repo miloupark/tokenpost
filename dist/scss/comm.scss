@@ -49,10 +49,9 @@
   width: 100%;
   margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1320px) {
   .wrap {
-    max-width: 1024px;
-    width: 1024px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -279,14 +278,28 @@
   .type1 {
     position: relative;
     width: 100%;
-    height: 416px;
     object-fit: cover;
     border-radius: 20px;
     background: url(../../images/mainslide-bg-PinotNoir.jpg) 0 0 no-repeat;
+    a {
+      display: flex;
+      width: 100%;
+      height: 416px;
+    }
+  }
+  .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 0 5%;
+  }
+  .thumb {
+    width: 50%;
   }
   .swiper-slide-1 {
     display: block;
-    width: 44%;
+    // width: 44%;
     height: 100%;
     margin-left: auto;
     border-top-right-radius: 20px;
@@ -328,21 +341,21 @@
     object-fit: cover;
   }
   .swiper-slide-tit {
-    position: absolute;
-    top: 100px;
-    left: 80px;
-    width: 44%;
+    // position: absolute;
+    // top: 100px;
+    // left: 80px;
     display: block;
     font-size: 40px;
     font-weight: 700;
     color: #fff;
   }
   .swiper-slide-cont {
-    position: absolute;
-    top: 240px;
-    left: 80px;
-    width: 40%;
+    // position: absolute;
+    // top: 240px;
+    // left: 80px;
+    // width: 40%;
     display: block;
+    margin-top: 40px;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
@@ -397,11 +410,11 @@
 
 // tokenpost main / newscards slider
 .newscards-slider {
-  width: 101%;
+  width: 100%;
   height: 334px;
   margin-top: 32px;
   overflow: hidden;
-  padding-right: 13px;
+  // padding-right: 13px;
 }
 .newscards-swiper {
   width: 100%;
@@ -1298,11 +1311,11 @@ color: #333;
     .mySwiper1 {
       width: 100%;
       .swiper-slide-tit {
-        width: 46%;
+        // width: 46%;
         word-break: keep-all;
       }
       .swiper-slide-cont {
-        width: max-content;
+        // width: max-content;
         max-width: 400px;
         word-break: keep-all;
       }
@@ -1315,7 +1328,7 @@ color: #333;
       .swiper-slide-1,
       .swiper-slide-2,
       .swiper-slide-3 {
-        width: 40%;
+        // width: 40%;
         object-fit: cover;
       }
     }
@@ -1351,7 +1364,7 @@ color: #333;
   }
   // tokenpost main / newscards slider
   .newscards-slider {
-    width: 102%;
+    width: 100%;
     height: 268px; /* 254px */
     margin-top: 24px;
     overflow: hidden;
@@ -1534,7 +1547,7 @@ color: #333;
   
 
 /* 작은 폰 */
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 744px) {
   // header
   .header .header-icons .header-icons__search::before,
   .header .header-icons .header-icons__user::before {

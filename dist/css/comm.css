@@ -71,7 +71,7 @@ th,
 td,
 input,
 select,
-button, header, main, footer, article {
+button, header, main, footer, article, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -326,10 +326,9 @@ legend {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1320px) {
   .wrap {
-    max-width: 1024px;
-    width: 1024px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -549,15 +548,28 @@ legend {
 .mySwiper1 .type1 {
   position: relative;
   width: 100%;
-  height: 416px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
   background: url(../../images/mainslide-bg-PinotNoir.jpg) 0 0 no-repeat;
 }
+.mySwiper1 .type1 a {
+  display: flex;
+  width: 100%;
+  height: 416px;
+}
+.mySwiper1 .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 5%;
+}
+.mySwiper1 .thumb {
+  width: 50%;
+}
 .mySwiper1 .swiper-slide-1 {
   display: block;
-  width: 44%;
   height: 100%;
   margin-left: auto;
   border-top-right-radius: 20px;
@@ -604,21 +616,14 @@ legend {
      object-fit: cover;
 }
 .mySwiper1 .swiper-slide-tit {
-  position: absolute;
-  top: 100px;
-  left: 80px;
-  width: 44%;
   display: block;
   font-size: 40px;
   font-weight: 700;
   color: #fff;
 }
 .mySwiper1 .swiper-slide-cont {
-  position: absolute;
-  top: 240px;
-  left: 80px;
-  width: 40%;
   display: block;
+  margin-top: 40px;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
@@ -671,11 +676,10 @@ legend {
 }
 
 .newscards-slider {
-  width: 101%;
+  width: 100%;
   height: 334px;
   margin-top: 32px;
   overflow: hidden;
-  padding-right: 13px;
 }
 
 .newscards-swiper {
@@ -1632,12 +1636,9 @@ header .current-date {
     width: 100%;
   }
   .mainnews-slider .mySwiper1 .swiper-slide-tit {
-    width: 46%;
     word-break: keep-all;
   }
   .mainnews-slider .mySwiper1 .swiper-slide-cont {
-    width: -moz-max-content;
-    width: max-content;
     max-width: 400px;
     word-break: keep-all;
   }
@@ -1656,7 +1657,6 @@ header .current-date {
   .mainnews-slider .type3 .swiper-slide-1,
   .mainnews-slider .type3 .swiper-slide-2,
   .mainnews-slider .type3 .swiper-slide-3 {
-    width: 40%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -1689,7 +1689,7 @@ header .current-date {
     color: #fff;
   }
   .newscards-slider {
-    width: 102%;
+    width: 100%;
     height: 268px; /* 254px */
     margin-top: 24px;
     overflow: hidden;
@@ -1865,7 +1865,7 @@ header .current-date {
   }
 }
 /* 작은 폰 */
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 744px) {
   .header .header-icons .header-icons__search::before,
   .header .header-icons .header-icons__user::before {
     display: none;
@@ -2246,7 +2246,7 @@ th,
 td,
 input,
 select,
-button, header, main, footer, article {
+button, header, main, footer, article, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -2475,18 +2475,8 @@ legend {
   content: "";
 }
 
-.wrap {
-  width: 1280px;
-  margin: 0 auto;
-}
-
 * {
   font-family: "Pretendard";
-}
-
-.wrap {
-  width: 1280px;
-  margin: 0 auto;
 }
 
 .forum-notice-wrap {
