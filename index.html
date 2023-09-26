@@ -3,12 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 가로스크롤 비활성화 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-  <!-- 아이폰 등 Apple iOS 기기에서 문제가 나타나는 경우 -->
-  <!-- <meta content="yes" name="apple-mobile-web-app-capable" />  
-  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" /> -->
-  <title>Document</title>
+  <title>Tokenpost</title>
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -34,6 +29,7 @@
   <div class="wrap">
     <!-- tokenpost main / header -->
     <header data-include-path="./outline/header.html"></header>
+    <!-- tokenpost main / main -->
     <main id="main" class="main">
       <!-- tokenpost main / main news slider -->
       <div class="mainnews-slider">
@@ -238,8 +234,10 @@
           <div class="swiper-slide keyword-newscard">
             <!-- 1 keyword newscards front -->
             <div class="keyword-newscard-front">
-                <a href="#">
-                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-blockchain.png" alt="블록체인 아이콘">
+                <a class="keyword-newscard-front__box" href="#">
+                  <div class="keyword-newscard-front-icon">
+                    <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-blockchain.png" alt="블록체인 아이콘">
+                  </div>
                   <div class="keyword-newscard-front-info">
                     <strong class="keyword-newscards-front-tit">블록체인</strong>
                     <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -299,8 +297,10 @@
             <!-- 2 keyword newscards front -->
             <div class="keyword-newscard-front">
                 <a href="#">
-                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-finacial.png" alt="금융 아이콘">
-                  <div class="keyword-newscard-front-info">
+                  <div class="keyword-newscard-front-icon">
+                    <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-finacial.png" alt="금융 아이콘">
+                  </div>
+                    <div class="keyword-newscard-front-info">
                     <strong class="keyword-newscards-front-tit key-newscards-fr-tit-2">금융</strong>
                     <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
                   </div>
@@ -360,7 +360,9 @@
             <!-- 3 keyword newscards front -->
             <div class="keyword-newscard-front">
               <a href="#">
-                <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-industry.png" alt="산업 아이콘">
+                <div class="keyword-newscard-front-icon">
+                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-industry.png" alt="산업 아이콘">
+                </div>
                 <div class="keyword-newscard-front-info">
                   <strong class="keyword-newscards-front-tit key-newscards-fr-tit-2">산업</strong>
                   <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -421,7 +423,9 @@
           <!-- 4 keyword newscards front -->
             <div class="keyword-newscard-front">
               <a href="#">
-                <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-social.png" alt="정치사회 아이콘">
+                <div class="keyword-newscard-front-icon">
+                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-social.png" alt="정치사회 아이콘">
+                </div>
                 <div class="keyword-newscard-front-info">
                   <strong class="keyword-newscards-front-tit">정치사회</strong>
                   <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -482,7 +486,9 @@
           <!-- 5 keyword newscards front -->
             <div class="keyword-newscard-front">
               <a href="#">
-                <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-national.png" alt="국제 아이콘">
+                <div class="keyword-newscard-front-icon">
+                 <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-national.png" alt="국제 아이콘">
+                </div>
                 <div class="keyword-newscard-front-info">
                   <strong class="keyword-newscards-front-tit key-newscards-fr-tit-2">국제</strong>
                   <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -543,7 +549,9 @@
             <!-- 6 keyword newscards front -->
               <div class="keyword-newscard-front">
                 <a href="#">
-                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-opinion.png" alt="오피니언 아이콘">
+                  <div class="keyword-newscard-front-icon">
+                    <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-opinion.png" alt="오피니언 아이콘">
+                  </div>
                   <div class="keyword-newscard-front-info">
                     <strong class="keyword-newscards-front-tit">오피니언</strong>
                     <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -604,7 +612,9 @@
             <!-- 7 keyword newscards front -->
               <div class="keyword-newscard-front">
                 <a href="#">
-                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-general.png" alt="일반 아이콘">
+                  <div class="keyword-newscard-front-icon">
+                    <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-general.png" alt="일반 아이콘">
+                  </div>
                   <div class="keyword-newscard-front-info">
                     <strong class="keyword-newscards-front-tit key-newscards-fr-tit-2">일반</strong>
                     <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -665,7 +675,9 @@
             <!-- 8 keyword newscards front -->
             <div class="keyword-newscard-front">
               <a href="#">
-                <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-coinness.png" alt="코인니스 아이콘">
+                <div class="keyword-newscard-front-icon">
+                  <img class="keyword-newscard-front__image" src="./images/keyword-news-3dicon-coinness.png" alt="코인니스 아이콘">
+                </div>
                 <div class="keyword-newscard-front-info">
                   <strong class="keyword-newscards-front-tit">코인니스</strong>
                   <p class="keyword-newscard-front__subtit">바쁜 현대인을 위한,<br>주제별 뉴스 한 눈에 보기</p>
@@ -1002,15 +1014,15 @@
       <!-- tokenpost main / dailyinfo -->
       <div class="main-dailyinfo">
         <!-- tokenpost main / calendar -->
-        <div class="wrapper">
+        <div class="dailyinfo-calendar">
           <h2 class="blind">캘린더 한 눈에 보기</h2>
-          <header>
+          <div class="dailyinfo-calendar-tit">
             <p class="current-date"></p>
             <div class="icons">
               <span id="prev" class="material-symbols-rounded"></span>
               <span id="next" class="material-symbols-rounded"></span>
             </div>
-          </header>
+          </div>
           <div class="calendar">
             <ul class="weeks">
               <li>Sun</li>

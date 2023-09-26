@@ -15,26 +15,38 @@
 //   }
 // }
 // .box-g {}
-// // title
+// title
 // .tit-sub {
 //   display: block;
 //   font-size: 28px;
 //   font-weight: 700;
 //   color: #333;
 // }
-// // icon
 
-// // btn
+// btn
 
-// // more
+// more
 
-// // line
+// line
+
+// icon
+// header-icons
+.btn-g {
+  display: block;
+  margin-left: 24px;
+  &::before {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+  }
+}
 
 // layout
 .wrap {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  background-color: #F1F3F8;
 }
 .header {
   display: flex;
@@ -54,6 +66,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    background-color: #F1F3F8;
   }
   .header {
     width: 100%;
@@ -72,7 +85,8 @@
 @media screen and (max-width: 428px) {
   .wrap {
     max-width: 428px;
-    width: 428px;
+    width: 100%;
+    background-color: #F1F3F8;
   }
   .header {
     width: 100%;
@@ -89,6 +103,7 @@
   }
 }
 
+// main header
 .header {
   .main-logo {
     display: flex;
@@ -96,57 +111,46 @@
     a {
       font-size: 24px;
       font-weight: 700;
-      // font-family: 'Pretendard-Bold';
     }
   }
   .header-gnb {
     position: relative;
     margin: 0 auto;
-    .header-gnb-depth1 {
-      display: flex;
-      justify-content: center;
+  }
+  .header-gnb-depth1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li a {
+      display: block;
+      text-align: center;
+      padding: 8px 32px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: "Pretendard";
+    }
+    .header-gnb-depth2 {
+      display: none;
+      width: 100%;
+      height: 360px;
       margin-top: 30px;
-      li a {
-        display: block;
-        text-align: center;
-        padding: 8px 32px;
-        font-size: 16px;
-        font-weight: 700;
-        font-family: "Pretendard";
-      }
-      .header-gnb-depth2 {
-        display: none;
-        width: 100%;
-        height: 360px;
-        margin-top: 30px;
-        background: #eee;
-      }
+      background: #eee;
       .header-gnb-depth2-lst {
         padding-top: 8px;
-      }
-      .header-gnb-depth2-lst li > a {
-        padding: 8px 16px;
-        font-size: 14px;
-        font-weight: 400;
-        font-family: "Pretendard";
+        li > a {
+          padding: 8px 16px;
+          font-size: 14px;
+          font-weight: 400;
+          font-family: "Pretendard";
+        }
       }
     }
   }
   .header-icons {
     display: flex;
     align-items: center;
-    .btn-g {
-      display: block;
-      margin-left: 24px;
-      &::before {
-        font-size: 24px;
-        font-weight: 900;
-        font-family: "Line Awesome Free";
-      }
-    }
     .header-icons__search {
       &::before {
-        display: block;
         content: "\f002";
         transform: scaleX(-1);
       }
@@ -160,12 +164,30 @@
       &::before {
         content: "\f0c9";
       }
-      &:hover {
-        .header-icons-all {
-          display: block;
-        }
+    }
+  }
+}
+@media screen and (max-width: 1320px) {
+  .header {
+    .main-logo {
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 24px;
+        font-weight: 700;
       }
     }
+    .header-gnb .header-gnb-depth1 {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 744px) {
+  .header-icons__search::before {
+    display: none;
+  }
+  .header-icons__user::before {
+    display: none
   }
 }
 
@@ -379,7 +401,7 @@
       border-radius: 10px;
       margin-right: 8px;
       background-color: #fff;
-      box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 12px 36px rgba(0,0,0,.09);
+      // box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 12px 36px rgba(0,0,0,.09);
       transition: all 0.3s ease-out;
       &:last-child {
         margin-right: 0;
@@ -424,7 +446,7 @@
   width: 20%;
   font-size: 18px;
   border-radius: 20px;
-  box-shadow: 0 0 2px rgba(0,0,0,.07), 4px 4px 16px rgba(0,0,0,.07);
+  // box-shadow: 0 0 2px rgba(0,0,0,.07), 4px 4px 16px rgba(0,0,0,.07);
   .swiper-slide-image {
     display: block;
     width: 100%;
@@ -490,16 +512,22 @@
   border-radius: 20px;
   z-index: 100;
 }
+.keyword-newscard-front-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 100px 0;
+}
 .keyword-newscard-front__image {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 90%;
   // height: 205px;
-  padding-top: 48px;
-  padding-left: 100px;
+  // padding-top: 48px;
+  // padding-left: 100px;
 }
 .keyword-newscard-front-info {
-  padding: 40px;
+  padding: 58px 48px;
 }
 .keyword-newscards-front-tit {
   position: relative;
@@ -585,7 +613,7 @@
   }
   &:hover {
     display: block;
-    font-weight: 500px;
+    font-weight: 700px;
     color: #1176AA;
     cursor: pointer;
   }
@@ -771,19 +799,19 @@
   border-radius: 20px;
   background-color: #eee;
 }
-.wrapper{
+.dailyinfo-calendar{
   width: 40%;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  // box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-.wrapper header{
+.dailyinfo-calendar-tit {
   display: flex;
   align-items: center;
   padding: 25px 39px 10px;
   justify-content: space-between;
 }
-header .icons{
+.dailyinfo-calendar-tit .icons{
   display: flex;
   position: relative;
   &::before {
@@ -808,7 +836,7 @@ header .icons{
     color: #333;
   }
 }
-header .icons span{
+.dailyinfo-calendar-tit .icons span{
   display: block;
   height: 38px;
   width: 38px;
@@ -824,10 +852,10 @@ header .icons span{
 .icons span:last-child{
   margin-right: -10px;
 }
-header .icons span:hover{
+.dailyinfo-calendar-tit .icons span:hover{
   background: #f2f2f2;
 }
-header .current-date{
+.dailyinfo-calendar-tit .current-date{
   font-size: 20px;
   font-weight: 500;
 }
@@ -1290,19 +1318,6 @@ color: #333;
 /* tablet */
 /* 1024px 이하일 경우 */
 @media screen and (max-width: 1024px) {
-  .header {
-    .main-logo {
-      display: flex;
-      align-items: center;
-      a {
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
-    .header-gnb .header-gnb-depth1 {
-      display: none;
-    }
-  }
 
   // mainnews slider
   .mainnews-slider {
@@ -1548,11 +1563,7 @@ color: #333;
 
 /* 작은 폰 */
 @media screen and (max-width: 744px) {
-  // header
-  .header .header-icons .header-icons__search::before,
-  .header .header-icons .header-icons__user::before {
-    display: none
-  }
+
   // mainnews slider
   .mySwiper1 {
     .swiper-slide-1,
