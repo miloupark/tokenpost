@@ -155,7 +155,6 @@ input[type=search]::-webkit-search-cancel-button {
 /* 기본 폰트 설정 */
 /* mobile */
 body {
-  background: #fff;
   font-size: 14px;
   line-height: 1.5;
   font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
@@ -314,11 +313,14 @@ legend {
   font-family: "Line Awesome Free";
 }
 
+body {
+  background-color: #F1F3F8;
+}
+
 .wrap {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  background-color: #F1F3F8;
 }
 
 .header {
@@ -342,7 +344,6 @@ legend {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: #F1F3F8;
   }
   .header {
     width: 100%;
@@ -362,7 +363,6 @@ legend {
   .wrap {
     max-width: 428px;
     width: 100%;
-    background-color: #F1F3F8;
   }
   .header {
     width: 100%;
@@ -560,108 +560,103 @@ legend {
   height: 416px;
 }
 .mySwiper1 .swiper-slide {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 416px;
-}
-.mySwiper1 .type1 {
   position: relative;
   width: 100%;
+  height: 416px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  background: url(../../images/mainslide-bg-PinotNoir.jpg) 0 0 no-repeat;
 }
-.mySwiper1 .type1 a {
+.mySwiper1 .mySwiper1-link {
   display: flex;
   width: 100%;
   height: 416px;
 }
-.mySwiper1 .txt {
+.mySwiper1 .mySwiper1-link .mySwiper1-txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
   padding: 0 5%;
 }
-.mySwiper1 .thumb {
-  width: 50%;
-}
-.mySwiper1 .swiper-slide-1 {
-  display: block;
-  height: 100%;
-  margin-left: auto;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mySwiper1 .type2 {
-  position: relative;
-  width: 100%;
-  height: 416px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  background: url(../../images/mainslide-bg-Stellar.jpg) 0 0 no-repeat;
-}
-.mySwiper1 .swiper-slide-2 {
-  display: block;
-  width: 44%;
-  height: 100%;
-  margin-left: auto;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mySwiper1 .type3 {
-  position: relative;
-  width: 100%;
-  height: 416px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  background: url(../../images/mainslide-bg-Venice.jpg) 0 0 no-repeat;
-}
-.mySwiper1 .swiper-slide-3 {
-  display: block;
-  width: 44%;
-  height: 100%;
-  margin-left: auto;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mySwiper1 .swiper-slide-tit {
+.mySwiper1 .mySwiper1-link .mySwiper1-txt .swiper-slide-tit {
   display: block;
   font-size: 40px;
   font-weight: 700;
   color: #fff;
 }
-.mySwiper1 .swiper-slide-cont {
+.mySwiper1 .mySwiper1-link .mySwiper1-txt .swiper-slide-cont {
   display: block;
-  margin-top: 40px;
+  margin-top: 32px;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
 }
-
-.mySwiper1-next,
-.mySwiper1-prev {
+.mySwiper1 .mySwiper1-link .mySwiper1-thumb {
+  width: 50%;
+}
+.mySwiper1 .mySwiper1-link .mySwiper1-thumb .mySwiper1-thumb-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mySwiper1 .type1 {
+  background: url(../../images/mainslide-bg-PinotNoir.jpg) 0 0 no-repeat;
+}
+.mySwiper1 .type2 {
+  background: url(../../images/mainslide-bg-Stellar.jpg) 0 0 no-repeat;
+}
+.mySwiper1 .type3 {
+  background: url(../../images/mainslide-bg-Venice.jpg) 0 0 no-repeat;
+}
+.mySwiper1 .mySwiper1-next,
+.mySwiper1 .mySwiper1-prev {
   color: #fff;
 }
 
+@media screen and (max-width: 1320px) {
+  .mainnews-slider {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mySwiper1 .mySwiper1-link .mySwiper1-txt {
+    width: 60%;
+    padding: 0 6%;
+  }
+  .mySwiper1 .mySwiper1-link .mySwiper1-txt .swiper-slide-tit {
+    word-break: keep-all;
+  }
+  .mySwiper1 .mySwiper1-link .mySwiper1-txt .swiper-slide-cont {
+    max-width: 400px;
+    word-break: keep-all;
+  }
+  .mySwiper1 .mySwiper1-link .mySwiper1-thumb {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 744px) {
+  .mySwiper1 .mySwiper1-link .mySwiper1-txt {
+    width: 100%;
+    padding: 0 14%;
+  }
+  .mySwiper1 .mySwiper1-link .mySwiper1-thumb {
+    display: none;
+  }
+}
 .news-category-btn {
   padding-top: 16px;
 }
-.news-category-btn .news-category-btn-lst {
+
+.news-category-btn-lst {
   display: flex;
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box {
+
+.news-category-btn-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -672,21 +667,22 @@ legend {
   background-color: #fff;
   transition: all 0.3s ease-out;
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box:last-child {
+.news-category-btn-box:last-child {
   margin-right: 0;
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box:hover {
+.news-category-btn-box:hover {
   transform: translateY(-8%);
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link {
+
+.news-category-btn-box-link {
   display: flex;
   justify-content: center;
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link .news-category-btn-icons {
+.news-category-btn-box-link .news-category-btn-icons {
   display: block;
   width: 28%;
 }
-.news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-box-link .news-category-btn-txt {
+.news-category-btn-box-link .news-category-btn-txt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -694,10 +690,66 @@ legend {
   font-size: 15px;
   font-weight: 700;
 }
+.news-category-btn-box-link .news-category-btn-txt:hover {
+  color: #1176AA;
+}
 
+@media screen and (max-width: 1320px) {
+  .news-category-btn {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-top: 32px;
+  }
+  .news-category-btn-lst {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .news-category-btn-box {
+    display: flex;
+    width: 24%;
+    margin-right: 0;
+  }
+  .news-category-btn-box:hover {
+    transform: none;
+  }
+  .news-category-btn-txt:hover {
+    color: #1176AA;
+  }
+}
+@media screen and (max-width: 744px) {
+  .news-category-btn {
+    display: flex;
+    width: 100%;
+    height: 369px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .news-category-btn-lst {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .news-category-btn-box {
+    display: flex;
+    width: 48%;
+    margin-bottom: 16px;
+  }
+  .news-category-btn-box:hover {
+    transform: none;
+  }
+  .news-category-btn-txt {
+    font-size: 18px;
+  }
+  .news-category-btn-txt:hover {
+    color: #1176AA;
+  }
+}
 .newscards-slider {
   width: 100%;
-  height: 334px;
   margin-top: 32px;
   overflow: hidden;
 }
@@ -751,10 +803,74 @@ legend {
   color: #1176AA;
 }
 
+@media screen and (max-width: 1024px) {
+  .newscards-slider {
+    width: 100%;
+    height: 254px;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+  .newscards-wrap {
+    display: block;
+    width: 33%;
+  }
+  .newscards-wrap .swiper-slide-image {
+    width: 100%;
+    height: 142px;
+  }
+  .newscards-wrap .swiper-slide-txtcont {
+    width: 100%;
+    height: 112px;
+  }
+  .newscards-wrap .swiper-slide-txtcont__tit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    font-size: 14px;
+  }
+  .newscards-wrap .swiper-slide-txtcont__tit:hover {
+    color: #1176AA;
+  }
+}
+@media screen and (max-width: 744px) {
+  .newscards-slider {
+    width: 100%;
+    height: 400px;
+    margin-top: 32px;
+    overflow: hidden;
+  }
+  .newscards-wrap {
+    width: 100%;
+  }
+  .newscards-wrap .swiper-slide-image {
+    display: block;
+    width: 100%;
+    height: 240px;
+  }
+  .newscards-wrap .swiper-slide-txtcont {
+    width: 100%;
+    height: 160px;
+    padding: 24px;
+  }
+  .newscards-wrap .swiper-slide-txtcont__keyword {
+    font-size: 16px;
+  }
+  .newscards-wrap .swiper-slide-txtcont__tit {
+    font-size: 20px;
+    height: 64px;
+    padding-top: 8px;
+    overflow: hidden;
+    padding-right: 13px;
+  }
+  .newscards-wrap .swiper-slide-txtcont__tit:hover {
+    color: #1176AA;
+  }
+}
 .mySwiper3 {
   width: 100%;
   margin: 0 auto;
-  padding-top: 96px;
+  padding-top: 114px;
 }
 
 .keyword-newscards-tit {
@@ -784,7 +900,7 @@ legend {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 40px 100px 0;
+  padding: 40px 100px;
 }
 
 .keyword-newscard-front__image {
@@ -794,7 +910,7 @@ legend {
 }
 
 .keyword-newscard-front-info {
-  padding: 58px 48px;
+  padding: 24px 48px;
 }
 
 .keyword-newscards-front-tit {
@@ -848,7 +964,7 @@ legend {
   height: 100%;
   padding: 40px;
   border-radius: 20px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .keyword-newscard-back__tit {
@@ -908,13 +1024,116 @@ legend {
   display: block;
 }
 
+@media screen and (max-width: 1024px) {
+  .keyword-newscard {
+    height: 360px;
+  }
+  .keyword-newscard-front {
+    padding: 10%;
+  }
+  .keyword-newscard-front-icon {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .keyword-newscard-front__image {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .keyword-newscard-front-info {
+    padding: 24px 16px;
+  }
+  .keyword-newscards-front-tit {
+    position: relative;
+    font-size: 24px;
+  }
+  .keyword-newscards-front-tit::before {
+    position: absolute;
+    top: -6px;
+    left: 90px;
+  }
+  .key-newscards-fr-tit-2 {
+    position: relative;
+  }
+  .key-newscards-fr-tit-2::before {
+    position: absolute;
+    top: -6px;
+    left: 48px;
+  }
+  .keyword-newscard-front__subtit {
+    font-size: 15px;
+  }
+  .keyword-newscard-back {
+    padding: 32px;
+  }
+  .keyword-newscard-back__tit {
+    font-size: 24px;
+  }
+  .keyword-newscard-back-cont {
+    padding-top: 24px;
+  }
+  .keyword-newscard-back-cont-lst:nth-child(6) {
+    display: none;
+  }
+}
+@media screen and (max-width: 744px) {
+  .keyword-newscards-tit {
+    padding-bottom: 32px;
+  }
+  .keyword-newscard {
+    height: 440px;
+  }
+  .keyword-newscard-front {
+    padding: 8%;
+  }
+  .keyword-newscard-front__image {
+    width: 30%;
+  }
+  .keyword-newscard-front-info {
+    padding: 40px 16px;
+  }
+  .keyword-newscards-front-tit {
+    font-size: 28px;
+  }
+  .keyword-newscards-front-tit::before {
+    position: absolute;
+    top: -4px;
+    left: 104px;
+  }
+  .keyword-newscard-front__subtit {
+    font-size: 18px;
+  }
+  .keyword-newscard-back__tit {
+    font-size: 28px;
+  }
+  .keyword-newscard-back-cont-lst {
+    padding-bottom: 30px;
+  }
+  .keyword-newscard-back-cont-lst__tit {
+    font-size: 18px;
+  }
+  .keyword-newscard-back-cont-lst__tit:hover {
+    display: block;
+    font-weight: 500px;
+    color: #1176AA;
+    cursor: pointer;
+  }
+  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
+    padding-top: 40px;
+  }
+  .btnnext-keyword-card,
+  .btnprev-keyword-card {
+    color: #fff;
+    margin-top: 72px;
+  }
+}
 .cypto-market-price-wrap {
   display: block;
   width: 100%;
   height: 840px;
   padding: 56px 216px;
   border-radius: 20px;
-  background: #eee;
+  background: #fff;
   margin-top: 114px;
 }
 
@@ -942,6 +1161,7 @@ legend {
   height: 300px;
   padding: 16px 16px 24px;
   border-radius: 12px;
+  border: 1px solid #eee;
   background: #fff;
 }
 
@@ -1068,6 +1288,97 @@ legend {
   color: #555;
 }
 
+@media screen and (max-width: 1320px) {
+  .cypto-market-price-wrap {
+    width: 100%;
+    padding: 56px;
+  }
+  .cypto-market-cards-wrap {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 982px) {
+  .cypto-market-price-wrap {
+    display: block;
+    width: 100%;
+    height: 642px;
+    padding: 32px;
+  }
+  .cypto-market-price-wrap-tit {
+    margin-bottom: 32px;
+  }
+  .cypto-market-cards-wrap {
+    display: block;
+    height: 504px;
+  }
+  .cypto-market-card {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  .cypto-card-rank {
+    width: 16%;
+  }
+  .cypto-card-rank__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .cypto-card-tit {
+    width: 60%;
+    padding: 0;
+  }
+  .cypto-card-tit-image {
+    width: 14%;
+  }
+  .cypto-card-tit-image__link {
+    width: 60%;
+  }
+  .cypto-card-tit-txt {
+    display: flex;
+    justify-content: center;
+    padding-left: 8px;
+  }
+  .cypto-card-tit-txt__top {
+    display: inline;
+  }
+  .cypto-card-tit-txt__bottom {
+    display: inline;
+  }
+  .crypto-card-percent-red {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+  }
+  .crypto-card-percent-red .crypto-card-percent-red__txt {
+    display: block;
+    padding: 0;
+  }
+  .crypto-card-percent-blue {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+  }
+  .crypto-card-percent-blue .crypto-card-percent-blue__txt {
+    display: block;
+    padding: 0;
+  }
+  .crypto-card-graph,
+  .crypto-card-price,
+  .crypto-card-date {
+    display: none;
+  }
+  .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
+    display: none;
+  }
+}
 .main-event-bnr {
   margin: 114px 0 56px;
 }
@@ -1078,6 +1389,25 @@ legend {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  .main-event-bnr {
+    margin: 114px 0 56px;
+  }
+  .main-event-bnr .main-event-bnr__img {
+    width: 100%;
+    height: 192px;
+    margin: 0;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .main-event-bnr .main-event-bnr__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 68% top;
+       object-position: 68% top;
+  }
+}
 .main-dailyinfo {
   display: flex;
   justify-content: space-between;
@@ -1085,12 +1415,8 @@ legend {
   margin: 0 auto;
 }
 
-.calendar-container {
-  display: block;
-  width: 524px;
-  height: 520px;
-  border-radius: 20px;
-  background-color: #eee;
+.main-dailyinfo {
+  display: flex;
 }
 
 .dailyinfo-calendar {
@@ -1102,7 +1428,7 @@ legend {
 .dailyinfo-calendar-tit {
   display: flex;
   align-items: center;
-  padding: 25px 39px 10px;
+  padding: 24px 39px 10px;
   justify-content: space-between;
 }
 
@@ -1227,7 +1553,7 @@ legend {
   height: 520px;
   border-radius: 20px;
   padding: 32px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .dailyinfo-today-info-tit {
@@ -1272,6 +1598,7 @@ legend {
   width: 95%;
   height: 106px;
   border-radius: 12px;
+  border: 1px solid #eee;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
@@ -1426,6 +1753,126 @@ legend {
   padding-top: 84px;
 }
 
+@media screen and (max-width: 1024px) {
+  .main-dailyinfo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .dailyinfo-calendar {
+    width: 56%;
+    padding: 0;
+  }
+  .calendar-container {
+    height: 100%;
+  }
+  .wrapper header {
+    padding: 16px 30px 0;
+  }
+  .calendar .days li {
+    margin-top: 40px;
+  }
+  .dailyinfo-today-info {
+    width: 42%;
+    height: 535px;
+    padding: 20px;
+  }
+  .dailyinfo-today-list-cont-wrap {
+    width: 100%;
+    height: 450px;
+    margin-top: 16px;
+  }
+  .dailyinfo-today-list-cont {
+    width: 93%;
+    height: 96px;
+    padding: 16px;
+  }
+  .dailyinfo-today-list-cont-logo {
+    display: flex;
+    align-items: center;
+  }
+  .dailyinfo-today-list-cont-logo-img {
+    width: 100%;
+    height: 40px;
+  }
+  .dailyinfo-today-list-cont-txt {
+    width: 78%;
+  }
+  .dailyinfo-today-list-cont__tit {
+    font-size: 15px;
+  }
+  .dailyinfo-today-list-cont__date {
+    padding-top: 4px;
+  }
+  .dailyinfo-event {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 48%;
+    margin-top: 20px;
+  }
+  .dailyinfo-event-lst {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .dailyinfo-event-airdrop,
+  .dailyinfo-event-quiz {
+    display: block;
+    width: 100%;
+    height: 200px;
+    padding: 24px;
+    pointer-events: none;
+  }
+  .dailyinfo-event-quiz {
+    margin-left: 2%;
+  }
+  .dailyinfo-event-airdrop__subtit,
+  .dailyinfo-event-quiz__subtit {
+    font-size: 20px;
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .main-dailyinfo {
+    display: block;
+    width: 100%;
+    height: 1180px;
+  }
+  .dailyinfo-calendar {
+    width: 100%;
+  }
+  .dailyinfo-today-info {
+    width: 100%;
+    height: 450px;
+    margin-top: 56px;
+    padding: 24px;
+  }
+  .dailyinfo-today-list-cont-wrap {
+    width: 100%;
+    height: 332px;
+    margin-top: 32px;
+  }
+  .dailyinfo-event {
+    width: 100%;
+    height: 200px;
+    margin-top: 56px;
+  }
+  .dailyinfo-event-lst {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+  }
+  .dailyinfo-event-airdrop {
+    width: 49%;
+  }
+  .dailyinfo-event-quiz {
+    width: 49%;
+  }
+}
 .main-footer-btn {
   display: flex;
   justify-content: center;
@@ -1637,237 +2084,7 @@ legend {
   padding-top: 16px;
 }
 
-/* tablet */
-/* 1024px 이하일 경우 */
-@media screen and (max-width: 1024px) {
-  .mainnews-slider {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .mainnews-slider .mySwiper1 {
-    width: 100%;
-  }
-  .mainnews-slider .mySwiper1 .swiper-slide-tit {
-    word-break: keep-all;
-  }
-  .mainnews-slider .mySwiper1 .swiper-slide-cont {
-    max-width: 400px;
-    word-break: keep-all;
-  }
-  .mainnews-slider .type1,
-  .mainnews-slider .type2,
-  .mainnews-slider .type3 {
-    display: block;
-    width: 100%;
-  }
-  .mainnews-slider .type1 .swiper-slide-1,
-  .mainnews-slider .type1 .swiper-slide-2,
-  .mainnews-slider .type1 .swiper-slide-3,
-  .mainnews-slider .type2 .swiper-slide-1,
-  .mainnews-slider .type2 .swiper-slide-2,
-  .mainnews-slider .type2 .swiper-slide-3,
-  .mainnews-slider .type3 .swiper-slide-1,
-  .mainnews-slider .type3 .swiper-slide-2,
-  .mainnews-slider .type3 .swiper-slide-3 {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .news-category-btn {
-    display: flex;
-    width: 100%;
-    height: 200px;
-    padding-top: 32px;
-  }
-  .news-category-btn .news-category-btn-lst {
-    display: flex;
-    flex-wrap: wrap;
-    width: 88%;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box {
-    display: flex;
-    width: 200px;
-    margin-right: 0;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:hover {
-    transform: none;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:active {
-    background-color: #1176AA;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:active .news-category-btn-txt {
-    color: #fff;
-  }
-  .newscards-slider {
-    width: 100%;
-    height: 268px; /* 254px */
-    margin-top: 24px;
-    overflow: hidden;
-    padding-right: 20px;
-  }
-  .newscards-wrap {
-    display: block;
-    width: 33%;
-  }
-  .newscards-wrap .swiper-slide-image {
-    width: 100%;
-    height: 142px;
-  }
-  .newscards-wrap .swiper-slide-txtcont {
-    width: 100%;
-    height: 112px;
-  }
-  .newscards-wrap .swiper-slide-txtcont__tit {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    width: 100%;
-    font-size: 14px;
-  }
-  .newscards-wrap .swiper-slide-txtcont__tit:hover {
-    color: #1176AA;
-  }
-  .keyword-newscard {
-    height: 360px;
-  }
-  .keyword-newscard-front {
-    display: flex;
-    justify-content: center;
-  }
-  .keyword-newscard-front__image {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    padding: 50px 98px 40px;
-  }
-  .keyword-newscard-front-info {
-    padding: 0 40px;
-  }
-  .keyword-newscards-front-tit {
-    position: relative;
-    font-size: 24px;
-  }
-  .keyword-newscards-front-tit::before {
-    position: absolute;
-    top: -6px;
-    left: 90px;
-  }
-  .key-newscards-fr-tit-2 {
-    position: relative;
-  }
-  .key-newscards-fr-tit-2::before {
-    position: absolute;
-    top: -6px;
-    left: 48px;
-  }
-  .keyword-newscard-front__subtit {
-    font-size: 15px;
-  }
-  .keyword-newscard-back {
-    padding: 32px;
-  }
-  .keyword-newscard-back__tit {
-    font-size: 24px;
-  }
-  .keyword-newscard-back-cont {
-    padding-top: 24px;
-  }
-  .keyword-newscard-back-cont-lst:nth-child(6) {
-    display: none;
-  }
-  .cypto-market-price-wrap {
-    width: 100%;
-    padding: 56px;
-  }
-  .cypto-market-cards-wrap {
-    display: flex;
-    width: 100%;
-  }
-  .main-event-bnr {
-    margin: 114px 0 56px;
-  }
-  .main-event-bnr .main-event-bnr__img {
-    width: 100%;
-    height: 192px;
-    margin: 0;
-    border-radius: 20px;
-  }
-  .main-dailyinfo {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 420px;
-  }
-  .calendar-container {
-    height: 100%;
-  }
-  .wrapper header {
-    padding: 16px 30px 0;
-  }
-  .calendar .days li {
-    margin-top: 30px;
-  }
-  .dailyinfo-today-info {
-    height: 420px;
-    padding: 20px;
-  }
-  .dailyinfo-today-list-cont-wrap {
-    width: 100%;
-    height: 332px;
-    margin-top: 16px;
-  }
-  .dailyinfo-today-list-cont {
-    width: 93%;
-    height: 96px;
-    padding: 16px;
-  }
-  .dailyinfo-today-list-cont-logo {
-    display: flex;
-    align-items: center;
-  }
-  .dailyinfo-today-list-cont-logo-img {
-    width: 100%;
-    height: 40px;
-  }
-  .dailyinfo-today-list-cont-txt {
-    width: 78%;
-  }
-  .dailyinfo-today-list-cont__tit {
-    font-size: 15px;
-  }
-  .dailyinfo-today-list-cont__date {
-    padding-top: 4px;
-  }
-  .dailyinfo-event {
-    width: 20%;
-    height: 440px;
-  }
-  .dailyinfo-event-lst {
-    height: 420px;
-  }
-  .dailyinfo-event-airdrop,
-  .dailyinfo-event-quiz {
-    width: 100%;
-    height: 200px;
-    padding: 24px;
-  }
-  .dailyinfo-event-airdrop:hover,
-  .dailyinfo-event-quiz:hover {
-    background-size: 100% 200px;
-  }
-  .dailyinfo-event-airdrop:hover .dailyinfo-event-quiz__tit,
-  .dailyinfo-event-airdrop:hover .dailyinfo-event-quiz__subtit,
-  .dailyinfo-event-quiz:hover .dailyinfo-event-quiz__tit,
-  .dailyinfo-event-quiz:hover .dailyinfo-event-quiz__subtit {
-    display: none;
-  }
-  .dailyinfo-event-airdrop__subtit,
-  .dailyinfo-event-quiz__subtit {
-    font-size: 20px;
-    padding-top: 60px;
-  }
+@media screen and (max-width: 1320px) {
   .main-footer-btn {
     width: 100%;
     height: 240px;
@@ -1876,263 +2093,7 @@ legend {
     width: 90%;
   }
 }
-/* 작은 폰 */
-@media screen and (max-width: 744px) {
-  .mySwiper1 .swiper-slide-1,
-  .mySwiper1 .swiper-slide-2,
-  .mySwiper1 .swiper-slide-3,
-  .mySwiper1 .swiper-slide-cont {
-    display: none;
-  }
-  .mySwiper1 .type1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .mySwiper1 .swiper-wrapper .swiper-slide .swiper-slide-tit {
-    position: absolute;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    width: 68%;
-    line-height: 1.7;
-    transform: translate(-50%, -50%);
-  }
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    color: #fff;
-    margin-top: 0;
-  }
-  .news-category-btn {
-    display: flex;
-    width: 100%;
-    height: 369px;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .news-category-btn .news-category-btn-lst {
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box {
-    display: flex;
-    width: 48%;
-    margin-bottom: 16px;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:hover {
-    transform: none;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:active {
-    color: #1176AA;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box:active .news-category-btn-txt {
-    color: #fff;
-  }
-  .news-category-btn .news-category-btn-lst .news-category-btn-box .news-category-btn-txt {
-    font-size: 18px;
-  }
-  .newscards-slider {
-    width: 100%;
-    height: 420px; /* 400px */
-    margin-top: 32px;
-    overflow: hidden;
-    padding-right: 0;
-  }
-  .mySwiper2 {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .mySwiper2 .newscards-wrap {
-    width: 100%;
-  }
-  .mySwiper2 .newscards-wrap .swiper-slide-image {
-    display: block;
-    width: 100%;
-    height: 240px;
-  }
-  .mySwiper2 .newscards-wrap .swiper-slide-txtcont {
-    width: 100%;
-    height: 160px;
-    padding: 24px;
-  }
-  .mySwiper2 .newscards-wrap .swiper-slide-txtcont__keyword {
-    font-size: 16px;
-  }
-  .mySwiper2 .newscards-wrap .swiper-slide-txtcont__tit {
-    font-size: 20px;
-    height: 64px;
-    padding-top: 8px;
-    overflow: hidden;
-    padding-right: 13px;
-  }
-  .mySwiper3 {
-    width: 100%;
-    padding-top: 100px;
-  }
-  .keyword-newscards-tit {
-    padding-bottom: 32px;
-  }
-  .keyword-newscard {
-    height: 440px;
-  }
-  .keyword-newscard-front__image {
-    width: 50%;
-    padding: 40px 100px 40px;
-  }
-  .keyword-newscards-front-tit {
-    font-size: 28px;
-  }
-  .keyword-newscards-front-tit::before {
-    position: absolute;
-    top: -4px;
-    left: 104px;
-  }
-  .keyword-newscard-front__subtit {
-    font-size: 18px;
-  }
-  .keyword-newscard-back__tit {
-    font-size: 28px;
-  }
-  .keyword-newscard-back-cont-lst {
-    padding-bottom: 30px;
-  }
-  .keyword-newscard-back-cont-lst__tit {
-    font-size: 18px;
-  }
-  .keyword-newscard-back-cont-lst__tit:hover {
-    display: block;
-    font-weight: 500px;
-    color: #1176AA;
-    cursor: pointer;
-  }
-  .mySwiper3 .swiper-wrapper .keyword-newscard-back .keyword-newscard-back-cont {
-    padding-top: 40px;
-  }
-  .btnnext-keyword-card,
-  .btnprev-keyword-card {
-    color: #fff;
-    margin-top: 72px;
-  }
-  .cypto-market-price-wrap {
-    display: block;
-    width: 100%;
-    height: 642px;
-    padding: 32px;
-  }
-  .cypto-market-price-wrap-tit {
-    margin-bottom: 32px;
-  }
-  .cypto-market-cards-wrap {
-    display: block;
-    height: 504px;
-  }
-  .cypto-market-card {
-    display: flex;
-    width: 100%;
-    height: 56px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-    padding: 8px;
-  }
-  .cypto-card-rank {
-    width: 16%;
-  }
-  .cypto-card-rank__num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-  }
-  .cypto-card-tit {
-    width: 60%;
-    padding: 0;
-  }
-  .cypto-card-tit-image {
-    width: 14%;
-  }
-  .cypto-card-tit-image__link {
-    width: 100%;
-  }
-  .cypto-card-tit-txt {
-    display: flex;
-    justify-content: center;
-    padding-left: 8px;
-  }
-  .cypto-card-tit-txt__top {
-    display: inline;
-  }
-  .cypto-card-tit-txt__bottom {
-    display: inline;
-  }
-  .crypto-card-percent-red {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 20%;
-  }
-  .crypto-card-percent-red .crypto-card-percent-red__txt {
-    display: block;
-    padding: 0;
-  }
-  .crypto-card-percent-blue {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 20%;
-  }
-  .crypto-card-percent-blue .crypto-card-percent-blue__txt {
-    display: block;
-    padding: 0;
-  }
-  .crypto-card-graph,
-  .crypto-card-price,
-  .crypto-card-date {
-    display: none;
-  }
-  .cypto-market-card .cypto-card-rank .cypto-card-rank__num::before {
-    display: none;
-  }
-  .main-event-bnr .main-event-bnr__img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 68% top;
-       object-position: 68% top;
-  }
-  .main-dailyinfo {
-    display: block;
-    width: 100%;
-    height: 1180px;
-  }
-  .wrapper {
-    width: 100%;
-  }
-  .dailyinfo-today-info {
-    width: 100%;
-    height: 450px;
-    margin-top: 56px;
-  }
-  .dailyinfo-today-list-cont-wrap {
-    width: 100%;
-    height: 332px;
-    margin-top: 32px;
-  }
-  .dailyinfo-event {
-    width: 100%;
-    height: 200px;
-    margin-top: 56px;
-  }
-  .dailyinfo-event-lst {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-  }
-  .dailyinfo-event-airdrop {
-    width: 49%;
-  }
-  .dailyinfo-event-quiz {
-    width: 49%;
-  }
+@media screen and (max-width: 982px) {
   .main-footer-btn {
     width: 100%;
     height: 336px;
@@ -2163,6 +2124,8 @@ legend {
     top: 16px;
     left: 20px;
   }
+}
+@media screen and (max-width: 982px) and (max-width: 744px) {
   .footer .main-footer-category {
     width: 100%;
   }
@@ -2338,7 +2301,6 @@ input[type=search]::-webkit-search-cancel-button {
 /* 기본 폰트 설정 */
 /* mobile */
 body {
-  background: #fff;
   font-size: 14px;
   line-height: 1.5;
   font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;

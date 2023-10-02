@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,36 +31,44 @@
     <header data-include-path="./outline/header.html"></header>
     <!-- tokenpost main / main -->
     <main id="main" class="main">
-      <!-- tokenpost main / main news slider -->
+      <!-- tokenpost main / main news slider / mySwiper1-->
       <div class="mainnews-slider">
         <h2 class="blind">오늘의 대표 뉴스 슬라이더</h2>
         <!-- Swiper -->
         <div class="swiper mySwiper1">
           <div class="swiper-wrapper">
             <div class="swiper-slide type1">
-              <a href="#">
-                <div class="txt">
+              <a class="mySwiper1-link" href="#">
+                <div class="mySwiper1-txt">
                   <strong class="swiper-slide-tit">전 SEC 관계자 "비트코인 현물 ETF 승인 확률 희박"</strong>
                   <p class="swiper-slide-cont">미국 증권거래위원회(SEC)의 전직 인사가 비트코인 현물 상장지수펀드(ETF) 승인 가능성에 대해 회의적인 견해를 밝혔다.</p>
                 </div>
-                <div class="thumb">
-                  <img class="swiper-slide-1" src="./images/news1.jpg" alt="전 SEC 관계자 비트코인 현물 ETF 승인 확률 희박">
+                <div class="mySwiper1-thumb">
+                  <img class="mySwiper1-thumb-img" src="./images/news1.jpg" alt="전 SEC 관계자 비트코인 현물 ETF 승인 확률 희박">
                 </div>
               </a>
             </div>
             <div class="swiper-slide type2">
-              <a href="#">
-                <img class="swiper-slide-2" src="./images/news2.jpg" alt="오디널스, 비트코인 일간 트랜잭션 85% 차지">
-                <strong class="swiper-slide-tit">오디널스, 비트코인 일간 트랜잭션 85% 차지</strong>
-                <p class="swiper-slide-cont">오디널스 인스크립션(비트코인 기반 토큰 발행) 활동이 비트코인 네트워크 전체 활동의 80% 이상을 차지한 것으로 나타났다.</p>
+              <a class="mySwiper1-link" href="#">
+                <div class="mySwiper1-txt">
+                  <strong class="swiper-slide-tit">오디널스, 비트코인 일간 트랜잭션 85% 차지</strong>
+                  <p class="swiper-slide-cont">오디널스 인스크립션(비트코인 기반 토큰 발행) 활동이 비트코인 네트워크 전체 활동의 80% 이상을 차지한 것으로 나타났다.</p>
+                </div>
+                <div class="mySwiper1-thumb">
+                  <img class="mySwiper1-thumb-img" src="./images/news2.jpg" alt="오디널스, 비트코인 일간 트랜잭션 85% 차지">
+                </div>
               </a>
             </div>
             <div class="swiper-slide type3">
-              <a href="#">
-                <img class="swiper-slide-3" src="./images/news3.jpg" alt="美 법원 토네이도캐시 제재 조치 유효... 사용자 해제 요구 기각">
-                <strong class="swiper-slide-tit">"토네이도캐시 제재 조치 유효, 사용자 해제 요구 기각"</strong>
-                <p class="swiper-slide-cont">암호화폐 믹싱 서비스 '토네이도캐시'에 대한 미국 재무부의 제재 조치를 
-                  철회해달라는 사용자 항소가 기각됐다.</p>
+              <a class="mySwiper1-link" href="#">
+                <div class="mySwiper1-txt">
+                  <strong class="swiper-slide-tit">"토네이도캐시 제재 조치 유효, 사용자 해제 요구 기각"</strong>
+                  <p class="swiper-slide-cont">암호화폐 믹싱 서비스 '토네이도캐시'에 대한 미국 재무부의 제재 조치를 
+                    철회해달라는 사용자 항소가 기각됐다.</p>
+                </div>
+                <div class="mySwiper1-thumb">
+                  <img class="mySwiper1-thumb-img" src="./images/news3.jpg" alt="美 법원 토네이도캐시 제재 조치 유효... 사용자 해제 요구 기각">
+                </div>
               </a>
             </div>
           </div>
@@ -125,7 +133,7 @@
         </ul>
       </div>
 
-      <!-- tokenpost main / newscards slider -->
+      <!-- tokenpost main / newscards slider / mySwiper2 -->
       <div class="newscards-slider">
         <h2 class="blind">카테고리 별 뉴스카드 슬라이더</h2>
         <div class="newscards-swiper mySwiper2">
@@ -145,6 +153,7 @@
                 <img class="swiper-slide-image" src="./images/newscard2.jpg" alt="월드코인 영지식증명으로 공개키와 생체 데이터 보호 강조">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">금융</span>
                   <p class="swiper-slide-txtcont__tit">월드코인 "영지식증명으로 공개키와 생체 데이터 보호" 강조</p>
                 </div>
               </a>
@@ -154,6 +163,7 @@
                 <img class="swiper-slide-image" src="./images/newscard3.jpg" alt="대만 금융감독위, 가상자산 규제 초안에 '스테이블코인 발행' 금지 포함">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">금융</span>
                   <p class="swiper-slide-txtcont__tit">대만 금융감독위, 가상자산 규제 초안에 '스테이블코인 발행' 금지 포함</p>
                 </div>
               </a>
@@ -172,6 +182,7 @@
                 <img class="swiper-slide-image" src="./images/newscard5.jpg" alt="친 리플 美 변호사 SEC 중간 판결, 커뮤니티가 결정적 역할">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">국제</span>
                   <p class="swiper-slide-txtcont__tit">친 리플 美 변호사 "SEC 중간 판결, 커뮤니티가 결정적 역할"</p>
                 </div>
               </a>
@@ -181,6 +192,7 @@
                 <img class="swiper-slide-image" src="./images/newscard6.jpg" alt="애널리스트 비트코인, 2만2000달러까지 단기하락 나올 수 있어">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">금융</span>
                   <p class="swiper-slide-txtcont__tit">애널리스트 "비트코인, 2만2000달러까지 단기하락 나올 수 있어"</p>
                 </div>
               </a>
@@ -199,6 +211,7 @@
                 <img class="swiper-slide-image" src="./images/newscard8.jpg" alt="바이낸스, 러시아 최고 경영진 사임...현지 사업 정리하나">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">국제</span>
                   <p class="swiper-slide-txtcont__tit">바이낸스, 러시아 최고 경영진 사임...현지 사업 정리하나</p>
                 </div>
               </a>
@@ -217,6 +230,7 @@
                 <img class="swiper-slide-image" src="./images/newscard10.jpg" alt="번스타인 다가오는 암호화폐 강세 사이클, 기관이 주도할 것">
                 <div class="swiper-slide-txtcont">
                   <span class="swiper-slide-txtcont__keyword">블록체인</span>
+                  <span class="swiper-slide-txtcont__keyword">국제</span>
                   <p class="swiper-slide-txtcont__tit">번스타인 "다가오는 암호화폐 강세 사이클, 기관이 주도할 것"</p>
                 </div>
               </a>
@@ -225,7 +239,7 @@
         </div>
       </div>
 
-      <!-- tokenpost main / keyword newscards slider -->
+      <!-- tokenpost main / keyword newscards slider / mySwiper3 -->
       <div class="swiper mySwiper3">
         <h2 class="blind">뉴스 타이틀로 한 눈에 보기</h2>
         <strong class="keyword-newscards-tit">오늘의 뉴스 타이틀 한 눈에 보기</strong>
@@ -977,7 +991,8 @@
             </div>
             <div class="cypto-card-tit">
               <div class="cypto-card-tit-image">
-                <a href="#"><img class="cypto-card-tit-image__link" src="./images/coinvalue8.png" alt="Tether USDt 코인 로고 이미지"></a>
+                <a href="#">
+                  <img class="cypto-card-tit-image__link" src="./images/coinvalue8.png" alt="Tether USDt 코인 로고 이미지"></a>
               </div>
               <div class="cypto-card-tit-txt">
                 <a href="#"><span class="cypto-card-tit-txt__top">(USDC)</span>
