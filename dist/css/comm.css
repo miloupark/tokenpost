@@ -1887,13 +1887,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 64%;
+  width: 72%;
   height: 100%;
 }
 
 .main-footer-btn-g {
   position: relative;
-  width: 30%;
+  width: 32%;
   height: 96px;
   padding: 24px 22px;
   border-radius: 12px;
@@ -2090,7 +2090,7 @@ body {
     height: 240px;
   }
   .main-footer-btn-lst {
-    width: 90%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 982px) {
@@ -2101,7 +2101,7 @@ body {
   }
   .main-footer-btn-lst {
     display: block;
-    width: 80%;
+    width: 90%;
   }
   .main-footer-btn-g {
     width: 100%;
