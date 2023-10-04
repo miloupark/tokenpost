@@ -2450,10 +2450,8 @@ legend {
 }
 
 .forum-notice-wrap {
-  width: 1440px;
+  width: 1280px;
   margin: 0 auto;
-  padding: 40px 80px;
-  background-color: #eee;
 }
 .forum-notice-wrap .forum-notice {
   display: flex;
@@ -2555,10 +2553,10 @@ legend {
   padding-bottom: 24px;
 }
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link .forum-notice-mostviewed-lst-cont__tag {
-  width: 70px;
+  width: 80px;
   font-size: 15px;
   font-weight: 400;
-  padding-right: 24px;
+  padding-right: 4px;
   color: #555;
 }
 .forum-notice-mostviewed-lst-g .forum-notice-mostviewed-lst-cont__link .forum-notice-mostviewed-lst-cont__tit {
@@ -2628,7 +2626,6 @@ legend {
   margin: 10px;
   border-radius: 20px;
   background-color: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 4px 12px 36px rgba(0, 0, 0, 0.09);
   transition: all 0.3s ease-out;
 }
 
@@ -2665,6 +2662,9 @@ legend {
   font-weight: 700;
   color: #333;
 }
+.forum-category-btn__link .forum-category-btn-cont__tit:hover {
+  color: #1176AA;
+}
 .forum-category-btn__link .forum-category-btn-cont__subtit {
   display: block;
   font-size: 14px;
@@ -2682,9 +2682,9 @@ legend {
 .forum-category-btn__link .forum-category-btn-cont__link::after {
   position: absolute;
   content: "\f105";
-  top: 1px;
-  right: 24px;
-  font-size: 16px;
+  top: 4px;
+  left: 60px;
+  font-size: 15px;
   font-weight: 900;
   font-family: "Line Awesome Free";
   color: #1176AA;
@@ -2866,7 +2866,7 @@ legend {
   height: 656px;
   border-radius: 20px;
   padding: 40px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .forum-airdrop-tit {
@@ -2895,6 +2895,7 @@ legend {
   border-radius: 16px;
   padding: 20px 40px;
   margin-bottom: 16px;
+  border: 1px solid #eee;
   background-color: #fff;
 }
 
@@ -2956,7 +2957,7 @@ legend {
   height: 656px;
   border-radius: 20px;
   padding: 40px;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .forum-quiz-tit {
@@ -2985,6 +2986,7 @@ legend {
   border-radius: 16px;
   padding: 20px 40px;
   margin-bottom: 16px;
+  border: 1px solid #eee;
   background-color: #fff;
 }
 
