@@ -1005,7 +1005,7 @@ body {
 }
 .keyword-newscard-back-cont-lst__tit:hover {
   display: block;
-  font-weight: 700px;
+  font-weight: 700;
   color: #1176AA;
   cursor: pointer;
 }
@@ -1114,7 +1114,7 @@ body {
   }
   .keyword-newscard-back-cont-lst__tit:hover {
     display: block;
-    font-weight: 500px;
+    font-weight: 500;
     color: #1176AA;
     cursor: pointer;
   }
