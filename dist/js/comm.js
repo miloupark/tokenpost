@@ -18,7 +18,7 @@ var swiper = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    428: { /* 이하의 크기에서 옵션 값 */
+    428: { 
       slidesPerView: 1,
       spaceBetween: 16,
     },
@@ -48,7 +48,7 @@ var swiper = new Swiper(".mySwiper3", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    428: { /* 이하의 크기에서 옵션 값 */
+    428: { 
     slidesPerView: 1
     
     },
