@@ -1,36 +1,10 @@
 @charset "UFT-8";
 @import "variables", "mixin", "fonts", "reset";
-// variables 변수가 가장 맨 앞, 선언 후 변수 사용해야함
 
-// comm.css -
-// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
 * {
   font-family: "Pretendard";
 }
 
-// .btn-g {
-//   // 일반적인 버튼
-//   &.red {
-//     background: red;
-//   }
-// }
-// .box-g {}
-// title
-// .tit-sub {
-//   display: block;
-//   font-size: 28px;
-//   font-weight: 700;
-//   color: #333;
-// }
-
-// btn
-
-// more
-
-// line
-
-// icon
-// header-icons
 .btn-g {
   display: block;
   margin-left: 24px;
@@ -1131,13 +1105,7 @@ body {
 .main-dailyinfo {
   display: flex;
 }
-// .calendar-container {
-//   display: block;
-//   width: 524px;
-//   height: 520px;  
-//   border-radius: 20px;
-//   background-color: #eee;
-// }
+
 .dailyinfo-calendar{
   width: 40%;
   background: #fff;
